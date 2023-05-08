@@ -1,0 +1,48 @@
+% Nomenclatura
+
+% \renewcommand{\nomname}{Nomenclatura}
+
+\DeclareRobustCommand{\SkipTocEntry}[5]{}
+\addtocontents{toc}{\SkipTocEntry}
+
+% (Pendiente): Esta pagina  se plantea en caso que sea necesario dejar una lista de acrónimos, abreviaciones o notaciones que lo requieran. En caso que no se requiera se eliminara del documento final.
+\makenomenclature\label{nomenclatura}
+
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{S}{Símbolos}{%
+  \ifstrequal{#1}{T}{Acrónimos}{}}%
+]}
+
+\renewcommand{\nompreamble}{El siguiente apartado describe los símbolos y acrónimos que serán usados más adelante en el contenido de este documento:\\}
+
+% \section*{Símbolos}
+
+% % \nomenclature[S]{$\eta$}{ Velocidad de giro \nomunit{[rpm]}}
+% % \nomenclature[S]{$\lambda$}{Coeficiente de relleno de sección}
+% % \nomenclature[S]{$i$}{Coeficiente de disminución de flujo de material} 
+% % \nomenclature[S]{$\rho$}{Densidad del material transportado \nomunit{$ \left[t/m^3\right]$}}
+% % \nomenclature[S]{$c_0$}{Coeficiente de resistencia del tipo de material}
+
+% \section*{Acrónimos y abreviaturas}
+
+\nomenclature[T]{$AGROSAVIA$}{Corporación Colombiana de Investigación Agropecuaria.}
+\nomenclature[T]{$CA$}{Centro Agropecuario.}
+\nomenclature[T]{$CIAL$}{Comités de Investigación Agrícola elegidos Localmente.}
+% \nomenclature[T]{$GUI$}{Interfaz Gráfica de Usuario.}
+% \nomenclature[T]{$HMI$}{Interfaz Humano Máquina.}
+\nomenclature[T]{$ICA$}{Instituto Colombiano Agropecuario.}
+\nomenclature[T]{$IGAC$}{Instituto Geográfico Agustín Codazzi.}
+% \nomenclature[T]{$RFID$}{Identificación por Radiofrecuencia.}
+% \nomenclature[T]{$PWM$}{En inglés: Pulse-Width Modulation.}
+% \nomenclature[T]{$LCD$}{En inglés: Liquid Cristal Display.}
+\nomenclature[T]{$SNIA$}{Sistema Nacional de Innovación Agropecuaria.}
+\nomenclature[T]{$SENA$}{Serivicio Nacional de Aprendizaje.}
+% \nomenclature[T]{$UID$}{Identificador Único.}
+% \nomenclature[T]{$I_2C$}{En inglés: Inter-Integrated Circuit.}
+% \nomenclature[T]{$CAN$}{En inglés: Control Area Network.}
+% \nomenclature[T]{$\mu C$}{Micro Controlador.}
+% \nomenclature[T]{$BASIC$}{En inglés: Beginner's All Purpose Symbolic Instruction Code.}
+% \nomenclature[T]{$ADC, DAC$}{En inglés: Analog-to-Digital Converter, Digital-to-Analog Converter.}
+
+\printnomenclature[3cm]

@@ -1,0 +1,59 @@
+\babel@toc {spanish}{}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Introducci\'on}{1}{chapter.1}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Objetivos}{5}{chapter.2}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Visi\'on global del contexto ganadero de c\'arnicos}{7}{chapter.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Mecanismo de Compuerta Rotativa.}}{8}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Aptitud lechera. }}{9}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Aptitud de tipo carne.}}{9}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Aptitud de doble prop\'osito. }}{10}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ganader\IeC {\'\i }a de carne. }}{11}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces En la primer fila de izquierda a derecha se observan ejemplares de las razas Charolais, Hereford; seguido de las razas Angus y Criolla en la fila inferior. }}{13}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Sistema de explotaci\'on estabulada. }}{13}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Sistema de explotaci\'on silvopastoril. }}{14}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Hidrataci\'on del ganado. }}{15}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Suplementos energ\'eticos. }}{15}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Suplementos prote\IeC {\'\i }nicos. }}{16}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Forraje y leguminosas. }}{16}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Marca de hierro en ganado. }}{17}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Anillo nasal o Nariguera. }}{18}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Arete o Crotal. }}{18}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Collar / J\'aquima de color o funci\'on. }}{19}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Chip subcut\'aneo. }}{19}{figure.3.17}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Collar con im\'an. }}{20}{figure.3.18}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Clasificaci\'on de Dosificacores }}{21}{figure.3.19}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Dosificador Volum\'etrico. }}{22}{figure.3.20}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Dosificador de liquidos. }}{22}{figure.3.21}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Dosificador de bomba. }}{23}{figure.3.22}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Coeficiente de relleno segun el tipo de carga }}{25}{figure.3.23}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Coeficiente de disminuci\'on de flujo de material ($i$) }}{26}{figure.3.24}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Coeficiente de resistencia del tipo de material }}{26}{figure.3.25}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Mecanismo de vasos telesc\'opicos }}{27}{figure.3.26}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Mecanismo de Compuerta Rotativa. }}{27}{figure.3.27}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Mecanismo de Compuerta Deslizante. Tomada de \cite {DEM} }}{28}{figure.3.28}
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Almacenamiento en nube. }}{30}{figure.3.29}
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Base de datos. }}{30}{figure.3.30}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Ganader\IeC {\'\i }a de carne. }}{31}{figure.3.31}
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Sistemas RFID. }}{32}{figure.3.32}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Electr\'onica en el sector agropecuario}{33}{chapter.4}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Analisis y dise\~no}{35}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de Bloques general. }}{36}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Matriz de selecci\'on por peso ponderado para el subsistema ID. }}{37}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Etiqueta \'o ``Tag'' RFID. }}{38}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Separaci\'on de ganado en el comedero. }}{38}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Primer modelo 3D del compartimento RFID. }}{39}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Fisionom\IeC {\'\i }a de razas comunes en el ciclo productivo de la Carne. }}{39}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Argolla de conexi\'on. }}{40}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Prototipo de accesorio RFID para la Jaquima. }}{41}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Diagrama radial de las modalidades de identificaci\'on bovina. }}{42}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces J\'aquima ID. }}{42}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Matriz de selecci\'on por peso ponderado para el mecanismo dosificador. }}{43}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Matriz de selecci\'on por peso ponderado para el motor . }}{44}{figure.5.12}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Resultados}{45}{chapter.6}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusiones y trabajos futuros}{47}{chapter.7}

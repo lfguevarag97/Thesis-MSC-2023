@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESUMEN <==>  ABSTRACT	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Resumen de la propuesta. (1/2 página). \\
+
+% Este es el que presenté a la facultad%%%%%%%%%%%%%%%%%%%%%%%
+%En este documento se propone el desarrollo de algoritmos de detección de deformaciones en la infraestructura vial, enfocado en el sector de la gestión de pavimentos y transporte; con el objetivo de identificar fallas cuantitativamente para poder así, maximizar el bienestar social y al mismo tiempo disminuir la incertidumbre asociada a la inversión mediante la internalizaci\'on de problemas de la infraestructura vial.\\
+%%%=====================================================================%%%%%%%%%%%%%%%%%%%%
+
+En los últimos años, el sector agropecuario ha tomado gran importancia en Latinoamericana y el mundo, especialmente porque el incremento poblacional ha aumentando el consumo de alimentos de forma cuantitativa y cualitativa. Aunque Colombia posee un gran potencial productivo y altamente competitivo en este sector, aún son muchos los productores que desempeñan la mayoría de labores de manera manual, sin la ayuda de la tecnología como herramienta de apoyo en sus actividades del día a día. La toma, registro, manipulación y representación de datos de forma manual significa un gran desgaste en cuestión de recursos humanos, económicos, material de trabajo y tiempo, por lo que se propone una herramienta de ayuda en el monitoreo y análisis de datos particularmente en el sector productivo de la ganaderia de la carne.\\
+
+El sistema realizado para este proyecto se denomina \textit{EndlessID}, diseñado para fincas ganaderas del municipio de Sotara-Cauca pero adaptable para otros sectores ganaderos del país.
+Esta compuesto por el trabajo interconectado de diferentes dispositivos electrónicos y electromecánicos que trabajan de forma conjunta para que el sistema esté en la capacidad de registrar datos de manera automática en bases de datos físicas o en la nube, que sirvan para monitorear el proceso alimenticio de reses pertenecientes al ganado estabulado que se encuentre en la etapa de engorde en el ciclo productivo de la carne, en una finca de un productor ganadero.
+
+La obtención de estos datos se logra mediante un proceso complementario de dosificación y sensado que inicia desde la verificación de alimento suficiente para abastecer las necesidades del ganado estabulado, seguido de la identificación de las cabezas de ganado mediante un dispositivo de identificación por radio frecuencia asociado a cada animal, con los que se podrá llevar un registro y monitoreo de datos de manera independiente, procedido de la dosificación del alimento desde el tanque de almacenamiento hasta el plato de comida para posteriormente pesar el animal y registrar los datos obtenidos de manera inmediata, reduciendo así, falencias humanas por registro y manipulación de datos erróneos.\\\\
+
+%%%%%%
+%%%%%%La falta de tecnología aplicada en estas prácticas conlleva un alto desgaste por parte del personal de trabajo quienes deben realizar acciones diarias y repetitivas de
+%%%%%%
+%%%%%% altmanete comept prácticas agropecuarias d
+%%%%%%
+%%%%%%cuenta con una fuerte y marcada tendencia hacia el sector agricola
+%%%%%%
+%%%%%%
+%%%%%% el sectoLa agricultura ha sido un El sector agropecuario ha sido un importante objeto de análisis debido al papel que puede desempeñar en
+ 
+%%%%%%%%%%%%% Esto mejor lo pongo en la descripcion del analisis y diseñ del sistema oa glo así.
+%%%%%%%%%%%%%%%Este proyecto consiste en el desarrollo de un sistema automático
+%%%%%%%%%%%%%%% %de bajo costo 
+%%%%%%%%%%%%%%% para el monitoreo de la alimentación especializada e intensiva de ganado estabulado involucrado en el ciclo productivo en la denominada "Ganadería de la Carne", es decir, reses que se encuentren en proceso de engorde o Ceba. El proceso de monitoreo alimenticio
+%%%%%%%%%%%%%%%% automático
+%%%%%%%%%%%%%%%  requiere de una sistematización en la identificación del ganado, la dosificación del alimento y la manipulación y el registro de los datos, sistematización mostrada durante el desarrollo de este proyecto de grado.\\
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%Los individuos que participan de este proceso de monitoreo continuo cuentan con una base de datos recopilados asociada a los identificadores por radiofrecuencia que llevan acoplados a un accesorio portátil en sus cuerpos
+%%%%%%%%%%%%%%%% (Ver figura \ref{lupa1png})
+%%%%%%%%%%%%%%% , y es gracias a este conjunto de datos que es posible monitorear la evolución alimenticia de cada cabeza del ganado estabulado de manera continua, remota e independiente. Una vez el individuo haya sido reconocido, se verifica el monto de comida apropiado a su dieta revisando la base de datos asociada a este animal y se procede a suministrar dicha porción mediante un sub-sistema de dosificación electromecánica.
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%Finalmente se procede a pesar el animal y realimentar la base de datos respectiva a éste, con los nuevos valores obtenidos diariamente al iniciar la  jornada de alimentación y sensado.\\
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%El proyecto se plantea para que pueda modularse y adaptarse a ganado de tamaño variable, también se considera una HMI para que el cliente ganadero pueda añadir o eliminar uno o mas reses, establecer los valores dietarios, asignar los RFID a nuevos novillos, visualizar (en caso que se presente) avisos o alarmas y encender o apagar el sistema.\\
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%El software se desarrolla en la plataforma Arduino debido a su fácil programación y manejo %(por parte del autor del proyecto, además, en ésta se puede) 
+%%%%%%%%%%%%%%%para manipular de manera continua una gran variedad de sensores y actuadores de bajo costo que pueden satisfacer las funciones básicas de maquinaria especializada sin incurrir en gastos que estén fuera del alcance de nuevos emprendedores ganaderos.\\
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%El sistema se plantea como herramienta de ayuda para productores de carne que presenten falencias en la toma, registro manipulación y representación de datos en algunas de sus actividades de ganadería. Adicionalmente se toma como referencia de usuarios potenciales, a emprendedores ganaderos del municipio de Sotará - Cauca, que practican este tipo de ganadería.\\\\
+
+
+%
+%
+%%%Comenzando por los lectores RFID, que facilitan la identificación de reses en grupos de ganado de tamaño variable, disminuyendo la posibilidad de dejar a un individuo sin su ración de comida preestablecida o de suministrar una porción erronea al sujeto equivocado. Esta identificación se realiza mediante un traspondedor añadido a las Jáquimas convencionales usadas en la ganadería.  %(Ver figura \ref{jaquimaidpng})
+%%%
+%%%El sistema, realizado en la plataforma Arduino  puede, con la ayuda de una variedad de dispositivos electrónicos y mecánicos (peso, presencia y/o detección, RFID, nivel, servomotores, celdas de carga, entre otros); obtener información pertinente con la que se puede monitorear el proceso alimenticio respectivo de cada cabeza de ganado de forma particular e independiente de las demás, mediante la toma y registro de datos en bases de datos físicas y/o en la nube. Esto quiere decir que con los datos almacenados se pueden proyectar y analizar comportamientos de peso que ayudan a la toma de decisiones sobre si un bovino en particular presenta dificultades en su crecimiento de peso o si ha alcanzado un peso idoneo para ser convertido en carne para consumo.\\
+%%%
+%%%El sistema consta de 2 partes principales, la primera parte abarca la identificación del bovino y dosificación correspondiente de alimento a cada animal en particular, y la segunda parte abarca la obtención de datos de cada res, los cuales son registrados en la(s) base(s) de datos.\\
+%%%Para el diseño del mecanismo dosificador se utilizó SolidWorks, un software especializado de alto procesamiento gráfico con el que se pudo generar en un modelo 3D un tornillo sin fin con su eje, paso y número de hélices así como también el ensamblaje del mismo mediante la conexión de las 2 partes tipo hembra que conforman la pieza. Este software facilitó que la fabriación del tornillo fuese menos costosa y mas precisa que por otros métodos manuales de fabricación.\\
+%%%
+%%%En lo que respecta a la construcción de algunas partes físicas para la dosificación, se utilizarón los modelos simulado en SolidWorks, para ser impresos en una impresora 3D del Centro de Automatización de Procesos (CAP) de la Pontificia Universidad Javeriana, con el material  biodegradable PLA de 1.75mm.
+%%%Otras partes que conforman el sistema fueron, de igual forma, diseñados en SolidWorks y fueron fabricadas manualmente  o compradas con productos comerciales similares como la tubería de PVC.\\
+%%%
+%%
+%%%En este documento se propone un alimentador automático de bajo costo para reses en proceso de engorde o ceba que permita, mediante sensores de peso, suministrar una cantidad de alimento de manera automática para cada res, en horarios del día preestablecidos por el productor ganadero y cuya ración será respectiva al la dieta de cada animal basada en los intereses del propietario. Las reses estarían identificadas por un número ID colgando de sus cuerpos con lo cual se monitorea cada bovino por separado generando un historial alimenticio en la nube para cada individuo.
+%%%Por medio de este alimentador se generaría un historial alimenticio de cada bovino que permitiría registrar la cantidad de porciones suministradas periódicamente, además de verificar, con sensores de presencia o detección,  si éste ha ingerido su alimento o no con lo cual se podrá identificar aquellas cabezas de ganado que estarían presentando desordenes alimenticios que vayan en contra de los intereses del productor.\\
+%%%
+%%%Entre los datos fijos de cada historial se tendría registro de su Nombre, RFID, Sexo, Raza, Peso y Edad inicial, Peso y Edad final; y como datos de monitoreo se tendría registro diario peso, edad, peso máximo alcanzado, si ha alcanzado o no un peso ideal y su evolución del peso para verificar si esta obteniendo un crecimiento positivo, o en caso contrario, proceder con la toma de decisiones respecto al sujeto en cuestión tales como su posible venta, tratamiento, o venta temprana, entre otros.
+%%%
+%%%Al estar identificados con un número ID propio e independiente, se ayuda se garantiza, mediante un sensor RFID, que el alimento se suministra al individuo correcto y que no se presentan casos en los que se suministren porciones repetidas en una misma franja horaria. Una vez el animal se encuentre en la zona de alimentación, estos serán pesados con el objetivo de hacer seguimiento del crecimiento de peso y verificar que esté cumpliendo con la rata de crecimiento fijada por el productor y en caso de alcanzar un peso máximo preestablecido o presentar disminución de peso hacer la respectiva notificación y observación en la nube para la toma de decisiones futuras.\\
+%%%
+%%%Por último el sistema verifica la cantidad neta de alimento suministrado y dará aviso preventivo, mediante un recordatorio o una alarma al personal encargado notificando si el alimento está próximo a acabarse.
+%%%Es importante resaltar que este sistema se realiza con herramientas y sensores de bajo costo de Arduino.
+
+
+{\bf Palabras y Conceptos Clave}: Almacenamiento en Nube, Bases de Datos, Ciclo productivo de cebado, Comunicación remota, Dosificación, Estabulación, Ganadería de Carne, Tasa de pesaje y crecimiento, Lector RFID, Jáquima RFID, SIM800L.

@@ -1,0 +1,92 @@
+
+
+
+
+Tal y como se menciona en el Capítulo 2, el objetivo principal de este proyecto radica en el desarrollo de un prototipo tal que ayude, permita y facilite el monitoreo alimenticio de un conjunto de novillos estabulados en proceso de engorde. Para ello primero es necesario comprender las etapas que influyen en la adquisición de datos y posteriormente considerar \textit{Oportunidades de Intervención} (\textit{OI}) o mejora desde un punto de vista ingenieril.\\
+
+\section{Iteración diaria del proceso de engorde}
+
+El proceso inicia con la verificación de alimento suficiente para el o los grupos de bovinos a alimentar, seguido por la entrada de individuos al área de alimentación; los animales deben ser ingresados por grupos de tal forma que se tenga conocimiento de los individuos que ingresan y salen, y de las porciones correspondientes para que su evolución y monitoreo alimenticio sea apropiado.
+
+\begin{enumerate}[O.I \#1:]
+    \item Esto sugiere la necesidad de identificar a los novillos y tener a la mano sus porciones dietarias correspondientes. \label{OI1}
+\end{enumerate}
+
+Al tener identificado al individuo y por ende tener conocimiento de su porción dietaria correspondiente, es necesario entregar dichas porciones descartando cualquier tipo de aproximación errónea, discrepancia o por ambigüedad por el criterio humano. Por otra parte se requiere optimizar el tiempo, costo y personal requerido en la dosificación del alimento desde el tanque de almacenamiento hasta los comederos.
+
+\begin{enumerate}[O.I \#2:]
+    \item Para validar y verificar que las porciones son apropiadas y  verídicas, se opta por pesar las porciones con balanzas digitales antes de ser entregadas al animal. En lo que respecta al suministro constante de alimento se considera tener puntos fijos de dosificación continua que faciliten la distribución del alimento de manera automática. Para ello se requiere la inclusión de mecanismos de dosificación como los mencionados en la Sección \ref{dosificadores}. \label{OI2}
+\end{enumerate}
+
+\begin{inparaenum}[(i)]
+	        Una vez iniciada y finalizada la ingesta del alimento, el animal es llevado a una balanza para obtener su peso actual, seguido a esto se registra manualmente éste y otros datos concernientes a su proceso de alimentación tales como:
+	        \item Las veces que ha sido alimentado
+	        \item Si ha presentado alguna dificultad en consumir su ración diaria. Posteriormente se da salida del área de alimentación.
+	    \end{inparaenum}
+
+\begin{enumerate}[O.I \#3:]
+    \item Al identificar al individuo mediante una referencia única, se pueden asociar datos a esta referencia de identificación, tal y como se realiza en una institución educativa mediante el carné estudiantil. Con esto, el registro de datos se garantiza de forma tal que no se puedan asignar datos erróneos entre los novillos del ganado estabulado ocurridos por equivocaciones en el registro manual de datos. 
+    Además, si el peso ha presentado algún comportamiento deseable o indeseable, el registro estadístico de los datos puede aportar en la toma de decisiones futuras. \label{OI3}
+\end{enumerate}
+
+Finalmente y de forma iterativa, se debe verificar que haya alimento suficiente para un próximo grupo que ingrese al área de alimentación.\\
+
+Como ayuda gráfica para abstraer el sistema, se considera el siguiente diagrama de actividades general mostrado en la Figura \ref{dblockspng}:
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.85]{img/dblocksg.png}
+	\end{center}
+	\caption{Diagrama de actividades general. \label{dblockspng}}
+\end{figure}
+
+Del diagrama se puede describir lo siguiente:
+
+\begin{itemize}
+	\item Para la verificación y validación del alimento se pueden utilizar sensores de presencia que indiquen la existencia (o no) de alimento suficiente.
+	\item Para la ``Pre-identificación'', se puede hacer uso de los dispositivos RFID mencionados en la sección \ref{concepadic} y atendiendo a la OI \#\ref{OI1}. %%% Tek -> Observación Resuelta
+	\item Para la ``Dosificación'' del alimento se requiere de hardware, sensores y actuadores electrónicos y/o electromecánicos.
+	\item Para el registro de los datos se puede hacer uso de la etapa de ``Pre-identificación'' y asociar bases de datos a estos dispositivos de reconocimiento para que se actualicen los datos de manera inequívoca.
+% 	\item C.I. hace referencia a las condiciones iniciales necesarias para ejecutar las actividades.
+\end{itemize}
+
+Con base en lo anterior, se puede relacionar la iteración diaria del proceso de engorde mediante un sistema prototipo segmentado en 4 subsistemas principales  que son descritos a continuación:
+
+\begin{itemize}
+    \item ``Identificación'': Subsistema para la identificación del ganado.
+    \item ``Estructura mecánica'': Composición física y mecánica del sistema prototipo.
+    \item ``Hardware'': Medición de variables de interés y manejo de actuadores.
+    \item ``Procesamiento de datos'': Tratamiento de los datos obtenidos.
+\end{itemize}
+
+% Observación añadida Post Sustentación el día 29 DE Julio de 2020 por comentarios del Jurado Carlos Lozano
+\textit{\textbf{Anotación complementaria: }} En secciones posteriores se muestran análisis y selección de alternativas para cada uno de los subsistemas (si aplica), mediante el uso de matrices de selección como las Tablas \ref{matrizid}, \ref{matrizactpng} y \ref{matrizmotor}. Los valores enteros de los pesos (1 a 5) y la ponderación de los valores allí registrados dependen de las siguientes consideraciones:
+
+\begin{itemize}
+    \item Criterio personal: Algunas alternativas requieren de experiencia en el manejo de otras ciencias aplicadas como la mecánica o la agropecuaria, por lo que dado el caso, los pesos asignados para la Tabla \ref{matrizactpng} dependerán de las capacidades, herramientas, recursos económicos, recursos humanos y criterios propios del estudiante autor de este proyecto de grado.
+    \item Criterio comercial: Las alternativas planteadas están sujetas a costos que pueden ser altos o bajos por lo que se considera de manera personal la capacidad económica del estudiante para la selección de una alternativa sobre otra.
+    \item Criterio económico: Las alternativas están sujetas a precios variables según su funcionalidad, calidad y cantidad. Estos gastos serán suplidos acorde a las capacidades económicas del estudiante, por lo tanto es éste quien puede escoger las alternativas que mejor se acomoden a su presupuesto.
+    \item Consideraciones convencionales: Algunas alternativas pueden poseer características que las hagan aparentemente más útiles que otras, no obstante se busca una simplificación de elementos comerciales, electrónicos y mecánicos, por lo que para la Tabla \ref{matrizmotorpng}, la asignación de los pesos se ve influenciada por la simplicidad de mantenimiento y uso de una alternativa sobre otra.
+    \item Criterios comparativos: Las alternativas están sujetas a comparaciones entre las mismas, se tiene en cuenta su complejidad, sus características y su implementación por parte del autor del proyecto.
+    \item Alternativas que se alejan de dichas condiciones serán atribuidas con pesos bajos (1) y aquellas que se acerquen o mejoren dichas condiciones serán atribuidas de pesos altos (5).
+\end{itemize}
+
+Con base en lo anterior, un valor de 1 será asignado para alternativas que se consideren como poco viables, malas, o no apropiadas. De manera análoga, un valor de 5 será asignado para alternativas que sean consideradas apropiadas. Todo esto con respecto a estos y demás criterios de selección mencionados más adelante.
+
+% \pagebreak
+
+\input{docs/subsisid}
+\input{docs/subsishw}
+\input{docs/subsissen}
+\input{docs/subsisdata}
+%
+%
+%establece el siguiente diagrama funcional del sistema (Ver Figura \ref{dfuncpng}):
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[scale=0.8]{img/dfunc.png}
+%	\end{center}
+%	\caption{Diagrama Funcional del sistema. \label{dfuncpng}}
+%\end{figure}
+%	 

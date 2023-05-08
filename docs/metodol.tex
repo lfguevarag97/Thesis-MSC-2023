@@ -1,0 +1,122 @@
+\section{Metodología de trabajo propuesta}
+Este trabajo consiste principalmente en la recolección de datos que posteriormente deben pasar por distintas etapas tales como analisis, organización, clasificación y, en algunos casos, normalización. Una vez se haya logrado el entendimiento de los datos se procede a establecer una serie de funciones matemáticas de estimación y/o regresión, y posteriormente un modelo dinámico mediante ecuaciones diferenciales. Finalmente este modelo deberá ser evaluado en pro verificar si éste puede estimar variables de manera apropiada.\\
+
+Teniendo en cuenta las etapas principales anteriormente mencionadas, y teniendo en consideración la literatura disponible para proyectos de este tipo; se considera plausible proponer una adaptación de la metodología CRISP-DM, a los intereses del proyecto. 
+%La metodología CRISP-DM es descrita a continuación:
+
+
+\section{Metodología CRISP-DM}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.50]{img/ciclocrisp.jpg}
+    \caption{Ciclo de Vida de minería de datos. Tomada de \cite{ibmcrisp}.}
+    \label{ciclocrisp}
+\end{figure}
+
+
+La metodología CRISP-DM, por sus siglas en Inglés, Cross Industry Standar Process for Data Mining, propone un método probado para orientar trabajos de minería de datos. Puede ser abarcada de 2 maneras; como proceso, ofreciendo un resumen del ciclo vital de la minería de datos; y como una metodología, en la que se incluye descripciones de las fases normales de un proyecto, incluyendo las tareas necesarias de cada etapa y una explicación inter-relacional entre las tareas \cite{ibmcrisp}.\\
+
+
+Una de las características de esta metodología es su flexibilidad y personalización de un modelo de minería de datos que se adapte a las necesidades del proyecto. Esta metodología cuenta con un ciclo de vida compuesto por 6 fases o etapas no necesariamente secuenciales; y es en estas etapas donde se indican las dependencias más importantes y frecuentes entre las fases \cite{ibmcrisp}.
+
+
+
+Tal y como se observa en la figura \ref{ciclocrisp}, las etapas de la metodología son:
+
+
+
+
+
+\subsection{Business Understanding / Entendimiento del negocio} 
+Esta primera etapa consiste principalmente en obtener la máxima cantidad de información posible de los objetivos comerciales. De esta forma se puede identificar de manera clara los objetivos, metas, problemas, y recursos con los que se cuentan para realizar el estudio. La metodología sugiere la recopilación de información sobre la situación comercial actual, los recursos personales, materiales e intangibles. Por otra parte se debe tener claro conocimiento de la estructura de la empresa, patrocinadores internos o externos y unidades comerciales que se verán afectadas positiva o negativamente tras la realización del proyecto de minería de datos \cite{ibmcrisp}.
+
+\subsection{Data Understanding / Entendimiento de los datos}
+Esta etapa implica estudiar más de cerca los datos disponibles de minería. Esto es un paso imprescindible para evitar problemas inesperados durante la fase de preparación de datos pues suele ser la más larga en los proyectos \cite{ibmcrisp}.\\
+
+En esta etapa se busca acceder a los datos, explorarlos mediante tablas, gráficos o análisis estadísticos. De esta forma se podrá determinar la calidad de los datos y describir resultados en la documentación del proyecto.
+
+En este punto de la metodología se puede catalogar los datos de 3 maneras distintas
+\begin{itemize}
+    \item Datos existentes: registros, transacciones, encuesta, registro web, entre otros
+    \item Datos adquiridos: Datos adicionales que pueden ser, o no, necesario incluirlos.
+    \item Datos adicionales:Datos complementarios si los requiere
+\end{itemize}
+Con base en lo anterior y con las delimitaciones de la seccion \ref{limites}, se puede establecer que para este proyecto se trabajará principalmente con los datos existentes.
+
+También es importante realizar una descripción detallada de los datos, ya sea en cantidad o calidad; tipos de valores, ya sean numéricos, categóricos o booleanos; esquemas de codificación
+
+\subsection{Data Preparation / Preparación de los datos}
+La preparación de datos es uno de los aspectos mas importantes pues se busca que los datos cuenten con una estructura indicada para que los modelos que se propongan pueden satisfacer las necesidades para los que son propuestos. Es posible que para llevar a cabo esta etapa se deba realizar una combinación o agrupación de datos o registros, realizar una selección de muestra de un subconjunto de datos, agregación de registros, clasificación de datos para el modelado, eliminación y/o sustitución de valores en blanco o perdidos, ó la división en conjuntos de datos de prueba, entrenamiento o evaluación \cite{ibmcrisp}.\\
+
+En cuanto a la selección de datos, es necesario que los datos sean relevantes por lo que se pueden seleccionar datos basados en la selección de elementos (filas de registros) o en la selección de atributos (columnas o características). Posteriormente a esto se debe realizar una limpieza de datos en donde se debe tratar con datos perdidos o en blanco, meta datos erróneos o perdidos, incoherencias y errores de datos, en cuyo caso deben ser corregidos \cite{ibmcrisp}.
+
+\subsubsection{Método de ajuste no lineal: Levenberg-Marquardt (LM)}
+
+Si un modelo es lineal en sus parámetros, el objetivo de mínimos cuadrados es cuadrático en los parámetros. Este objetivo puede minimizarse con respecto a los parámetros en un solo paso mediante la solución de una ecuación matricial lineal. Si la función de ajuste no es lineal en sus parámetros, el problema de mínimos cuadrados requiere un algoritmo de solución iterativo. Dichos algoritmos reducen la suma de los cuadrados de los errores entre la función del modelo y los puntos de datos a través de una secuencia de actualizaciones bien elegidas de los valores de los parámetros del modelo \cite{levenberduke}.\\
+
+Siguiendo el método de Gauss-Newton, la suma de los errores al cuadrado se reduce asumiendo que la función de mínimos cuadrados es localmente cuadrática en los parámetros y encontrando el mínimo de esta cuadrática.Esta medida de bondad de ajuste con valores escalares se denomina criterio de error de chi-cuadrado ($\chi^{2}$), porque la suma de los cuadrados de las variables aleatorias normalmente distribuidas se distribuye como la distribución de ($\chi^{2}$). Si la función y es no lineal en los parámetros del modelo, entonces la minimización de con respecto a los parámetros debe realizarse de forma iterativa \cite{levenberduke}. \\
+
+El ajuste de curvas es un proceso que se utiliza para encontrar una función matemática que mejor se ajuste a un conjunto de datos experimentales. Una de las técnicas más populares para el ajuste de curvas es el método de Levenberg-Marquardt, que es una combinación de los métodos de Gauss-Newton y el método del gradiente conjugado \cite{levenberduke}. El método de LM es muy eficiente en la resolución de problemas de ajuste de curvas no lineales, y es ampliamente utilizado en diversas áreas de la ciencia y la ingeniería, incluyendo la física, la química, la biología, la economía y la ingeniería.\\
+
+
+En términos generales, el método de LM minimiza la función de error cuadrático entre los datos experimentales y el modelo teórico. Este método se basa en un enfoque iterativo que comienza con una estimación inicial de los parámetros de la función de ajuste y se ajusta sucesivamente hasta que se alcanza una solución que minimiza la función de error cuadrático. El método de LM utiliza una matriz jacobiana para calcular la dirección del gradiente y la tasa de aprendizaje de cada paso iterativo. La matriz jacobiana se utiliza para calcular la dirección del gradiente y la tasa de aprendizaje de cada paso iterativo. Si la tasa de aprendizaje es grande, el método funciona como el método del gradiente conjugado. Si la tasa de aprendizaje es pequeña, el método funciona como el método de Gauss-Newton. Por lo tanto, el método de Levenberg-Marquardt es una combinación de ambos métodos \cite{levenberduke}.\\
+
+
+% \subsubsection{Método de ajuste: Efectos mixtos}
+\subsubsection{Método de ajuste no lineal: Efectos mixtos (ME)}
+
+Otro de los métodos de ajuste más utilizados para el análisis individualizado de múltiples objetivos dependientes del tiempo es el ajuste por efectos mixtos lineales y no lineales. Estos modelos de efectos mixtos se basan en un modelo generalizado para describir poblaciones aún cuando los parámetros de crecimiento del modelo pueden ser únicos para los sujetos de estudio \cite{mixedShelley}. En estos modelos, se pueden incorporar tanto efectos fijos como aleatorios, lo que permite tener en cuenta tanto la variabilidad entre individuos como la variabilidad dentro de cada individuo en el tiempo. Para este método, agregar efectos aleatorios a un modelo extiende la confiabilidad de las inferencias más allá de la muestra específica de individuos. \\
+
+Por definición, se puede establecer la respuesta al modelo de efectos mixtos como:
+
+\begin{equation}
+    y_{ij} = f(\varphi,x_{ij}) + \varepsilon_{ij}
+\end{equation}
+\begin{equation}
+    \varphi = \beta + b_{i}
+\end{equation}
+
+Donde $x_{ij}$, es un vector de predictores, $\varphi$, es un vector de parámetros del modelo, $\varepsilon$, es un error asociado a la medición o al proceso de toma de datos y j es el numero de observaciones existentes en un grupo i. $\varphi$ usualmente es un modelo resultante de la combinación de efectos aleatorios $b_{i}$, que son usualmente descritos como multivariados normalmente distribuidos con media 0. Es importante mencionar que los errores son usualmente asumidos como independientes, idéntica y normalmente distribuidos con varianza constante \cite{matlabmixed}.\\
+
+Los modelos de efectos mixtos tienen en cuenta tanto los efectos fijos como los aleatorios. Así como todos los modelos de regresión, su propósito es describir una variable de respuesta en función de las variables predictoras; sin embargo, los modelos de efectos mixtos reconocen las correlaciones dentro de los subgrupos de muestra. %(no aplicable para este caso pues no los sujetos de estudio son las reses individuales y no hay subgrupos).
+De esta manera, proporcionan un compromiso entre ignorar los grupos de datos por completo y ajustar cada grupo con un modelo separado \cite{matlabmixed}. 
+
+
+
+
+\subsection{Modelling / Modelado} 
+
+Este es el punto donde los datos preparados pueden incorporarse a las herramientas analíticas y cuyos resultados podrán arrojar primeros resultados deseados respecto al problema planteado en la comprensión del negocio. El modelado se suele ejecutar en múltiples iteraciones. Normalmente, los analistas de datos ejecutan varios modelos utilizando los parámetros predeterminados y ajustan los parámetros o vuelven a la fase de preparación de datos para las manipulaciones necesarias por su modelo.
+
+Es necesario que el modelo sea acorde a los tipos de datos disponibles, a los objetivos y patrones, y a los requisitos específicos de modelado como por ejemplo si se busca que los resultados sean fácilmente presentables.\\
+
+En cuanto a la generación de los modelos es necesario dedicar el tiempo suficiente para experimentar con distintos modelos antes de llegar a conclusiones definitivas. Estos modelos pueden ofrecer resultados interesantes en cuanto a interpretaciones y conclusiones. También puede realizarse una comparativa de modelos antes de integrarlos o desplegarlos. Para registrar el proceso con una amplia variedad de modelos es necesario asegurarse de registrar los cambios que se realicen en cada modelo en pro de corroborar y/o analizar los resultados cuando sea necesario.
+
+Al final de esta etapa se dispondrá de 3 tipos de información que pueden ser usados para la toma de decisiones posteriores; estos datos son: 
+\begin{enumerate}
+    \item Configuración de parámetros donde se incluyen las notas que se han tomado sobre los parámetros que ofrecen mejores resultados.
+    \item Los modelos producidos.
+    \item Las descripciones de resultados de los modelos, incluyendo resultados asociados a problemas con los datos, rendimiento y exploración de resultados
+\end{enumerate}
+
+\subsubsection{Modelamiento por Ecuaciones Diferenciales Ordinarias (EDOs)}
+\subsubsection{Modelamiento EDO: Balance de energía}
+
+
+\subsection{Evaluation and Assesment / Evaluación} 
+
+En este punto, se habrá completado la mayor parte del proyecto. También se habrá determinado, en la fase de modelado, que los modelos son técnicamente correctos y efectivos en función de los objetivos que se han definido previamente. Esta etapa de la metodología produce 2 tipos de resultados: \begin{itemize}
+    \item Los modelos finales seleccionados en la fase anterior de CRISP-DM.
+    \item Las conclusiones o interferencias obtenidas de los modelos y del proceso de minería de datos; recibiendo el nombre de \textit{\textbf{descubrimientos}}.
+\end{itemize}
+
+Es en esta etapa donde se debe verificar si los resultados se expresan con claridad y de forma que se pueden representar con facilidad; si se han realizado descubrimientos especiales o particularidades que se deban resaltar; y si los resultados se adaptan a los objetivos del proyecto. Una vez haya evaluado los resultados, es recomendable realizar una lista de el (los) modelo(s) aprobado(s) para incluir en el informe final.
+
+
+\subsection{Deployment / Despliegue} 
+En general, la fase de despliegue de CRISP-DM incluye dos tipos de actividades:
+\begin{itemize}
+    \item Planificación y control del despliegue de los resultados
+    \item Finalización de tareas de presentación como la producción de un informe final y la revisión del proyecto
+\end{itemize}

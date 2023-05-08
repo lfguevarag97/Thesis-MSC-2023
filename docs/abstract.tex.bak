@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESUMEN <==>  ABSTRACT	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Resumen de la propuesta. (1/2 página). \\
+
+% Este es el que presenté a la facultad%%%%%%%%%%%%%%%%%%%%%%%
+%En este documento se propone el desarrollo de algoritmos de detección de deformaciones en la infraestructura vial, enfocado en el sector de la gestión de pavimentos y transporte; con el objetivo de identificar fallas cuantitativamente para poder así, maximizar el bienestar social y al mismo tiempo disminuir la incertidumbre asociada a la inversión mediante la internalizaci\'on de problemas de la infraestructura vial.\\
+%%%=====================================================================%%%%%%%%%%%%%%%%%%%%
+
+In recent years, the agricultural sector has taken great importance in Latin America and the rest of the world, especially because the world's population increase has caused high consumption of food quantitatively and qualitatively. Although Colombia has a great productive and highly competitive potential in this sector, there are still many producers who perform most of their tasks manually, without the help of technology as a support tool in their daily activities. The taking, recording, manipulating and representating data manually means a great waste in terms of human, economic resources, work material and time, for which a helping tool is proposed in the monitoring and analysis of data particularly in the productive sector of beef cattle. \\
+
+The system developed for this project is called \textit{EndlessID}, designed for livestock farms in the municipality of Sotara-Cauca but adaptable for other livestock sectors in the country.
+It is composed of the interconnected work of different electronic and electromechanical devices that work together so that the system is able to record data automatically in physical databases or in cloud, which serve to monitor the feeding process of cattle, belonging to the stabled cattle that is in the stage of fattening in the productive cycle of the meat, in a farm of a livestock producer.
+
+The obtaining of this data is achieved through a complementary process of dosing and sensing that starts from the verification of enough food to supply the needs of the stabled cattle, followed by the identification of the heads of cattle through a radiofrequency identification device associated with each animal, with which it will be possible to keep a recording and monitoring of data independently, proceeding from the dosage of the food from the storage tank to the food plate then later weigh the animal and record the data obtained immediately, reducing thus, human faults by registration and erroneous manipulation of data. \\\\
+%%% This project consists in the development of a low-cost automatic system for specialized and intensive feeding of stabled cattle involved in Cattle raising meat productive cycle, that is, bulls in process of fattening or Ceba.
+%%%The system is considered as a helping tool for Meat producers that have data acquisition and manipulation flaws in their daily activities. Furthermore, cattle raisers from the municipallity of Sotara-Cauca, are considered as potentially users, because they practice this type of farming and they are easy access for the developer of this project.\\
+%%%
+%%%The system, developed in Arduino platform can, with help of wide variety of electronic and mechanical devices (Weight, presence and/or detecction, RFID, level, servomotors, load cells, among others); obtain  relevant information used to monitor the respective feeding process of each beast, particularly and independent from others, through data acquisition and registration in physical or Cloud databases. This means that stored data can be used to project and analyze weight behaviours that help in decision making on if a particular bovine presents difficulties in its growth of weigth or if it has reached an ideal weight to be turned into meat for human consumption.\\
+%%%
+%%%
+%%%The system is divided in 2 main parts, the first one covers bovine identification and it's respective food dosification, the second part covers data acquisition of each bull, which will be registered in the database(s).\\
+%%%For the dosification mechanism, SolidWorks was used, and specialized software for high graphic processing  in which 3D models of an endless screw with its axis, step and number of propellers was designed, as well as its  assembly by connecting 2 female parts that comform the entire piece. This software facilitated that the endless screw manufacturing would be less expensive and more precise than with manual manufacturing.\\
+%%%
+%%%In regards of some physical parts for food dosification, models simulated in SolidWorks were used, and then printed in a 3D printer from CAP at Pontificia Universidad Javeriana, with  PLA 1.75mm biodegradable material. Other parts that conform the system were, as well as the mentioned above, designed in SolidWorks and were manufatured manually or bought with similar comercial products i.e the PVC pipes.\\
+
+
+{\bf Keywords}: Cloud Storage, Databases, Ceba productive cycle, Wireless communication, Dosage, Stabling, Meat cattle raising, Weight and growth rate, RFID reader, Jaquima RFID, SIM800L.

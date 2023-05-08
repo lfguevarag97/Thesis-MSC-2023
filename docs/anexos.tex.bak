@@ -1,0 +1,25 @@
+%A continuación se presentan los anexos del proyecto:
+%\begin{itemize}
+%	\item Consideraciones para presupuesto del proyecto:
+		\begin{figure}
+			\begin{center}
+				\includegraphics{img/consideraciones2.png}
+			\end{center}
+			\caption{Consideraciones para el presupuesto \label{tabconsideraciones}}
+		\end{figure}
+%	\item Presupuesto del proyecto:
+		\begin{figure}
+			\begin{center}
+				\includegraphics{img/presuTot.png}
+			\end{center}
+			\caption{Presupuesto \label{tabpresupuesto}}
+		\end{figure}
+%	\item Cronograma del proyecto:
+		\begin{figure}
+			\begin{center}
+				\includegraphics{img/cronopng4_5.png}
+%				\includegraphics{img/cronopng2.png} %este es el que tiene colores mas oscuro po si no se ve bien el otro
+			\end{center}
+			\caption{Cronograma del proyecto. \label{cronograma}}
+		\end{figure}
+%\end{itemize} 

@@ -1,0 +1,134 @@
+                   
+\documentclass[11pt,twoside]{docs/thesis}
+%\documentclass[tikz]{standalone}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{makeidx}
+\usepackage{graphics}
+\usepackage[spanish]{babel}
+%\usepackage{translator}
+
+
+\usepackage{datetime}
+\yyyymmdddate
+\usepackage{pdflscape} % provides the landscape environment
+\usepackage{ragged2e} % provides \RaggedLeft
+
+%%%%%%%%%%%%%%%%
+% TITULO DEL PROYECTO
+%%%%%%%%%%%%%%%%
+%\titulo{T\'itulo del Trabajo de Grado}
+
+\titulo{Diseño de sistema automático de monitoreo alimenticio de bajo costo para productores ganaderos de reses estabuladas en proceso de ceba} 
+
+
+%%%\titulo{Diseño de sistema automático de monitoreo alimenticio de bajo costo para productores ganaderos de reses estabuladas en proceso de ceba en el municipio de Cajibío - Cauca}
+
+
+%Para TAMURA: 
+%%%%%%%
+% AUTOR(ES)
+%%%%%%%
+%\autorA{COD}{Primer Autor}
+\autorA{2117293}{Luis Felipe Guevara Gómez}
+%\autorB{COD}{Segundo Autor} %Opcional
+
+%%%%%%%
+% FECHA DE ENTREGA
+%%%%%%%
+
+\fecha{\today}
+
+%%%%%%%%%%%%%%%%%
+% DIRECTOR DEL PROYECTO
+% DIRECTOR DE CARRERA
+%%%%%%%%%%%%%%%%%
+
+%\directorproyecto{Dr.}{Nombre del Director}
+\directorproyecto{Dr.}{Eugenio Tamura Morimitsu}
+%\codirectorproyecto{Dr.}{Luis Fernando Macea Mercado}
+\directorcarrera{Dr.}{Eugenio Tamura Morimitsu}
+
+\include{docs/format}
+\makeindex
+
+
+
+\begin{document}
+
+%\renewcommand{\dateseparator}{-} 
+%\yyyymmdddate
+%\today
+\maketitle
+\makecoverletter
+
+%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+%%%%%%%%%%%%%%%%%%
+\chapter*{Agradecimientos} \input{docs/agradecimientos}
+\chapter*{Glosario} \input{docs/glosario}
+\chapter*{Resumen}  \input{docs/resumen}
+\chapter*{Abstract} \input{docs/abstract}
+
+%%%%%%%%%%%%%%%%%
+%%%% TABLE OF CONTENTS
+%%%% AND PREABLE
+%%%%%%%%%%%%%%%%%
+  
+  
+\tableofcontents  % ==================>    ESTE ES EL INDICE GENERAL     <=======================
+\listoffigures 	  % ==================>    ESTE ES EL INDICE DE FIGURAS  <=======================
+\listoftables     % ==================>    ESTE ES EL INDICE DE TABLAS   <=======================
+\mainmatter       % ==================>    ESTE NO SE QUE ES...     <=======================
+
+
+\dominitoc
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%
+% INTRODUCCION
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introducci\'on}
+
+\input{docs/introduccion.tex}
+
+\chapter{Visión global del sistema}
+
+\input{docs/visionglobal.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% DESCRIPCION DEL PROBLEMA
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Descripci\'on del Problema}
+
+\input{docs/descripcion.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% DESARROLLO DEL PROYECTO
+%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Desarrollo del Proyecto} 
+\input{docs/desarrollo.tex}
+
+%\chapter*{Anexos} \label{anexus}
+% \input{docs/anexos}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{plain}
+\bibliography{docs/biblio}
+
+%%%%%%%%%%%%%%%%
+% GENERAL INDEX
+%%%%%%%%%%%%%%%%
+
+\printindex
+
+\end{document}
+
+%\endinput

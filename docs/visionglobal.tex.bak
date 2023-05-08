@@ -1,0 +1,933 @@
+%%%%%%%%%%%%%%%%%%%%%%
+% DESCRIPCION DEL PROBLEMA
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+En este capitulo se describe parte del contexto ganadero actual de cárnicos en Colombia y el Cauca y algunas de las caracter\'isticas principales relacionadas al proceso de ceba en ganado vacuno. Estos temas sirven como base conceptual para comprender el análisis y dise\~no empleados en este proyecto.
+
+%En este capitulo se explica el contexto ganadero actual y algunas de las características principales relacionadas al proceso de ceba.(Esto estaba antes del 15 de Agsoto de 2019 que hice los cambios en bOSCH)
+
+%El titulo debe ser algo como Contexto general de la ganaderia de carne
+
+%Tengo que agregar algo como otro capitulo de solo lo del tornillo (creo que alcanza) o sino agregarlo a lo de ELECTRÜONICA EN EL AGRO y combinar ese capitulo y PONERLE OTRO NOMBRE.
+
+
+\section{Generalidades agropecuarias} \label{tgan}
+%\section{Visi\'on global} \label{tgan}
+%\section{Contexto ganadero en Colombia} \label{tgan}
+
+%ESTO SE BORRA-> Explicar el CONTEXTO, s\'intomas y causas del problema a resolver. (1.5 p\'aginas).EXPLICAR QUE VOY A HACER \\ \\
+
+
+La fortaleza principal del sector primario colombiano radica en la producci\'on de recursos de la naturaleza. Esto se refiere a las actividades econ\'omicas en relaci\'on a los procesos de producci\'on en el sector agropecuario. Este sector abarca el conjunto de t\'ecnicas y las acciones que permiten trabajar y cultivar la tierra para producir materias primas as\'i como tambi\'en la
+producci\'on de recursos de la ganader\'ia.
+
+Por su parte, El sector ganadero alude a los diferentes tipos de ganado de una zona y a las actividades que se emplean para criar y comercializar a estos animales y a los productos derivados de estos. En colombia se pr\'actica diferentes modalidades de ganaderia con base en el tipo de ganado de enfoque tales como:\\
+
+\begin{itemize}
+\item Bovinos ó Vacunos
+\item Equinos
+\item Mulares y asnales
+\item Ovinos
+\item Porcinos\\
+\end{itemize}
+
+De igual forma, estos tipos de ganado son trabajados con diferentes designaciones, entre las cuales se pueden mencionar:\\
+
+\begin{itemize}
+\item Crianza y material reproductivo: Tiene como objetivo la reproducc\'on de ganado mediante el cruce de individuos con las mejores caracteristicas biologicas para mejorar as\'i la genetica de los individuos. Los mejores ejemplares son comercializados como material reproductivo y producción de leche dependiendo de su sexo (macho y hembra respectivamente), y los demas ejemplares pasan a ser parte de la ganader\'ia de la carne.
+\item Producci\'on de leche y derivados: Como su nombre lo indica, es el ganado designado para orde\~no
+\item Producci\'on de carne: Encaminado a la producci\'on cuantitativa y cualitativa de carne.
+\end{itemize}
+
+\subsection{Caracteres zoot\'ecnicos del ganado vacuno}
+
+La destinaci\'on del ganado vacuno para producci\'on de leche, material reproductivo o engorde depende de algunos factores fisionomicos y biologicos. Por ello se hace menci\'on de estos atributos a continuaci\'on:
+
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.9]{img/dibujito1.png}
+ \end{center}
+ \caption{Mecanismo de Compuerta Rotativa.}
+\end{figure}
+
+\subsubsection{Clasificaci\'on vacuna por aptitud productiva}
+\begin{itemize}
+\item \textbf{Lechero:} (Cabe resaltar que un requerimiento o propiedad fisionomica b\'asica es que posean ubre, esto quiere decir solo las hembras pueden hacer parte de esta aptitud productiva). Poseen formaci\'on triangular, cuentan con cuerpo y extremidades largas y delgadas con poca voluminosidad cárnica
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.9]{img/dibujito2.png}
+ \end{center}
+ \caption{Aptitud lechera. }
+\end{figure}
+\item \textbf{Carne:} Poseen una contextura rectangular. Adem\'as de poseer un cuerpo ancho con sus extremidades bien dotadas de carne.
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.9]{img/dibujito3.png}
+ \end{center}
+ \caption{Aptitud de tipo carne.}
+\end{figure}
+\item \textbf{Doble prop\'osito:} Cuentan con propiedades mixtas de los 2 tipos ya mencionados, por lo que tanto su contextura, como volumen carnico, ubre y extremidades son medianas. Este tipo de animales poseen una mayor facilidad en la adaptaci\'on del clima, alimentaci\'on y manejo. 
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.9]{img/dibujito4.png}
+ \end{center}
+ \caption{Aptitud de doble prop\'osito. \label{}}
+\end{figure}
+\end{itemize}
+
+A modo general y para el desarrollo de este trabajo desde este punto en adelante, se decide describir mas a fondo el ganado vacuno y enfocarse en describir de manera mas profunda la ganaderia de la Carne.\\
+
+
+
+
+
+%El sector ganadero abarca diferentes especies de ganado tales como, los bovinos, los ovinos, los porcinos, entre otros. En Colombia se tiene una alta presencia de producción de estos tipos especialmente en el ganado bovino y ovino. De igual forma, estos tipos de ganado tienen diferentes modalidades, entre las cuales se pueden mencionar el ganado para crianza, para producción de leches y sus derivados, y ganadería de la carne.
+ 
+
+Debido a que el ciclo productivo de la carne consta de diferentes etapas con diferentes requerimientos, necesidades y cantidad de áreas verdes, se considera aportar el diseño de un sistema que pueda simplificar  tareas de obtención de datos y gastos por mano de obra en cultivos de reses destinados al engorde, los cuales pueden desempeñarse en espacios cerrados como establos, dando paso al monitoreo por condiciones de estabulación, en donde se garantiza el suministro de forraje verde, minerales, vitaminas y dietas específicas para el ganado y adaptándose a espacios cercanos a la casa matriz de administración de los productores \cite{contextoganadero}.\\\\
+
+En el Cauca, aunque se cuente con bastas hectáreas de diferentes fertilidades y condiciones térmicas apropiadas para el cultivo y desarrollo de la ganadería, se presentan muchas falencias en materia tecnológica y económica, en donde los movimientos migratorios de campesinos desplazados y los efectos colaterales del conflicto armado que se ha presentado en el país, son las principales causas de estas falencias. Sin embargo, el emprendimiento de los pequeños y medianos productores da paso a nuevas oportunidades de intervención por parte de la Ingeniería electrónica y el manejo aplicativo de nuevas tecnologías que permitan tener un contacto más cercano con la población campesina. \\
+
+
+%En Colombia y el mundo se presentan constantes inversiones en materia tecnológica para mejorar la forma en cómo el ganado es productivo y puede participar de forma competitiva en un mercado de consumo de calidad.\\
+
+%El manejo de software sofisticado y maquinaria industrial puede presuponer brechas para con los usuarios campesinos debido a la falta de capacitación técnica o por la complejidad de uso de los programas para el manejo de datos. Sin embargo, el desarrollo de nuevas tecnologías ha dado paso a una era digital con la que se espera lograr avances significativos. Como se menciona en \cite{minagricultura}, \cite{ashby} y \cite{fao} la inclusión de las ciencias y la formación de entidades de apoyo al sector agrario pueden aportar significativamente al desempeño de los  cultivos ganaderos. 
+%Como alternativa a facilitar al usuario software o herramientas más amigables se plantea el manejo de microprocesadores y microcontroladores como Arduino o Rasperry Pi \cite{arduinodef}. Estos dispositivos son fácilmente re-programables y pueden adaptarse no solo a las necesidades de pequeños productores ganaderos sino también al uso por parte de grandes cultivadores del ganado de la carne.\\
+
+
+%Mediante la posibilidad de acceder a los datos de manera remota mediante las redes de Internet y datos, y estableciendo un sistema automático de suministro y supervisión alimenticio, se espera reducir gastos por transporte, personal de seguimiento y tiempo  y claridad en el registro de datos dando así, paso para que estos tiempos y recursos puedan ser redistribuidos en otras o nuevas tareas del productor ganadero.
+
+
+Lo anterior se diseña y se plantea acorde con el manual de Buenas Prácticas de Ganadería  (BPG) y con las legislaciones pertinentes al manejo de alimentos para el consumo humano establecidas por la ley colombiana mencionados en la sección \ref{leyes}.
+
+
+
+%%%%%%%%JUSTIFICACION%%%%%%%%
+
+%%%La ganadería de la carne supone un ambiente apropiado para que los animales en cuestión puedan sacar provecho de sus  cualidades genéticas y puedan producir los mejores productos en cuestión de calidad. Para ello, el cultivo de la carne debe ser debida y minuciosamente realizado lo que supone un constante trabajo de inspección tanto de la alimentación del ganado así como también del registro apropiado de los datos de seguimiento determinados por el ganadero y los intereses del mercado.
+%%%Sin embargo, las fincas y los terrenos destinados para estabular el ganado suelen encontrarse en recintos separados lo que implica a los productores tener un constante transporte de bienes y recursos tanto físicos como personales, lo que conlleva a gastos de recursos en transporte y contratación de personal. Además se debe llevar un registro de las especificaciones alimenticias y dietarías de cada res con lo que se presuponen grandes tareas de registro de actividades y datos primarios sobre el proceso evolutivo de la alimentación del ganado. No obstante, estas tareas de registro son realizadas de manera general abarcando el comportamiento general del ganado alimentado y en ocasiones se presentan casos en donde se distribuye de manera desorganizada conjunta del alimento dietario, ocasionando que algunas reses puedan abastecerse de dietas más desproporcionadas que otras lo que conlleva de comportamientos en peso irregulares o poco deseados para los intereses de los productores.
+%%%
+%%%En este trabajo se propone un alimentador automático de bajo costo para reses en proceso de engorde o ceba que permita, mediante sensores de peso, suministrar una cantidad de alimento de manera automática para cada res, en horarios del día preestablecidos por el productor ganadero y cuya ración será respectiva a la dieta de cada animal basada en los intereses del propietario. Las reses estarían identificadas por un número ID unido directa o indirectamente a sus cuerpos con lo cual se supervisa cada bovino por separado generando un historial alimenticio en la nube para cada individuo. Este historial permitiría organizar de manera sistemática el proceso evolutivo de la alimentación de una res específica sin prestaciones a errores humanos por registro indebido o erróneo.
+%%%Por medio de este alimentador se generaría un historial alimenticio de cada bovino que permitiría registrar la cantidad de porciones suministradas periódicamente, además de verificar, con sensores de presencia o detección,  si éste ha ingerido su alimento o no con lo cual se podrá identificar aquellas cabezas de ganado que estarían presentando desordenes alimenticios que vayan en contra de los intereses del productor. Esto aportaría significativamente a un distribución más sistemática  y eficiente del alimento del ganado.\\
+%%%
+%%%Entre los datos fijos de cada historial se tendría registro de su Nombre, RFID, Sexo, Raza, Peso y Edad inicial, Peso y Edad final; y como datos de monitoreo se tendría registro diario peso, edad, peso máximo alcanzado, si ha alcanzado o no un peso ideal y su evolución del peso para verificar si está obteniendo un crecimiento positivo, o en caso contrario, proceder con la toma de decisiones respecto al sujeto en cuestión tales como su posible venta, tratamiento, o venta temprana, entre otros.
+%%%
+%%%Al estar identificados con un número ID propio e independiente, mediante un sensor RFID, se ayuda a que el alimento se suministre al individuo correcto y que no se presentan casos en los que se suministren porciones repetidas en una misma franja horaria. Una vez el animal se encuentre en la zona de alimentación, estos serán pesados con el objetivo de hacer seguimiento del crecimiento de peso y verificar que esté cumpliendo con la tasa de crecimiento fijada por el productor y en caso de alcanzar un peso máximo preestablecido o presentar disminución de peso hacer la respectiva notificación y observación en la nube para la toma de decisiones futuras.\\
+%%%
+%%%Por último el sistema verifica la cantidad neta de alimento suministrado y dará aviso preventivo, mediante un recordatorio o una alarma al personal encargado notificando si el alimento está próximo a acabarse.
+%%%Es importante resaltar que este sistema se realiza con herramientas y sensores de bajo costo de Arduino.\\
+
+
+%%%%%%%%%%%%%%%%%%
+
+\subsection{Ciclo productivo de la carne}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.75]{img/ganadcarne2.png}
+\end{center}
+\caption{Ganadería de carne. \label{ganadcarnepng}}
+\end{figure}
+
+ 
+El ciclo productivo de la carne (Ver Figura \ref{ganadcarnepng})  de un ganado destinado para tal fin consta de 3 etapas principales que abarcan desde el nacimiento de la cría, su desarrollo y crecimiento y finalizando con su comercializaci\'on en el momento en que alacanza las condiciones apropiadas para ser transformado en carne para consumo humano \cite{mahecha}. Estas etapas son brevemente descritas a continuación:
+
+
+%y finalizando en el momento en que alacanza las condiciones apropiadas para ser transformado en carne para consumo humano \cite{mahecha}. Estas etapas son brevemente descritas a continuación:
+
+\begin{itemize}
+	\item \textbf{Ganadería de Cría:} Es la etapa de producción temprana en donde el animal (generalmente crías macho llamadas bovinos) es alimentado y criado desde su nacimiento hasta los primeros seis (6) meses de edad. 
+	\begin{itemize}
+		\item En esta etapa se requiere de grandes extensiones de tierra para producir crías
+		\item No requiere de estaciones climatologías especificas y se puede dar en todo el año.
+		\item Los elementos principales en la dieta de estas criaturas son los nutrientes provenientes del 					  Calostro y la leche materna.\\
+	\end{itemize} 
+	\item \textbf{Ganadería de Levante:} Es la etapa inmediatamente siguiente a la etapa de crianza, en donde el bovino se desarrollara entre los siete (7) y diez y ocho (18) meses de edad.
+	\begin{itemize}
+		\item En esta etapa se estima que el peso del animal puede alcanzar un mínimo de 230[kg] de peso en adelante.
+		\item Es considerada como la etapa mas  rentable debido a las  pocas exigencias en materia de calidad alimenticia. 
+		\item El objetivo de esta etapa es que el sujeto en cuestión alcance el peso estimado peso deseado en el menor tiempo posible con el menor esfuerzo posible
+		\item El alimento se basa en pasturas de calidad, provenientes de las extensiones de tierra donde comen las reses y se crían.
+		\item El animal gana mayor peso debido a su etapa de crecimiento, por lo que entre mejor sea su alimentación se obtendrán mejores resultados.
+		\item Es de vital importancia que el animal se encuentre en la capacidad de  alimentarse Ad Libitum, es decir a placer y a voluntad.\\
+	\end{itemize} 
+	\item \textbf{Ganadería de engorde o Ceba:} Es la etapa final que abarca desde los 19 meses de edad hasat los 24 o 36 meses, dependiendo de su crecimiento  y otros factores como el interés del productor, la demanda del mercado, entre otras. En sus características principales se pueden mencionar:
+	\begin{itemize}
+		\item El limite se define por los intereses del productor, la demanda del mercado y en general por el peso ideal del animal que es aproximadamente mayor o igual a los 450[kg].
+		\item Para la alimentación se requieren de buenas, grandes y controladas cantidades con el fin de mejorar la carne. Para esto se utilizan dietas que requieren pasturas y concentrados dietarios.
+		\item Se debe monitorear la alimentación tomando registro en la ganancia de gramaje diaria de cada uno de los animales.
+	\end{itemize}
+\end{itemize} 
+
+\subsubsection{Razas} Debido a la gran variedad de especies, condiciones ambientales, y al proceso evolutivo del ganado, historicamente se ha podido clasificar y seleccionar las razas mas representativas para este tipo de explotación ganadera. Más precisamente se puede hacer mención de las siguientes:
+\begin{multicols}{2}
+\begin{center}
+\begin{itemize}
+\item Beefmaster
+\item Charolais
+\item Simmental
+\item Angus
+\item Brangus
+\item Santa Gertrudis
+\item Hereford
+\item Limousin
+\item Cebú
+\item Belgina Blue
+\end{itemize}
+\end{center}
+\end{multicols}
+
+Éstas son seleccionadas principalmente por la contextura voluminosa pero factores como la calidad de la carne pueden sobrepasar los criterios cuantitativos. A continuación se muestran algunas de las razas mas usadas para este propósito:
+
+
+
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.6]{img/cuadrorazas.png}
+% \end{center}
+ \caption{En la primer fila de izquierda a derecha se observan ejemplares de las razas Charolais, Hereford; seguido de las razas Angus y Criolla en la fila inferior. \label{cuadrorazaspng}}
+  \end{center}
+\end{figure}
+
+
+
+
+
+\section{Sistemas de explotaci\'on del ganado vacuno}
+Indiferentemente de su aptitud productiva; el ganado vacuno debe situarse en una infraestructura o ambiente apropiado para su desarrollo. Sin embargo, por  cuestiones geogr\'aficas, geol\'ogicas y/o climatol\'ogicas, los aniamales son criados mediante metodos de explotaci\'on como el estabulado, semiestabulado y el silvopastoril:\\
+
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.8]{img/estabulado.png}
+ \end{center}
+ \caption{Sistema de explotación estabulada. \label{estabulpng}}
+\end{figure}
+
+El sistema ``Estabulado'' (Ver figura \ref{estabulpng}) es una forma de crianza de ganado en la cual los animales pasan la mayor parte del tiempo en establos donde realizan sus actividades diarias. En estos establos se recrea la vida del ganado con la diferencia que el mismo se encuentra protegido bajo techo sin tener exposición directa al sol y a las condiciones medio ambientales. En este sistema se pretende una mayor producción y mejor calidad de la carne en el menor tiempo posible \cite{defestabulacion}.\\
+ Por su parte el sistema ``Silvopastoril' (Ver figura \ref{silvopng})' es una forma de cultivo agropecuario que involucra la presencia de árboles interactuando con gramineas y los animales sometidos a un manejo determinado para incrementar la productividad y el beneficio neto de la explotación a mediano y corto plazo \cite{defsilvopas}.
+
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.9]{img/silvopastoril.png}
+ \end{center}
+ \caption{Sistema de explotación silvopastoril. \label{silvopng}}
+\end{figure}
+
+Finalmente, en el sistema semiestabulado se combinan los 2 sistemas mencionados. En este sistema mixto, los animales ingieren sus raciones de alimento principal n áreas extensas de pastos y forrajes vegetales, mientras que el cuidado y el suministro especializado de vitaminas y proteínas se realiza bajo techo.
+%\begin{figure}[H]
+% \begin{center}
+% \includegraphics[scale=0.6]{img/tiposdosif.png}
+% \end{center}
+% \caption{Sistema de explotaci\'on por estabulación.  \label{estabulpng}}
+%\end{figure}
+%\begin{figure}[H]
+% \begin{center}
+% \includegraphics[scale=0.6]{img/tiposdosif.png}
+% \end{center}
+% \caption{Sistema de explotaci\'on silvopastoril. \label{silvopng}}
+%\end{figure}
+
+
+\subsection{Alimento}
+%\section{Marco de referencia}
+\subsubsection{Alimentación}
+La alimentación de un cultivo de ganado requiere de una dieta o ración con diferentes componentes básicos o nutrientes que deben ser suministrados día a día de forma balanceada para lograr un crecimiento óptimo y que los animales puedan expresar su potencial genético \cite{recomendaciones}. Los componentes principales que conforman la dieta alimenticia del ganado son:
+	\begin{itemize}
+	
+	\item \textbf{Balance de raciones y dietas especializadas} %Ponerle negrilla
+Estas dietas son suministradas por personal técnico calificado que prepara un dieta acorde a la cantidad de nutrientes de cada animal de forma particular e independiente, considerando su peso actual, su velocidad de crecimiento y estado fisiológico.
+\item \textbf{Componentes básicos de la dieta} % Ponerle negrilla
+		\begin{itemize}
+		\item \textbf{Agua:} Componente principal de la alimentación. Esta debe ser suministrada en cantidad y calidad para ser aprovechada por cada animal llegando a ocupar mas del 50\% de la masa corporal de un ejemplar adulto y hasta un 90 \% de un recién nacido.
+		
+		\begin{figure}[H]
+		 \begin{center}
+		 \includegraphics[scale=0.8]{img/agua.png}
+		 \end{center}
+		 \caption{Hidratación del ganado. 	\label{energeticospng}}
+		\end{figure}
+		
+		\item \textbf{Energía:}  Este componente se suministra mediante azúcares, almidones, celulosa, entre otros, los cuales aportan grandes cantidades de energía mas no de proteína, razón por la cual se deben suministrar de forma complementaria.
+		\begin{figure}[H]
+		 \begin{center}
+		 \includegraphics[scale=0.7]{img/melazacana.png}
+		 \end{center}
+		 \caption{Suplementos energéticos. 	\label{energeticospng}}
+		\end{figure}
+
+		\item \textbf{Proteínas:} Estos nutrientes son fundamentales especialmente durante los periodos de sequía, por consiguiente, se optan por fuentes altas en proteína como leguminosas forrajeras, el Maní, Leucaena y el más común, los pastos de forraje verde. 
+		\begin{figure}[H]
+		 \begin{center}
+		 \includegraphics[scale=0.8]{img/proteina.png}
+		 \end{center}
+		 \caption{Suplementos proteínicos. \label{proteinaspng}}
+		\end{figure}
+
+		\item \textbf{Minerales:} Son indispensables en la ganancia de peso de los novillos durante la etapa de Cría y Levante. Este complemento alimenticio debe estar siempre a la disposición para que el ganado pueda abastecer sus necesidades. Estos minerales se suelen proporcionar mediante mezclas de macrominerales y microminerales que se ofrecen de libre consumo al ganado.
+		\item \textbf{Vitaminas:} Suministradas en cantidades pequeñas aplicadas comúnmente en animales cuya alimentación se basa en forrajes secos,  o en animales enfermos convalecientes, desnutridos o durante épocas de sequía prolongada.
+		\begin{figure}[H]
+		 \begin{center}
+		 \includegraphics[scale=0.6]{img/leguminosas.png}
+		 \end{center}
+		 \caption{Forraje y leguminosas. \label{vitaminaspng}}
+		\end{figure}
+
+		\end{itemize}
+	\end{itemize}
+	
+\subsection{Identificación de ganado}
+	
+	La identificación de ganado se ha realizado en diferentes modalidades con el paso del tiempo y depende de diversos factores tanto culturales como comerciales, entre otros. Entre las modalidades mas comunes de clasificación ganadera que se practican en Colombia y el mundo se pueden establecer:\\
+	\begin{itemize}
+	
+		\item \textbf{Identificación por Marcado :} Esa es una de las maneras de identificación de ganado mas antiguas, aunque sigue siendo utilizada en distintas partes del mundo como Norte America, Europa y Latinoamerica. Estas marcas son hechas mediante la presión de hierro caliente al rojo vivo sobre la piel gruesa del animal dejando una marca sobre éste tal y como se puede apreciar en la  figura \ref{cowboypng}, dando paso a que pueda ser clafisicado o identificado en ranchos compartidos \cite{cowboy}. Las marcas pueden representar la finca a la que pertenecen así como también el número de lote o cabeza de ganado comercializada.
+		
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.9]{img/cowboy.png}
+		\end{center}
+		\caption{Marca de hierro en ganado. \label{cowboypng}}
+		\end{figure}
+		
+		\item \textbf{Anillo nasal o nariguera:} Como su nombre lo dice, son anillos puestos en la nariz de los semovientes, especialmente para aquellos que presentan comportamientos agresivos que pueden significar grandes riesgos para el personal ganadero (Ver Figura \ref{nariguerapng}).
+		De acuerdo con el medico veterinario de la Universidad de Ciencias Aplicadas y Ambientales y especialista en grandes animales, Jorge Torres Vanegas, estos anillos son puestos en el tabique nasal del animal, alrededor de una pulgada de la punta de la nariz; su ubicación en esta área se da debido a la alta sensibilidad de esta zona en las reses, lo que significa una medida de prevención y manejo del hato garantizando control del animal y seguridad para productores y mayordomos \cite{veterinario}.\\
+	Estos anillos pueden ser de diferentes materiales y diferentes tamaños  lo que facilita la clasificación de los animales por su nivel de agresividad para con el personal de trabajo en la finca de explotación ganadera.
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.7]{img/nariguera.png}
+		\end{center}
+		\caption{Anillo nasal o Nariguera. \label{nariguerapng}}
+		\end{figure}
+		
+		\item \textbf{Arete o Crotal:} Es un colgante plástico donde se registra un número asociado e irrpetible de varios digitos (Ver Figura \ref{aretepng}). En Chile, este proceso permite identificar oficialmente un animal mediante el Dispositivo de Identificación Individual Oficial (DIIO) \cite{diio}. El DIIO permanece con el animal durante toda su vida y no puede ser alterado, adulterado, copiado ni falsificado. Esta modalidad de reconocimiento animal requiere de 2 partes, en primer lugar, de un accesorio visual tipo doble paleta y en segundo lugar, un accesorio visual tipo botón, con igual número de identificación que el de doble paleta y en algunos casos puede incorporar un Chip de radiofrecuencia RFID. Este tipo de reconocimiento permite conocer la condición trazable de cualquier animal, además de identificar mediante un número asociado una res en particular.
+		
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.7]{img/arete.png}
+		\end{center}
+		\caption{Arete o Crotal. \label{aretepng}}
+		\end{figure}
+		
+		\item \textbf{Collar / Jáquima de color o función:} En esta modalidad, se utilizan collares de diferentes colores, los cuales están referenciados a diferentes aspectos del ganado tales como el tipo de ganadería (Lechera, Carne, Reproducción o Crianza), raza, edad, genero, entre otros (Ver Figura \ref{collarpng}). Adicionalmente, los avances tecnológicos de los últimos años han dado paso a nuevas aplicaciones tales como collares de monitoreo del comportamiento posicional del animal permitiendo saber cuánto come, camina y descansa; collares de detección de enfermedades, collares de detección de celo, entre otros \cite{collares}. 
+		
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.7]{img/collar.png}
+		\end{center}
+		\caption{Collar / Jáquima de color o función. \label{collarpng}}
+		\end{figure}
+		
+		
+		\item \textbf{Identificación Electrónica o Chip Subcutaneo:} Es una pequeña cápsula de cristal especial que tiene un tamaño pequeño de aproximadamente un grano de arroz y que contiene un transpondedor con un UID que permite la identificación de animales. Este dispositivo es usado en diferentes tipos de ganado especialmente en equinos (Ver Figura \ref{chippng}). En Colombia, el Instituto Colombiano Agropecuario ICA, mediante la Libreta Sanitaria Equina LSE y  mediante la resolución 20174 de 2016, establece que este dispositivo es de uso obligatorio para transportar y establecer trazabilidad del equino. Por otra parte, los animales que utilicen este tipo de identificador electrónico no pueden ser  destinados a consumo \cite{chipID}.
+		
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.7]{img/chip.png}
+		\end{center}
+		\caption{Chip subcutáneo. \label{chippng}}
+		\end{figure}
+		
+		% especiales para cada especie
+	
+	\end{itemize}
+	
+	Estas modalidades junto con la aplicación de nuevas tecnologías y adicionando la constante necesidad de ayudar a mejorar las actividades agropecuarias en Colombia y el mundo, han dado paso al  desarrollo de variantes como lo podemos apreciar en el trabajo realizado  por los médicos veterinarios Hernan Agüero y Carlos Pedraza del Instituto de Investigaciones Agropecuarias de Chile (INIA), en el que usan collares equipados con imanes asociados al animal \cite{aguero} como se puede ver en la figua \ref{imanpng} y esto sirve también para la dosificación de alimento del mismo, como se explica mas adelante en la sección \ref{subsisact}.\\
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.8]{img/iman.png}
+		\end{center}
+		\caption{Collar con imán. \label{imanpng}}
+	\end{figure}
+	
+	
+%\section{Marco de referencia}
+
+	
+
+
+
+%\subsection{Mecanismos de Dosificación}
+\section{Dosificación}
+En esta sección se hace una recopilación de  conceptos, mecanismos, características, propiedades, dispositivos, material de diseño mecánico y material a dosificar; elementos necesarios para comprender analizar y familiarizarse con el contenido de este proyecto.\\
+
+\subsection{Almacenamiento}
+El alimento almacenado cae por gravedad al mecanismo de dosificación y este debe ser adaptado a su tamaño, densidad y peso \cite{pinturan}. Aparte del mecanismo, se debe tener en cuenta el material de contrucción, entre los materiales de fabricación mas comunes se encuentran el Poliestireno, Vidrio  y Céramica, Acero Inoxidable, Plástico,  entre otros. Estos deben garantizar resistencia y que cumpla con los requerimientos generales de almacenamiento de alimentos \cite{casti}:
+\begin{itemize}
+	\item El material de fabricación no debe modificar la composición, color, sabor, ni olor del producto contenido y no puede ceder componentes al medio interno ni externo que constituyan un riesgo para la salud.
+	\item Fabricación con polímeros y aditivos que están incluidos en las listas positivas de las regulaciones alimentarias.
+	\item Cumplir con los requisitos específicos de migración total en casos de compuestos químicos y componentes en el material plástico.
+\end{itemize}
+
+
+\subsection{Dosificadores}
+
+Es una herramienta de suministro de producto en porciones y tiempo determinados por las necesidades de producción. La forma física del ensamble final de estas herramientas varía de acuerdo con factores como el producto a dosificar, la cantidad de material, peso y volumen del mismo y la precisión de cantidad dosificada. Pese a esto, a modo general poseen de 3 partes indispensables:\\
+
+%
+%\begin{figure}[H]
+% \begin{center}
+% \includegraphics[scale=0.6]{img/mapaconceptual.png}
+% \end{center}
+% \caption{Clasificaci\'on de Dosificacores \label{mapaconceppng}}
+%\end{figure}
+
+
+\begin{itemize}
+\item \textbf{Tolva de almacenamiento:} Como su nombre lo indica, en la tolva de almacenamiento se suministra el producto en cuestión, ya sea mediante una banda transportadora en aplicaciones industriales, o mediante un transportador encargado de descargar el alimento de forma manual. La tolva es la encargada de mantener el producto en su interior para ser dosificado.
+\item \textbf{Sistema dosificador:} Esta es la parte mas importante del dosificador ensamblado, ésta se encarga de determinar y medir la cantidad de sustancia que se extrae de la tolva para pasar a la siguiente estación. Dependiendo de la precisión o exigencias del productor, la medición se puede realizar según el peso o según el volumen. 
+\item \textbf{Boquilla de descarga:} También  denominadas como tubos de descarga, son los encargados de impedir que el producto sea dosificado incorrectamente, evitando desperdicios por riego o un mal direccionamiento. Además, evita riesgos al operario por cuestiones de manipulación o inhalación del producto.\\
+\end{itemize}
+
+El suministro de los alimentos del ganado se realiza mediante dispositivos electrónicos, mecánicos, electromecánicos y manuales. A modo general, están compuestos por servomotores, motores eléctricos, cilindros neumáticos y/o reguladores electrónicos y mecánicos \cite{pinturan}. 
+Debido a la gran variedad de productos que pueden ser dosificados y a la variedad de aplicaciones de estas herramientas, se puede representar una clasificación de los tipos de dosificadores como la que se observaen la figura \ref{mapaconceppng}
+
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.62]{img/mapaconceptual.png}
+ \end{center}
+ \caption{Clasificaci\'on de Dosificacores \label{mapaconceppng}}
+\end{figure}
+
+%Cada uno de los mencionados se describe brevemente a continuación:
+
+
+
+% Estos dispositivos regulan el despacho del alimento en las diferentes etapas del cultivo de carne.
+
+%También pueden ser clasificados acorde a la naturaleza de la sustancia a manipular. Más propiamente dentro de la categoría de dosificadores volumetricos existen una gran variedad de mecanismos de dosificación  \cite{torres} como los siguientes:
+
+%%%%y a la amplia gama de aplicaciones de estas herramientas se puede representar una clasificación  como la que se observa a continuación:
+%%%
+%%%%\begin{figure}[H]
+%%%%			\begin{center}
+%%%%				\includegraphics[scale=0.6]{img/tiposdosif.png}
+%%%%			\end{center}
+%%%%			\caption{Mecanismo de Tornillo sin fin. Tomada de \cite{DEM} \label{tiposdosifpng}}
+%%%%		\end{figure}
+%%%
+%%%%Tal y como se puede observar, existe una amplia gama de dosificadores y cada uno de estos se describe brevemente a continuación:
+
+%\begin{itemize}
+\subsubsection{Volumétricos}
+Su principal uso es la dosificación de sustancias con propiedades físicas homogéneas como la forma, el tamaño y peso como por ejemplo los líquidos viscosos, polvos, cereales, granos y alimentos semigranulados.
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.6]{img/volumetrico.png}
+ \end{center}
+ \caption{Dosificador Volumétrico. \label{mapaconceppng}}
+\end{figure}
+
+\subsubsection{Líquidos}
+Constituidos principalmente por una válvula y una bomba dosificadora. Son usadas mas que todo para sustancias fluidas como el agua, lácteos, jugos, y productos similares.
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.6]{img/liquidos.png}
+ \end{center}
+ \caption{Dosificador de liquidos. \label{mapaconceppng}}
+\end{figure}
+
+\subsubsection{Bomba}
+ Usados para sustancias viscosas y pastosas; son conducidas por tubos y ductos, y son usadas para grasas ceras, mieles, salsas, entre otros.
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.6]{img/bomba.png}
+ \end{center}
+ \caption{Dosificador de bomba. \label{mapaconceppng}}
+\end{figure}
+
+\subsubsection{Tornillo sin fin} 
+Este mecanismo dosificador, basado en el principio de funcionamiento del tornillo de Arquimides, es usado para transportar y manipular sustancias semigranuladas y polvorientas. En este caso, los productos son evacuados de la tolva en cantidad y tiempos deseados  con respecto a la velocidad de giro del tornillo, es decir, a las revoluciones por minuto (rpm) del mismo.\\
+
+%\begin{figure}[H]
+%			\begin{center}
+%				\includegraphics[scale=0.6]{img/tiposdosif.png}
+%			\end{center}
+%			\caption{Mecanismo de Tornillo sin fin. Tomada de \cite{DEM} \label{tiposdosifpng}}
+%		\end{figure}
+
+%\begin{figure}[H]
+% \begin{center}
+% \includegraphics[scale=0.6]{img/mapaconceptual.png}
+% \end{center}
+% \caption{Clasificaci\'on de Dosificacores \label{mapaconceppng}}
+%\end{figure}
+
+% Suelen ser accionados por un motor reductor de alto torque  y  pueden ser de distintos tamaños, formas, diametros variables o funciones especiales \cite{torres}.
+
+\begin{itemize}
+\item \textbf{Estructura general:} 
+Básicamente, un transportador de tornillo esta constituido por un eje de giro suspendido en un canal en forma de ``U'' denominado ``Canalón'', un motor reductor a un extremo del tornillo encargado de girar la(s) hélice(s) que arrastran el producto a dosificar. La versatilidad de este sistema de dosificación le permite ser aplicado como transportador, mezclados, o agitador otorgando ventajas y desventajas para su uso práctico como se puede observar en la siguiente figura: (Fotico al lado con unas viñetas al lado como en una pptx).\\
+
+% Sencillez de fabricación, diseño compacto y de fácil instalación. Bajo costo. Sistema hermetico, evitando generación de polvos y exhalaciones molestas. Bocas de carga y descarga en diferentes puntos
+% Desventajas: Mayor torque y por ende mayor potencia para accionamiento, dificultad en condiciones de elevación respecto al eje horizontal. usado con materiales NO abrasivos debido a su alto desgaste de materiales de fabricacion
+
+
+%\begin{figure}[H]
+%			\begin{center}
+%				\includegraphics[scale=0.6]{img/tiposdosif.png}
+%			\end{center}
+%			\caption{Mecanismo de Tornillo sin fin. Tomada de \cite{DEM} \label{tiposdosifpng}}
+%		\end{figure}
+
+Dependiendo de la forma del diseño del tornillo, su aplicación, paletas de transporte y número de hélices el tornillo puede clasificarse en: 
+
+%	\begin{itemize}
+%	\item Tornillo sin fin de hélice helicoidal
+%	\item Tornillo sin fin de hélice seccional
+%	\item Tornillo sin fin de paletas cortadas
+%	\item Tornillo sin fin de paletas tipo cinta
+%	\item Tornillo sin fin con palas
+%	\item Tornillo sin fin de paletas plegadas y cortadas
+%	\item Tornillo sin fin de diámetro variable
+%	\item Tornillo sin fin de paso escalonado
+%	\end{itemize}
+
+	\begin{multicols}{2}
+	\begin{itemize}
+	\item Tornillo sin fin de helice helicoidal
+	\item Tornillo sin fin de helice seccional
+	\item Tornillo sin fin de paletas cortadas
+	\item Tornillo sin fin de paletas tipo cinta
+	\item Tornillo sin fin con palas
+	\item Tornillo sin fin de paletas plegadas y cortadas
+	\item Tornillo sin fin de diametro variable
+	\item Tornillo sin fin de paso escalonado
+	\end{itemize}
+	\end{multicols}
+
+
+\item \textbf{Componentes y requisitos:}
+ Para el manejo de materiales, la hélice debe tener un grosor entre 3 a 4 [mm] de espesor.
+%  (PONER COMO UNA FOTICO DE LA HELICE DE CERCA PARA VER EL GROSOR).
+   El diámetro externo de la hélice debe ser menor al diámetro del canalón para evitar rozes al momento del giro del tornillo (Poner una foto/plano de la vista frontal del tornillo o un dibujito con el tornillo y señalado el D y P=1/2D).\\\\
+ Para evitar flexiones del eje en tornillos de gran longitud se hace necesario el uso de soportes intermedios  para poyar el eje y ayudar a que mantenga su eje  suspendido. Para que el tornillo pueda recibir y transmitir el torque generado por el motor de manera eficiente, es necesario utilizar elementos de acoplamiento mecánico.\\
+
+
+\item \textbf{Relación de selección entre la hélice y el material:} 
+ Para el transporte de materiales sólidos \\
+
+\item \textbf{Carcasa:}
+ La unión de las paredes que recubren el transportador, retienen el material y separan al tornillo del ambiente exterior se le llama Carcasa. Estas superficies suelen tener entre 3 y 6 [mm] de espesor y en casos de transporte de alimentos o elementos altamente abrasivos, se construye el armasón en acero inoxidable  para garantizar  durabilidad en la carcasa.
+ Además, la carcasa posee una boca de carga por donde entra el alimento y una boca de descarga por donde éste sale.\\
+
+\item \textbf{Velocidad de giro ():}
+ Esta depende principalmente de la naturaleza del material transportado. Como los materiales pueden variar en formas, pesos y tamaños, no es posible determinar una velocidad teórica exacta pero estadísticamente puede establecerse que:\\
+ 
+	\begin{itemize}
+	\item En materiales pesados $\eta$ $\approx$ 50 [rpm]
+	\item En materiales ligeros $\eta$ < 150 [rpm]\\
+	\end{itemize}
+	
+A modo general, esta consideraciones se obtienen al notar que la velocidad de giro es inversamente proporcional peso [g] y abrasividad del material transportado, y del diámetro del tornillo.
+
+Mediante la siguiente tabla se puede observar una aproximación de las velocidades de giro con respecto a diferentes tipos de material:\\\\
+
+
+%\begin{figure}[H]
+%			\begin{center}
+%				\includegraphics[scale=0.6]{img/tiposdosif.png}
+%			\end{center}
+%			\caption{Mecanismo de Tornillo sin fin. Tomada de \cite{DEM} \label{tiposdosifpng}}
+%\end{figure}
+
+\item \textbf{Paso (P) y Diámetro (D):}
+ Por definición, el paso de tornillo o paso de hélice es la distancia existente entre hélices consecutivas de la dirección del eje del tornillo. La dimensión del paso suele estar comprendida entre 0,5 y 1 veces la medida del diámetro del mismo y es mayor a medida que el peso del material sea menor. En lo que respecta al diámetro, éste es mayor mientras que la velocidad de giro sea baja y viceversa.
+
+\item \textbf{Capacidad de transporte:}
+ Para determinar la capacidad de transporte de un tornillo primero es necesario tener en cuenta:
+	\begin{itemize}
+	\item Área de relleno del canalón (S):\\ 
+	Es el área que ocupa el material que se mueve en el transportador y se puede obtener mediante la siguiente expresión:
+	\begin{equation}
+	S=\lambda\left(\frac{\pi\cdot D^2}{4}\right)
+	\end{equation}
+	Donde $S$  se mide en [$m^2$], $D$ es el diámetro del canalón del transportador, en [$m$], $\lambda$ es el coeficiente de relleno de la sección. 
+	
+	Este deberá ser menor a la unidad para evitar así amontonamiento del material e interrupciones en el flujo a través del canalón. Este a su vez debe ser seleccionado con base en el tipo de carga tal y como se observa a continuación:
+	\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.6]{img/coeffrelleno.png}
+				\end{center}
+				\caption{Coeficiente de relleno segun el tipo de carga \label{coeffrellenopng}}
+	\end{figure}
+	\item Velocidad de desplazamiento ($\nu$):\\
+	 Velocidad traslacional del material en la dirección longitudinal del eje del tornillo. Depende del paso (P) y de la velocidad de giro ($\eta$). Su cálculo se describe mediante la ecuación $\nu=\frac{P_\eta}{60}$, donde $\nu$ se mide en [$\frac{m}{s}$], $P$ se mide en [$m$] y $\eta$ se mide en [$rpm$].\\
+
+	Ahora bien, la capacidad de transporte se calcula mediante la siguiente expresión:
+	\begin{equation}
+	Q[\frac{t}{h}]=3600 \cdot S\cdot\nu\cdot\rho\cdot i
+	\end{equation}
+	 
+	Donde $Q$ es el flujo del material transportado [$\frac{t}{h}$], $\rho$ es la densidad del material transportado medido en [$\frac{t}{m^3}$] e  $i$ es el coeficiente de disminución del flujo de material debido a la inclinación del transportador, este coeficiente indica la reducción de capacidad de transporte debida a la inclinación del canalón y para escoger este valor se considera la siguiente relación:\\
+
+	\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.6]{img/coeffdisminucion.png}
+				\end{center}
+				\caption{Coeficiente de disminución de flujo de material ($i$) \label{tiposdosifpng}}
+	\end{figure}
+
+Sustituyendo las expresiones de $S$ y $\nu$ se obtiene la siguiente expresión:\\
+
+%$$Q[\frac{t}{h}]=3600S*\nu*\rho*i$$
+
+
+	\begin{equation}
+	Q[\frac{t}{h}]=3600 \cdot\lambda\cdot\left(\frac{\pi\cdot D^2}{4}\right)\cdot\left(\frac{P\cdot\eta}{60}\right)\cdot\rho\cdot i 
+	\end{equation}
+	
+
+
+	\end{itemize}
+\item \textbf{Potencia total [$kW$]:}
+ Es la potencia requerida para el accionamiento del transportador junto con la carga a transportar. Esta potencia se obtiene al sumar la potencia realizada en desplazamiento horizontal Ph, la potencia de accionamiento del tornillo en vacío Pn y la potencia de inclinación Pi (sí aplica).
+%	\begin{equation*}
+%	P_T=P_H+P_N+P_i
+%	\end{equation*}
+
+	\begin{itemize}
+	\item Potencia de desplazamiento horizontal:
+	  $$P_H= c_0\left(\frac{Q*L}{367}\right)$$
+	  En donde L, es la longitud del transportador en [$m$] y $c_0$ es el coeficiente de resistencia del material transportado: este valor se puede conocer al emplear la siguiente tabla semi empírica:
+
+	\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.6]{img/coeffresistencia.png}
+				\end{center}
+				\caption{Coeficiente de resistencia del tipo de material \label{tiposdosifpng}}
+	\end{figure}
+
+
+	\item Potencia en vacío:
+	  $$P_N=\frac{D*L}{20}$$ % \left(\frac{L*$\eta$*F_b*F_d}{1000000}\right)*745,7*1000$ %estos ultimos factores son para pasar de Hp a KW 
+	\item Potencia de inclinación: 
+	$$P_i = \left(\frac{Q \cdot\rho\cdot H}{2000000}\right)\cdot 745,7 \cdot 1000$$
+	De donde H es la diferencia de altura entre las bocas de entrada y salida del canalón.
+	\end{itemize}
+
+%XXXXXXXXXXXXXXXXXXXXXXXXXX
+%XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+% ME FALTA ACABAR LO DEL TORQUE; LA TESIS ESA TIENE COMO CALCULAR EL TROQUE DEL MOTOR; AUNQUE EN TEORIA ESO ME LO DICE EL DATASHEET PERO IGUAL PODRIA PONERLO ESTE COMENTARIO LO PUSE EL 31/07/19 ANTES DE IRNOS A JUGAR FUTBOL EN BIETIGHEIM
+
+% aqui m pueo extender otro poco mas cOn lo de internernet Y LA TEORIA DE TORNILLOS y la univalle y la tesis de la salle
+
+%XXXXXXXXXXXXXXXXXXXXXXXXXX
+%XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+\subsubsection{Vasos telescópicos}
+Este tipo de dosificadores básicamente están constituidos por una tolva de almacenamiento, agitadores, un motor reductor y un embudo de caida \cite{perry}. Estos dosificadores solo estan en la capacidad de dosificar productos granulados. Un claro ejemplo del uso de este mecanismo puede observarse en el trabajo de grado realizado por los ingenieros Carlos Pinto y Hernán Sánchez egresados de la universidad de la Salle \cite{pinturan}.
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.6]{img/pinturanpng.png}
+ \end{center}
+ \caption{Mecanismo de vasos telescópicos \label{mapaconceppng}}
+\end{figure}
+\subsubsection{Dosificadores de Compuerta Rotativa} % PONER NEGRILLA
+		
+En este caso se tiene una compuerta rotativa como elemento principal de dosificación, permite una construcción simple y robusta, aunque presenta menor precisión que el mecanismo de tornillo sin fin. Una representación de este tipo de mecanismo se puede ver en la Figura \ref{rotala}.
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.9]{img/rotar.png}
+			\end{center}
+			\caption{Mecanismo de Compuerta Rotativa. \label{rotala}}
+		\end{figure} % Ponerle negrilla
+		
+\subsubsection{Dosificadores de Compuerta deslizante} % PONER NEGRILLA
+		
+		Son compuertas deslizantes usadas para descargar material de tolvas, transportadores o compartimientos. La
+compuerta deslizante consta de un marco rígido con una lámina deslizante ubicada en el interior que se abre y se cierra contra el flujo de material (Ver Figura \ref{deslis}). La placa deslizante puede ser accionada por medios manuales, neumáticos, eléctricos o hidráulicos. La lámina puede ser implementada de diferentes maneras y puede estar apoyada por rodamientos en 2 de sus extremos para facilitar la transición reduciendo así la fricción con las paredes del marco.
+	
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.9]{img/slides.png}
+			\end{center}
+			\caption{Mecanismo de Compuerta Deslizante. Tomada de \cite{DEM} \label{deslis}}
+		\end{figure} % Ponerle negrilla	
+
+
+
+\subsubsection{Gravimétricos} Usados especialmente cuando las sustancias o productos que carecen de una forma homogénea. Poseen un porcentaje de error menor que los volumétricos debido a que manejan porciones dosificadas de menor tamaño y añadiendo que estas porciones son sensadas mediante sistemas electrónicos de precisión.  Por otra parte, cuentan con un sistema de control que pueden estar fundamentados por métodos estadísticos o de aproximaciones.\\
+\begin{itemize}
+	\item \textbf{Metodo de aproximaciones (MA):} Mediante un sistema de control de lazo cerrado se verifica que la discrepancia entre el peso suministrado y el peso ideal sea aproximadamente nula.
+	\item \textbf{Metodo estadistico (ME):} En este caso, el sistema de control no se centra en la diferencia entre los pesos reales y de referencia sino sobre la cantiada de producto suministrado finalmente, por lo que el sistema de verificación es mas sofisticado. Para ello se dispone de un sistema de balanzas temporizadas que entregan porciones parciales que por medio de la teoría de combinaciones determina la mejor combinación de balanzas sumadas \cite{pinturan}.\\
+\end{itemize}
+
+\end{itemize}
+%de Como se puede apreciar en la  figura (xyz),  
+%\end{itemize}
+
+
+
+
+%	\begin{itemize}
+%	
+%		\item \textbf{Dosificadores de Tornillo} % PONER NEGRILLA
+%		
+%		En estos dosificadores (Ver figura \ref{dositorni}) se tiene un Tornillo sin fin que actua como dosificador, éste se suele encontrar en la parte inferior de la tolva de alimentación y libera un volumen determinado de sustancia en cada vuelta; su velocidad y precisión de dosificación dependen de la velocidad de giro con la que se esté manipulando \cite{torres}. Este sistema de dosificación es el más utilizado debido a su implementación simple y porque se adapta a la naturaleza de la mayoría de las sustancias dosificadas.
+%		\begin{figure}[H]
+%			\begin{center}
+%				\includegraphics[scale=0.6]{img/tornillo.png}
+%			\end{center}
+%			\caption{Mecanismo de Tornillo sin fin. Tomada de \cite{DEM} \label{dositorni}}
+%		\end{figure} % Ponerle negrilla
+%		
+%%		\item \textbf{Dosificadores de Compuerta Rotativa} % PONER NEGRILLA
+%%		
+%%		En este caso se tiene una compuerta rotativa como elemento principal de dosificación, permite una construcción simple y robusta, aunque presenta menor precisión que el mecanismo de tornillo sin fin. Una representación de este tipo de mecanismo se puede ver en la Figura \ref{rotala}.
+%%		\begin{figure}[H]
+%%			\begin{center}
+%%				\includegraphics[scale=0.9]{img/rotar.png}
+%%			\end{center}
+%%			\caption{Mecanismo de Compuerta Rotativa. \label{rotala}}
+%%		\end{figure} % Ponerle negrilla
+%%		
+%%		\item \textbf{Dosificadores de Compuerta deslizante} % PONER NEGRILLA
+%%		
+%%		Son compuertas deslizantes usadas para descargar material de tolvas, transportadores o compartimientos. La
+%%compuerta deslizante consta de un marco rígido con una lámina deslizante ubicada en el interior que se abre y se cierra contra el flujo de material (Ver Figura \ref{deslis}). La placa deslizante puede ser accionada por medios manuales, neumáticos, eléctricos o hidráulicos. La lámina puede ser implementada de diferentes maneras y puede estar apoyada por rodamientos en 2 de sus extremos para facilitar la transición reduciendo así la fricción con las paredes del marco.
+%%	
+%%		\begin{figure}[H]
+%%			\begin{center}
+%%				\includegraphics[scale=0.9]{img/slides.png}
+%%			\end{center}
+%%			\caption{Mecanismo de Compuerta Deslizante. Tomada de \cite{DEM} \label{deslis}}
+%%		\end{figure} % Ponerle negrilla		
+%	\end{itemize}
+	
+
+\subsection{Leyes y Normatividad}  \label{leyes}
+Requerida para que el avance ganadero se realice de manera coordinada o estandarizada basada en las buenas prácticas ganaderas en pro de mejorar la productividad y ayudarla a alcanzar niveles de ganadería bovina del mundo \cite{invima}. 
+\begin{itemize}
+	\item \textbf{Decreto 1500 de 2007:} Reglamento técnico a través del cual se crea el Sistema Oficial de Inspección, Vigilancia y Control de la Carne y otros productos comestibles y derivados cárnicos destinados para el consumo humano.
+	\item \textbf{Decreto 072 de 2007:} Por el cual estable el manual de buenas prácticas de manejo para la producción de ganado bovino.
+	\item \textbf{Decreto 2905 de 2007:} Por el cual se establece el reglamento técnico sobre los requisitos sanitarios y de inocuidad de la carne y productos cárnicos comestibles de las especies bovina y bufalina destinados para el consumo humano.
+	\item \textbf{Decreto 18119 de 2007:} Por el cual se reglamenta los requisitos del plan gradual de cumplimiento para  las plantas de beneficio y desposte de bovino y bufalinos.
+	\item \textbf{Decreto 2278 de 1982:} Reglamentación parcial en el titulo V de la ley 09 de 1979 que se refiere al sacrificio de animales de abasto público o para consumo humano y el procesamiento, transporte y comercialización de su carne.
+\end{itemize}
+
+
+
+\subsection{Conceptos adicionales}
+
+\begin{itemize}
+
+	\item \textbf{Algoritmos Computacionales:}
+	Los algoritmos son un conjunto de instrucciones o reglas predefinidas de manera ordenada que permiten llevar a cabo una actividad mediante pasos consecutivos secuenciales o paralelos de manera no ambigua para poder realizar una actividad \cite{algoritmo}. Los algoritmos computacionales son algoritmos más sofisticados y precisos que permiten aprovechar las nuevas tecnolog\'ias y que al depender de una memoria finita deben ser lo mas optimizados posible para que puedan procesar grandes cantidades de datos con limitaciones finitas y generalmente a bajo costo. 
+
+	\item \textbf{Almacenamiento en la nube:}
+	 La nube, también denominada como ``Cloud Storage" (Ver Figura \ref{cloudpng}), se refiere tanto a las aplicaciones entregadas como servicios a través de internet y el sfotware del hardware y sistemas en los centros de datos que proporcionan estos servicios \cite{cloud2}.
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.5]{img/cloud.png}
+	\end{center}
+	\caption{Almacenamiento en nube. \label{cloudpng}}
+	\end{figure}
+	\item \textbf{Arduino:} Es una plataforma electrónica de código abierto basado en software y hardware de fácil uso. Las placas de Arduino están en la capacidad de leer entradas, manipular sensores y transmitir información de manera remota, entre otros. Estas placas son reprogramables mediante una serie de instrucciones al microcontrolador y se pueden programar con múltiples lenguajes de programación \cite{arduinodef}.
+	\item \textbf{Bases de datos digitales:}
+	Es un conjunto de datos interrelacionados y almacenados de forma ordenada y sistem\'atica (Ver Figura \ref{databasepng}) para un uso posterior\cite{database}. Debido al desarrollo tecnol\'ogico de la inform\'atica y la electr\'onica, estas bases de datos suelen ser digitales y por lo general se almacenan en la nube (Cloud). Por otra parte, es considerado un modelo de almacenamiento de datos basado en redes de computadoras, donde los datos est\'an alojados en espacios de almacenamiento virtualizados \cite{cloud}.
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.5]{img/databasepng.png}
+		\end{center}
+	\caption{Base de datos. \label{databasepng}}
+	\end{figure}
+	\item \textbf{Ciclo de Ceba:} Consiste en el engorde de ganado destinado para la producción de carne, principalmente en bovinos machos jovenes denominados novillos \cite{defceba}. 
+%	\item \textbf{Estabulación:} Es una forma de crianza de ganado en la cual los animales pasan la mayor parte del tiempo en establos donde realizan sus actividades diarias. En estos establos se recrea la vida del ganado con la diferencia que el mismo se encuentra protegido bajo techo sin tener exposición directa al sol y a las condiciones medio ambientales. En este sistema se pretende una mayor producción y mejor calidad de la carne en el menor tiempo posible \cite{defestabulacion}.
+%	\item \textbf{Ganadería de carne:}
+%	 Es un ciclo productivo de cabezas de ganado destinadas al engorde que comprende un proceso prolongado en el tiempo que consta de varias etapas que abarcan desde el nacimiento vivo de la cría, siguiendo con su crecimiento y finalmente su comercialización en producto final, ya sea en carne, lácteos o sus derivados (Ver Figura \ref{ganadcarnepng}).
+	 
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.5]{img/ganadcarne.png}
+	\end{center}
+	\caption{Ganadería de carne. \label{ganadcarnepng}}
+	\end{figure}
+	\item \textbf{HMI:} Por sus siglas en inglés, ``Human-Machine Interface'', se refiera a la interfaz de interracción entre maquinas y humanos aplicable a los sistemas de automatización de procesos \cite{hmi}.
+	\item \textbf{Jáquima:} Es un freno, cabestro o cabezada usado en la ganadería principalmente equina, para identificar, amansar o manipular al animal \cite{jaquima}.
+	\item \textbf{RFID:}
+	 La identificación por radiofrecuencia (Ver Figura \ref{rfid1png}), es un sistema reprogramable de almacenamiento y recuperación de datos de manera inalámbrica mediante etiquetas, tarjetas o transpondedores en general, que pueden ser adheridas a productos, animales e incluso a personas sin necesidad de alimentación interna. Este sistema tiene una gran variedad de aplicaciones entre las cuales se pueden mencionar logísticas de distribución, servicios industriales, control de acceso, entre otros \cite{rfid1}.\\
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.99]{img/rfid1.png}
+	\end{center}
+	\caption{Sistemas RFID. \label{rfid1png}}
+	\end{figure}
+%	\item \textbf{Silvopastoreo:} Es una forma de cultivo agropecuario que involucra la presencia de árboles interactuando con gramíneas y los animales sometidos a un manejo determinado para incrementar la productividad y el beneficio neto de la explotación a mediano y corto plazo \cite{defsilvopas}.
+	\item \textbf{Software de Código Abierto OSS (Open Source Software):} Es un concepto relativamente reciente que abarca un modelo de desarrollo de software basado en colaboración abierta en Internet, donde un propietario de software permite a los usuarios utilizar, cambiar y redistribuir el software para cualquier propósito. \cite{Defopensource}.
+\end{itemize}
+
+
+%\section{Descripción general del sistema}
+
+%%%%%%%%%%%%%El sistema realizado para este proyecto se denomina \textit{EndlessID}, diseñado para fincas ganaderas del municipio de Sotara-Cauca pero adaptable para otros sectores ganaderos del país.
+%%%%%%%%%%%%%Esta compuesto por el trabajo interconectado de diferentes dispositivos electrónicos y electromecánicos que trabajan de forma conjunta para que el sistema esté en la capacidad de registrar datos de manera automática en bases de datos físicas o en la nube, que sirvan para monitorear el proceso alimenticio de reses pertenecientes al ganado estabulado que se encuentre en la etapa de engorde en el ciclo productivo de la carne, en una finca de un productor ganadero.
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%La obtención de estos datos se logra mediante un proceso complementario de dosificación y sensado que inicia desde la verificación de alimento suficiente para abastecer las necesidades del ganado estabulado, seguido de la identificación de las cabezas de ganado mediante un dispositivo de identificación por radio frecuencia asociado a cada animal, con los que se podrá llevar un registro y monitoreo de datos de manera independiente, procedido de la dosificación del alimento desde el tanque de almacenamiento hasta el plato de comida para posteriormente pesar el animal y registrar los datos obtenidos de manera inmediata, reduciendo así, falencias humanas por registro y manipulación de datos erróneos.
+
+%Como ayuda gráfica para comprender el sistema, se considera el siguiente diagrama de bloques mostrado en la Figura \ref{dblockspng}:
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[scale=0.85]{img/dblocks.png}
+%	\end{center}
+%	\caption{Diagrama de Bloques general. \label{dblockspng}}
+%\end{figure}
+
+
+
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[scale=0.8]{img/dfunc.png}
+%	\end{center}
+%	\caption{Diagrama Funcional del sistema. \label{dfuncpng}}
+%\end{figure}
+%	 
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+%	Con base en las modalidades estudiadas se procede a hacer una selección de modalidad que más se acomoda a las necesidades y limitantes del proyecto.
+%	Por su parte, el sistema planteado en este proyecto también presupone variaciones a las modalidades  arriba mencionadas con consideraciones adicionales de diseño tal y como se describe a continuación:
+	
+%	\begin{itemize}
+%		\item \textbf{Chaleco ó ``Backband'':} En primera instancia se consideró un chaleco usable, portable Y reutilizable, que sería utilizado por cada individuo perteneciente al ganado estabulado desde su ingreso hasta su salida en la etapa de Ceba, es decir, hasta que alcance un peso adecuado para ser transformado en carne para consumo humano y una vez esto ocurriera, el chaleco sería reasignado a un próximo miembro de la etapa de engorde. Como los equinos, bovinos y otros animales domésticos ya utilizan accesorios en su día a día, se consideró posible que el ganado usase este tipo de complemento. Por otra parte, uno de los objetivos principales de este proyecto es que se pueda identificar cada una de las reses de manera automática, por lo que el uso de etiquetas RFID fue uno de los influyentes mas importantes en este diseño. \\
+%
+%Ahora bien, en la infraestructura general de un comedero para ganado estabulado, se tienen algunas observaciones que por lo general son añadidas a la misma, como por ejemplo, la separación de cada cabeza mediante barras a los costados que sirven para separar a los animales entre sí evitando disputas en la manada(Ver Figura \ref{barraspng}).
+%  Estas barras también rodean la nuca del animal dejando un espacio apropiado para que éste pueda ingresar su cabeza y cuello hasta el comedero.
+%% de canoa, canaleta o mixto.
+%
+%		\begin{figure}[H]
+%		\begin{center}
+%			\includegraphics[scale=0.7]{img/barras.png}
+%		\end{center}
+%		\caption{Separación de ganado en el comedero. \label{barraspng}}
+%		\end{figure}
+%		
+%Además, para que el lector RFID no dependa de un personal encargado de la lectura de cada etiqueta en los chalecos, es necesario que el lector se encuentre en una posición fija. Con esto en mente, se presupuso que el lector debería estar en un punto estratégico que facilitara la proximidad de la etiqueta RFID sin incomodar al individuo que sería alimentado; por lo tanto el lector RFID se encontraría en la barra superior que bordea la nuca del bovino ocasionando que la etiqueta RFID del chaleco se encontrara en la nuca del novillo.
+%
+%Se diseñó un primer bosquejo en 3D del compartimento del chaleco que contendría la etiqueta RFID y de la cual se colocarían las correas ajustables que bordearían el cuerpo del novillo (Ver Figura \ref{mod1png}), lastimosamente se detectó una primer falencia a este diseño. Esto debido a que no todas las razas de bovinos más usados en este tipo de ganadería en Colombia son iguales en altura, contextura y fisionomía \cite{razas}.
+%
+%		\begin{figure}[H]
+%		\begin{center}
+%			\includegraphics[scale=0.7]{img/mod1.png}
+%		\end{center}
+%		\caption{Primer modelo 3D del compartimento RFID. \label{mod1png}}
+%		\end{figure}
+%
+%
+%
+%En la figura \ref{jorobapng} se puede observar razas como la Cyr, Brahman y Nelore; estas poseen una especie de joroba en la nuca o tejido descolgado en la parte inferior del cuerpo, lo que complica el uso de los chalecos y de la posición de la etiqueta RFID en ellos.
+%
+%		\begin{figure}[H]
+%		\begin{center}
+%			\includegraphics[scale=0.7]{img/joroba.png}
+%		\end{center}
+%		\caption{Fisionomía de razas comunes en el ciclo productivo de la Carne. \label{jorobapng}}
+%		\end{figure}
+%
+%
+%		\item \textbf{``Armband'':} Como medida reactiva y correctiva al problema del diseño anterior, se consideró que la etiqueta RFID podría ubicarse a uno de los costados de las extremidades del individuo y por ende el lector, tendría una nueva ubicación acorde a este cambio. No obstante se presentaron otras complicaciones que evidenciaron fallas en este diseño. La abrazadera ubicada en la extremidad dificulta el movimiento articular de la misma y como en cualquier otro caso de interacción animal que vive en grupo, se presentan ocasiones de confrontación física entre sujetos del sexo masculino; estas confrontaciones pueden suponer un daño irreparable en el compartimento portable del ``Armband'' dificultando la identificación del bovino en ocasiones futuras.
+%		
+%	\end{itemize}
+%		
+%		
+%Para satisfacer con las tareas de diseño concernientes a la identificación de ganado planteadas en este proyecto conservando factores característicos como la portabilidad, usabilidad y reutilización del identificador RFID y recalcando lo aprendido sobre las falencias de los diseños anteriores, se opta por considerar una modalidad híbrida entre la Jáquima  y los 2 prototipos diseñados.
+%Para el diseño de este nuevo prototipo se observa que un rasgo físico común entre las razas de bovinos usadas para engorde, es  que poseen un gran espacio en la parte frontal del cráneo, por encima de los ojos y que suele usarse con jáquimas comerciales, convencionales y modificables.\\
+%
+%
+%En la figura \ref{argollapng} se observa que las Jáquimas especializadas utilizan una argolla de conexión para unir y tensionar las correas ajustables. Teniendo esto presente se  puede reemplazar esta argolla con un accesorio que se conecte a las correas de la Jáquima garantizando que el accesorio siga siendo usable y reutilizable y que pueda portar una etiqueta RFID de manera portable.
+%
+%		\begin{figure}[H]
+%		\begin{center}
+%			\includegraphics[scale=0.7]{img/argolla.png}
+%		\end{center}
+%		\caption{Argolla de conexión. \label{argollapng}}
+%		\end{figure}
+%
+%Nuevamente, el diseño 3D de este accesorio se realiza en SolidWorks. Para este caso, se requiere de 2 partes, una usada como base donde irá la etiqueta RFID y otra que servirá de tapa protectora. Es importante añadir que este accesorio permite cambiar la etiqueta RFID si lo requiere lo que evidencia la reutilización del prototipo para ganado en el futuro.
+%
+%La base cuenta con un corte interno que sirve como almohadilla en donde se inserta la etiqueta RFID y también cuenta con 3 hendiduras para el acople de la tapa protectora. Por su parte, la tapa protectora cuenta con 3 salientes que sirven para acoplarse correctamente a la base y permitir que se conforme el accesorio en su totalidad.
+%
+%Una vez impresas las piezas, se obtienen resultados apreciables en la Figura \ref{jrfidpng}:
+%
+%		\begin{figure}[H]
+%		\begin{center}
+%			\includegraphics[scale=0.6]{img/jrfid.png}
+%		\end{center}
+%		\caption{Prototipo de accesorio RFID para la Jaquima. \label{jrfidpng}}
+%		\end{figure}
+%
+%En la parte derecha se puede observar que para garantizar resistencia y robustez del producto impreso, es necesario considerar un relleno o ``Infill'' entre 15 y 20\% de tipo Linea, esto se observa gráficamente con la cuadrícula formada por el relleno mencionado.
+
+
+		
+%		, Las actividades del día a día que realizan estos animales dieron paso a concluir la no viabilidad de este diseño. Entre estas activiades se hace mención de la interacción entre reses que en algunos casos implica choques entre ellas, el constante movimiento de las extremidades superiores que podrían verse limitadas por las correas pertenecientes al 
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   PENDIENTE    %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textbf{\section{Justificaci\'on}}
+%\textbf{\textit{Justificaci\'on del proyecto (metodol\'ogica, te\'orica, pr\'actica) (1 p\'agina)}}
+
+%%%%%%%%%%        ALIMENTO DE RESES DE CEBA DE RESES ESTABULADAS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%La ganadería de la carne supone un ambiente apropiado para que los animales en cuestión puedan sacar provecho de sus  cualidades genéticas y puedan producir los mejores productos en cuestión de calidad. Para ello, el cultivo de la carne debe ser debida y minuciosamente realizado lo que supone un constante trabajo de inspección tanto de la alimentación del ganado así como también del registro apropiado de los datos de seguimiento determinados por el ganadero y los intereses del mercado.
+%Sin embargo, las fincas y los terrenos destinados para estabular el ganado suelen encontrarse en recintos separados lo que implica a los productores tener un constante transporte de bienes y recursos tanto físicos como personales, lo que conlleva a gastos de recursos en transporte y contratación de personal. Además se debe llevar un registro de las especificaciones alimenticias y dietarías de cada res con lo que se presuponen grandes tareas de registro de actividades y datos primarios sobre el proceso evolutivo de la alimentación del ganado. No obstante, estas tareas de registro son realizadas de manera general abarcando el comportamiento general del ganado alimentado y en ocasiones se presentan casos en donde se distribuye de manera desorganizada conjunta del alimento dietario, ocasionando que algunas reses puedan abastecerse de dietas más desproporcionadas que otras lo que conlleva de comportamientos en peso irregulares o poco deseados para los intereses de los productores.
+%
+%En este trabajo se propone un alimentador automático de bajo costo para reses en proceso de engorde o ceba que permita, mediante sensores de peso, suministrar una cantidad de alimento de manera automática para cada res, en horarios del día preestablecidos por el productor ganadero y cuya ración será respectiva a la dieta de cada animal basada en los intereses del propietario. Las reses estarían identificadas por un número ID unido directa o indirectamente a sus cuerpos con lo cual se supervisa cada bovino por separado generando un historial alimenticio en la nube para cada individuo. Este historial permitiría organizar de manera sistemática el proceso evolutivo de la alimentación de una res específica sin prestaciones a errores humanos por registro indebido o erróneo.
+%Por medio de este alimentador se generaría un historial alimenticio de cada bovino que permitiría registrar la cantidad de porciones suministradas periódicamente, además de verificar, con sensores de presencia o detección,  si éste ha ingerido su alimento o no con lo cual se podrá identificar aquellas cabezas de ganado que estarían presentando desordenes alimenticios que vayan en contra de los intereses del productor. Esto aportaría significativamente a un distribución más sistemática  y eficiente del alimento del ganado.\\
+%
+%Entre los datos fijos de cada historial se tendría registro de su Nombre, RFID, Sexo, Raza, Peso y Edad inicial, Peso y Edad final; y como datos de monitoreo se tendría registro diario peso, edad, peso máximo alcanzado, si ha alcanzado o no un peso ideal y su evolución del peso para verificar si está obteniendo un crecimiento positivo, o en caso contrario, proceder con la toma de decisiones respecto al sujeto en cuestión tales como su posible venta, tratamiento, o venta temprana, entre otros.
+%
+%Al estar identificados con un número ID propio e independiente, mediante un sensor RFID, se ayuda a que el alimento se suministre al individuo correcto y que no se presentan casos en los que se suministren porciones repetidas en una misma franja horaria. Una vez el animal se encuentre en la zona de alimentación, estos serán pesados con el objetivo de hacer seguimiento del crecimiento de peso y verificar que esté cumpliendo con la tasa de crecimiento fijada por el productor y en caso de alcanzar un peso máximo preestablecido o presentar disminución de peso hacer la respectiva notificación y observación en la nube para la toma de decisiones futuras.\\
+%
+%Por último el sistema verifica la cantidad neta de alimento suministrado y dará aviso preventivo, mediante un recordatorio o una alarma al personal encargado notificando si el alimento está próximo a acabarse.
+%Es importante resaltar que este sistema se realiza con herramientas y sensores de bajo costo de Arduino.\\
+
+
+
+
+%%%%
+%%%%\section{Delimitaciones y Alcances} \label{limites}
+%%%%\begin{itemize}
+%%%%	\item La programación se realiza en Arduino como herramienta de procesamiento de los datos en crudo sensados.
+%%%%	\item Se utilizarán módulos y sensores de bajo costo en comparación a sensores de nivel industrial.
+%%%%	\item Los módulos actuadores y de sensado además de los parámetros de entrada usados en el prototipo, representarán (a escala) los valores y comportamientos de parámetros y sensores usados en trabajos de campo a nivel comercial. %(VER COMO ESCRIBIRLO MEJOR)
+%%%%%	\item Se hará una búsqueda y clasificación de dispositivos para el sensado de las variables estables y evolutivas que serán monitoreadas. (ESTO PARECE MAS QUE TODO UNA ACTIVIDAD) -> LISTO EL POLLO
+%%%%	\item Se seleccionarán los dispositivos más acordes a las necesidades y recursos limitados de y para el desarrollo del proyecto.
+%%%%	\item El (los) algoritmo(s) será(n) probado(s) en la construcción del prototipo maqueta a escala mas no en una implementación final en infraestructura ganadera ya establecida.
+%%%%	\item El diseño del sistema final entregado da la posibilidad de implementar un sistema con hasta 4 dosificadores por 1 solo contenedor o almacenador de alimento.
+%%%%	\item El prototipo final a entregar constaría de la funcionalidad del sistema para 1 solo punto de dosificación del alimento.
+%%%%	\item La notificaci\'on se registra en una base de datos. En caso de ser física, en un archivo de texto con modalidad .csv; en caso de ser en la nube, en Google Drive. El registro de la notificación hace parte del prototipo realizado.
+%%%%	\item El envío de los datos a la nube se realiza mediante módulos Wifi de Arduino Esp8266.
+%%%%	\item Los registros en la base de datos se caracterizar\'ian por los datos procesados obtenidos en el sensado.
+%%%%	\item El sistema diseñado es prototipable o implementable para territorios con acceso a Internet.
+%%%%
+%%%%%	\item 	Se dise\~na una aplicaci\'on m\'ovil  con la que se podrá verificar los registros de deformaciones.
+%%%%\end{itemize}
+%%%%
+%%%%%Enumere las delimitaciones (restricciones) en la soluci\'on que va a proponer.  (1/2 p\'agina). 
+%%%%\subsection{Entregables}
+%%%%Se establece diseñar un prototipo que constaría de:
+%%%%
+%%%%\begin{itemize}
+%%%%	\item Diseño de un sistema automático de monitoreo alimenticio de reses estabuladas en proceso de ceba.  
+%%%%	\item Diseño de Prototipo funcional (a escala) del sistema diseñado con un único punto de dosificación.
+%%%%	\item Construcción física (a escala) del prototipo diseñado con un solo dosificador funcional.
+%%%%	\item Plan de pruebas.
+%%%%	\item Documentación descriptiva, explicativa y argumentativa que evidencie el proceso de desarrollo del proyecto.
+%%%%\end{itemize}
+%%%%%Productos y resultados que se entregar\'an cuando finalice el proyecto (1/2 p\'agina). 
+
+

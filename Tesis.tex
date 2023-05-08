@@ -1,0 +1,186 @@
+\documentclass[11pt,twoside]{docs/thesis}
+%\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\renewcommand\spanishtablename{Tabla}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{url}
+% \usepackage{hyperref}  aqui estaba hyperref en orden
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{graphics}
+%\usepackage{translator}
+
+\usepackage{datetime}
+\yyyymmdddate
+\usepackage{pdflscape} % provides the landscape environment
+\usepackage{ragged2e} % provides \RaggedLeft
+\usepackage{hyperref}
+\usepackage[intoc, spanish]{nomencl}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %  Paragraph as another subsubsubsection 2023
+% \usepackage{titlesec}
+% \titleformat{\paragraph}
+% {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% \setcounter{secnumdepth}{4}
+% \setcounter{tocdepth}{4}
+% \titlespacing*{\paragraph}
+% {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%
+% TITULO DEL TRABAJO DE GRADO
+%%%%%%%%%%%%%%%%
+
+\titulo{Modelamiento dinámico de la producción ganadera en el Servicio Nacional de Aprendizaje SENA - Seccional Popayán, Cauca}
+
+%\autorA{COD}{Primer Autor}
+\autorA{2117293}{Ing. Luis Felipe Guevara Gómez}
+%\autorB{COD}{Segundo Autor} %Opcional
+
+%%%%%%%
+% FECHA DE ENTREGA
+%%%%%%%
+
+\fecha{\today}
+
+%%%%%%%%%%%%%%%%%
+% DIRECTOR DEL PROYECTO
+% DIRECTOR DE CARRERA
+% DECANO
+%%%%%%%%%%%%%%%%%
+
+%\directorproyecto{Dr.}{Nombre del Director}
+\directorproyecto{Dr.}{Luis Eduardo Tobón Llano}
+%\codirectorproyecto{Dr.}{Luis Fernando Macea Mercado}
+\directorcarrera{Dr.}{Juan Carlos Martinez Arias}
+
+% TeK
+\decanoFIC{Dr.}{Hern\'an Camilo Rocha Ni\~no}
+
+%%%%%%%
+% JURADOS
+%%%%%%%
+\juradoA{Degree.}{pepito perez \#1} % Jurado 1
+\juradoB{Degree.}{Pepito perez \#2} % Jurado 2
+
+\include{docs/format}
+\makeindex
+
+\begin{document}
+
+%\renewcommand{\dateseparator}{-} 
+%\yyyymmdddate
+%\today
+\maketitle
+\makecoverletter
+
+%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+%%%%%%%%%%%%%%%%%%
+\chapter*{Agradecimientos} \input{docs/agradecimientos}
+
+%\chapter*{Nomenclatura}
+\makenomenclature
+\input{docs/nomenclatura}
+
+%\chapter*{Glosario} \input{docs/glosario}
+\chapter*{Resumen}  \input{docs/resumen}
+\chapter*{Abstract} \input{docs/abstract}
+
+%%%%%%%%%%%%%%%%%
+%%%% TABLE OF CONTENTS
+%%%% AND PREABLE
+%%%%%%%%%%%%%%%%%
+
+\tableofcontents %\label{Indextable}  % ==>  ESTE ES EL INDICE GENERAL  <===
+\listoffigures 	  % ==>  ESTE ES EL INDICE DE FIGURAS  <===
+\renewcommand\listtablename{Índice de tablas}
+\listoftables     % ==================>    ESTE ES EL INDICE DE TABLAS  
+\clearpage % <=======================
+\mainmatter       % ==================>    ESTE NO SE QUE ES...     <=======================
+
+\dominitoc
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%% INTRODUCCION
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introducción}
+\input{docs/introduccion.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%% OBJETIVOS
+%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Objetivos y restricciones}
+\input{docs/objetivos.tex}
+
+\chapter{Metodología}
+\input{docs/metodol.tex}
+
+\chapter{Visión global del contexto \\ ganadero multipropósito} \label{visglob}
+\input{docs/visionglobal.tex}
+
+\chapter{CRISP - DM: ETAPA \#1 \\ Entendimiento del negocio}
+\label{crisp1}
+\input{docs/crispdme1.tex}
+
+\chapter{CRISP - DM: ETAPA \#2 \\ Entendimiento de los datos}
+\label{crisp2}
+\input{docs/crispdme2.tex}
+
+\chapter{CRISP - DM: ETAPA \#3 \\ Preparación de los datos} 
+\label{crisp3}
+\input{docs/crispdme3.tex}
+
+% \chapter{CRISP - DM: ETAPA \#3.5 - Preparación de los datos}
+% \input{docs/crispdme3.tex}
+
+\chapter{CRISP - DM: ETAPA \#4 \\ Modelado}\label{crisp4}
+\label{crisp4}
+\input{docs/crispdme4.tex}
+
+\chapter{CRISP - DM: ETAPA \#5 \\ Evaluación}
+\label{crisp5}
+\input{docs/crispdme5.tex}
+
+% \chapter{CRISP - DM: ETAPA \#6 \\ Despliegue}
+% \label{crisp6}
+% \input{docs/crispdme6.tex}
+
+
+% \input{docs/.tex}
+% %%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CONCLUSIONES Y TRABAJOS FUTUROS %%%%
+%  Contribuciones y  hallazgos ponerlos en su debido momento con el proceso de analisis en los datos.
+\chapter{Conclusiones y trabajos futuros}
+\input{docs/conclusiones.tex}
+
+%\chapter*{Anexos} \label{anexus}
+% \input{docs/anexos}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{IEEEtran}
+\bibliography{docs/biblio}
+
+%%%%%%%%%%%%%%%%
+% GENERAL INDEX
+%%%%%%%%%%%%%%%%
+
+\printindex
+
+\end{document}
+
+%\endinput

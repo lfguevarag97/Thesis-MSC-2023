@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%
+% DESCRIPCION DEL PROBLEMA
+%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Planteamiento del Problema} \label{plant}
+%ESTO SE BORRA-> Explicar el CONTEXTO, s\'intomas y causas del problema a resolver. (1.5 p\'aginas).EXPLICAR QUE VOY A HACER \\ \\
+
+El sector ganadero abarca diferentes especies de ganado tales como, los bovinos, los ovinos, los porcinos, entre otros. En Colombia se tiene una alta presencia de producción de estos tipos especialmente en el ganado bovino y ovino. De igual forma, estos tipos de ganado tienen diferentes modalidades, entre las cuales se pueden mencionar el ganado para crianza, para producción de leches y sus derivados y ganadería de la carne. En Colombia y el mundo se presentan constantes inversiones en materia tecnológica para mejorar la forma en cómo el ganado es productivo y puede participar de forma competitiva en un mercado de consumo de calidad.\\
+
+Debido a que el ciclo productivo de la carne consta de diferentes etapas con diferentes requerimientos, necesidades y cantidad de áreas verdes, se considera aportar el diseño de un sistema que pueda simplificar  tareas de obtención de datos y gastos por mano de obra en cultivos de reses destinados al engorde, los cuales pueden desempeñarse en espacios cerrados como establos, dando paso al monitoreo por condiciones de estabulación, en donde se garantiza el suministro de forraje verde, minerales, vitaminas y dietas específicas para el ganado y adaptándose a espacios cercanos a la casa matriz de administración de los productores \cite{contextoganadero}.
+En el Cauca, aunque se cuente con bastas hectáreas de diferentes fertilidades y condiciones térmicas apropiadas para el cultivo y desarrollo de la ganadería, se presentan muchas falencias en materia tecnológica y económica, en donde los movimientos migratorios de campesinos desplazados y los efectos colaterales del conflicto armado que se ha presentado en el país, son las principales causas de estas falencias. Sin embargo, el emprendimiento de los pequeños y medianos productores da paso a nuevas oportunidades de intervención por parte de la Ingeniería electrónica y el manejo aplicativo de nuevas tecnologías que permitan tener un contacto más cercano con la población campesina. \\
+
+El manejo de software sofisticado y maquinaria industrial puede presuponer brechas para con los usuarios campesinos por la falta de capacitación técnica o por la complejidad de uso de los programas para el manejo de datos. Sin embargo, el desarrollo de nuevas tecnologías ha dado paso a una era digital con la que se espera lograr avances significativos. Como se menciona en \cite{minagricultura}, \cite{ashby} y \cite{fao} la inclusión de las ciencias y la formación de entidades de apoyo al sector agrario pueden aportar significativamente al desempeño de los  cultivos ganaderos. 
+Como medio para facilitar al usuario la inclusión de software y herramientas tecnológicas más amigables se plantea el manejo de una HMI para que por medio de ésta, el usuario ganadero pueda añadir o eliminar uno o mas reses, establecer los valores dietarios, asignar los RFID a nuevos novillos, visualizar (en caso que se presente) avisos o alarmas y encender o apagar el sistema.\\
+
+Lo anterior se diseña, y se plantea acorde con el manual de Buenas Prácticas de Ganadería  (BPG) y con las legislaciones pertinentes al manejo de alimentos para el consumo humano establecidas por la ley colombiana mencionados en la sección \ref{leyes}.
+
+%%%%%%%%% CREOQ UE ESTE PARRAFO SE PUEDE BORRAR:
+%%se puede reprogramar y reconfigurar la cantidad de  micro controladores como Arduino o Rasperry Pi \cite{arduinodef}. Estos dispositivos son fácilmente re-programables y pueden adaptarse no solo a las necesidades de pequeños productores ganaderos sino también al uso por parte de grandes cultivadores del ganado de la carne.\\
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  TRABAJOS FUTUROS
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%Para trabajos futuros y de mayores dificultades geograficas se considera la posibilidad de acceder a los datos de manera remota mediante las redes de Internet y datos, y estableciendo un sistema automático de suministro y supervisión alimenticio; con esto se espera reducir gastos por transporte, personal de seguimiento y tiempo  y claridad en el registro de datos dando así, paso para que estos tiempos y recursos puedan ser redistribuidos en otras o nuevas tareas del productor ganadero.
+
+
+
+
+
+
+
+
+
+\subsection{Formulaci\'on}
+%Pregunta fundamental que se busca responder con el proyecto en esta formulación.
+
+%%?`C\'omo detectar la presencia de deformaci\'on de pavimentos en un tramo vial para posteriormente realizar una plataforma basada en la informaci\'on recolectada colectivamente por los usuarios del sistema? %en esta formulación 
+
+?`Cómo monitorear de manera automática la evolución alimenticia de reses en proceso de ceba bajo condiciones de estabulación para productores ganaderos de carne? 
+
+%?`Cómo monitorear la evolución alimenticia de reses en proceso de ceba mediante un sistema automático de bajo costo para productores ganaderos de carne? 
+
+\subsection{Sistematizaci\'on}
+%Subpreguntas que ayudan a definir claramente el problema de investigaci\'on (1 p\'agina con la formulaci\'on) 			
+El problema se sistematiza de la siguiente manera:
+\begin{itemize}
+	\item ?`Qué tipo de herramientas tecnológicas se utilizar\'ian para realizar el monitoreo alimenticio de las reses?
+	\item ?`C\'omo identificar cada cabeza de ganado por separado y evitar confusiones en grandes poblaciones de ganado?
+	\item ?`C\'omo saber los tiempos del día en los que se debe suministrar el alimento?
+%	\item ?`C\'omo saber la cantidad de alimento que será suministrado en un día y verificar que aún se cuente con alimento suficiente para ser suministrado al ganado?
+	\item ?`C\'omo verificar que aún se cuente con alimento suficiente para ser suministrado al ganado?
+	\item ?`C\'omo saber la porción de alimento apropiada para cada animal de manera particular?
+	\item ?`C\'omo suministrar el alimento racionado?
+	\item ?`C\'omo verificar que no se otorgará de manera equívoca las porciones de alimento a animales erróneos?
+	\item ?`C\'omo verificar que una res en particular ha ingerido correctamente su porción de alimento?
+	\item ?`C\'omo verificar que una res determinada presenta (o no) un crecimiento de peso acorde a los intereses del productor?
+	\item ?`C\'omo verificar que una res en específico ha alcanzado su peso máximo o ideal de acuerdo con los intereses del productor?
+	\item ?`C\'omo notificar cuando no haya suficiente alimento para suministrarlo a el ganado?
+	\item ?`C\'omo registrar los datos sensados en una base de datos en la nube?
+	\item ?`C\'omo realizar el registro de forma automática?
+	\item ?`C\'omo mostrar al usuario los datos registrados en la base de datos?
+	\item ?`C\'omo representar los datos almacenados en la base de datos?
+	\item ?`C\'omo verificar que los resultados obtenidos son acordes al diseño planteado?
+\end{itemize}
+
+\section{Objetivos}
+\subsection{Objetivo General}
+
+%\textbf{\textit{aksjhfkajhsgfkajshfkasj}}
+
+Diseñar un sistema de monitoreo alimenticio con herramientas de bajo costo para ganado estabulado en proceso de ceba.
+
+
+\subsection{Objetivos Espec\'ificos}
+
+\begin{itemize}
+	\item Investigar, clasificar y seleccionar los dispositivos y herramientas que serán usadas para el sensado de la deformación.
+	\item Asignar números, nombres  o características de identificación para referenciar a cada res.
+	\item Utilizar dispositivos de tiempo para poner en funcionamiento el alimentador a las horas deseadas por el productor.
+	\item Comprobar la existencia de cantidad suficiente de alimento almacenado.
+	\item Suministrar la porción de alimento respectiva a cada bovino mediante la cantidad especificada por su referencia de identificación.
+	\item Entregar la ración de alimento mediante un actuador de dosificación.
+	\item Identificar a la res mediante su referencia de identificación y corroborar si ya se le ha suministrado (o no) su respectiva porción de alimento en una franja horaria determinada.
+	\item Corroborar que la res ha ingerido su porción de alimento
+	\item Monitorear el crecimiento de peso de cada res y compararlo con el crecimiento ideal o deseado.
+	\item Conocer el peso de cada cabeza de ganado diariamente.
+	\item Notificar al personal encargado la insuficiencia de alimento almacenado.
+	\item Registrar la información sensada en una unidad de almacenamiento en la nube.
+	\item Realizar el registro de datos de forma automática.
+	\item Permitir al usuario acceder a los datos almacenados.
+	\item Representar los datos almacenados de manera gráfica.
+	\item Realizar un plan de pruebas.
+\end{itemize}
+
+
+\textbf{\section{Justificaci\'on}}
+%\textbf{\textit{Justificaci\'on del proyecto (metodol\'ogica, te\'orica, pr\'actica) (1 p\'agina)}}
+
+%%%%%%%%%%        ALIMENTO DE RESES DE CEBA DE RESES ESTABULADAS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La ganadería de la carne supone un ambiente apropiado para que los animales en cuestión puedan sacar provecho de sus  cualidades genéticas y puedan producir los mejores productos en cuestión de calidad. Para ello, el cultivo de la carne debe ser debida y minuciosamente realizado lo que supone un constante trabajo de inspección tanto de la alimentación del ganado así como también del registro apropiado de los datos de seguimiento determinados por el ganadero y los intereses del mercado.
+Sin embargo, las fincas y los terrenos destinados para estabular el ganado suelen encontrarse en recintos separados lo que implica a los productores tener un constante transporte de bienes y recursos tanto físicos como personales, lo que conlleva a gastos de recursos en transporte y contratación de personal. Además se debe llevar un registro de las especificaciones alimenticias y dietarías de cada res con lo que se presuponen grandes tareas de registro de actividades y datos primarios sobre el proceso evolutivo de la alimentación del ganado. No obstante, estas tareas de registro son realizadas de manera general abarcando el comportamiento general del ganado alimentado y en ocasiones se presentan casos en donde se distribuye de manera desorganizada conjunta del alimento dietario, ocasionando que algunas reses puedan abastecerse de dietas más desproporcionadas que otras lo que conlleva de comportamientos en peso irregulares o poco deseados para los intereses de los productores.
+
+En este trabajo se propone un alimentador automático de bajo costo para reses en proceso de engorde o ceba que permita, mediante sensores de peso, suministrar una cantidad de alimento de manera automática para cada res, en horarios del día preestablecidos por el productor ganadero y cuya ración será respectiva a la dieta de cada animal basada en los intereses del propietario. Las reses estarían identificadas por un número ID unido directa o indirectamente a sus cuerpos con lo cual se supervisa cada bovino por separado generando un historial alimenticio en la nube para cada individuo. Este historial permitiría organizar de manera sistemática el proceso evolutivo de la alimentación de una res específica sin prestaciones a errores humanos por registro indebido o erróneo.
+Por medio de este alimentador se generaría un historial alimenticio de cada bovino que permitiría registrar la cantidad de porciones suministradas periódicamente, además de verificar, con sensores de presencia o detección,  si éste ha ingerido su alimento o no con lo cual se podrá identificar aquellas cabezas de ganado que estarían presentando desordenes alimenticios que vayan en contra de los intereses del productor. Esto aportaría significativamente a un distribución más sistemática  y eficiente del alimento del ganado.\\
+
+Entre los datos fijos de cada historial se tendría registro de su Nombre, RFID, Sexo, Raza, Peso y Edad inicial, Peso y Edad final; y como datos de monitoreo se tendría registro diario peso, edad, peso máximo alcanzado, si ha alcanzado o no un peso ideal y su evolución del peso para verificar si está obteniendo un crecimiento positivo, o en caso contrario, proceder con la toma de decisiones respecto al sujeto en cuestión tales como su posible venta, tratamiento, o venta temprana, entre otros.
+
+Al estar identificados con un número ID propio e independiente, mediante un sensor RFID, se ayuda a que el alimento se suministre al individuo correcto y que no se presentan casos en los que se suministren porciones repetidas en una misma franja horaria. Una vez el animal se encuentre en la zona de alimentación, estos serán pesados con el objetivo de hacer seguimiento del crecimiento de peso y verificar que esté cumpliendo con la tasa de crecimiento fijada por el productor y en caso de alcanzar un peso máximo preestablecido o presentar disminución de peso hacer la respectiva notificación y observación en la nube para la toma de decisiones futuras.\\
+
+Por último el sistema verifica la cantidad neta de alimento suministrado y dará aviso preventivo, mediante un recordatorio o una alarma al personal encargado notificando si el alimento está próximo a acabarse.
+Es importante resaltar que este sistema se realiza con herramientas y sensores de bajo costo de Arduino.\\
+
+
+
+
+
+\section{Delimitaciones y Alcances} \label{limites}
+\begin{itemize}
+	\item La programación se realiza en Arduino como herramienta de procesamiento de los datos en crudo sensados.
+	\item Se utilizarán módulos y sensores de bajo costo en comparación a sensores de nivel industrial.
+	\item Los módulos actuadores y de sensado además de los parámetros de entrada usados en el prototipo, representarán (a escala) los valores y comportamientos de parámetros y sensores usados en trabajos de campo a nivel comercial. %(VER COMO ESCRIBIRLO MEJOR)
+%	\item Se hará una búsqueda y clasificación de dispositivos para el sensado de las variables estables y evolutivas que serán monitoreadas. (ESTO PARECE MAS QUE TODO UNA ACTIVIDAD) -> LISTO EL POLLO
+	\item Se seleccionarán los dispositivos más acordes a las necesidades y recursos limitados de y para el desarrollo del proyecto.
+	\item El (los) algoritmo(s) será(n) probado(s) en la construcción del prototipo maqueta a escala mas no en una implementación final en infraestructura ganadera ya establecida.
+	\item El diseño del sistema final entregado da la posibilidad de implementar un sistema con hasta 4 dosificadores por 1 solo contenedor o almacenador de alimento.
+	\item El prototipo final a entregar constaría de la funcionalidad del sistema para 1 solo punto de dosificación del alimento.
+	\item La notificaci\'on se registra en una base de datos. En caso de ser física, en un archivo de texto con modalidad .csv; en caso de ser en la nube, en Google Drive. El registro de la notificación hace parte del prototipo realizado.
+	\item El envío de los datos a la nube se realiza mediante módulos Wifi de Arduino Esp8266.
+	\item Los registros en la base de datos se caracterizar\'ian por los datos procesados obtenidos en el sensado.
+	\item El sistema diseñado es prototipable o implementable para territorios con acceso a Internet.
+
+%	\item 	Se dise\~na una aplicaci\'on m\'ovil  con la que se podrá verificar los registros de deformaciones.
+\end{itemize}
+
+%Enumere las delimitaciones (restricciones) en la soluci\'on que va a proponer.  (1/2 p\'agina). 
+\subsection{Entregables}
+Se establece diseñar un prototipo que constaría de:
+
+\begin{itemize}
+	\item Diseño de un sistema automático de monitoreo alimenticio de reses estabuladas en proceso de ceba.  
+	\item Diseño de Prototipo funcional (a escala) del sistema diseñado con un único punto de dosificación.
+	\item Construcción física (a escala) del prototipo diseñado con un solo dosificador funcional.
+	\item Plan de pruebas.
+	\item Documentación descriptiva, explicativa y argumentativa que evidencie el proceso de desarrollo del proyecto.
+\end{itemize}
+%Productos y resultados que se entregar\'an cuando finalice el proyecto (1/2 p\'agina). 
+
+

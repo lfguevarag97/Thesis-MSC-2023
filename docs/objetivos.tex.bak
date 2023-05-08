@@ -1,0 +1,33 @@
+%Objetivos 
+
+%\subsection{Objetivo General}
+\section{Objetivo General}
+
+%\textbf{\textit{aksjhfkajhsgfkajshfkasj}}
+
+Diseñar un sistema para ayudar al monitoreo alimenticio
+ %con herramientas de bajo costo para
+ de ganado estabulado en proceso de ceba.
+
+
+%\subsection{Objetivos Espec\'ificos}
+\section{Objetivos Espec\'ificos}
+
+\begin{itemize}
+	\item Investigar, clasificar y seleccionar los dispositivos y herramientas que serán usadas para el sensado de la deformación.
+%%	\item Asignar números, nombres  o características de identificación para referenciar a cada res.
+%%	\item Utilizar dispositivos de tiempo para poner en funcionamiento el alimentador a las horas deseadas por el productor.
+	\item Comprobar la existencia de cantidad suficiente de alimento almacenado.
+	\item Suministrar la porción de alimento respectiva a cada bovino mediante la cantidad especificada por su referencia de identificación.
+	\item Entregar la ración de alimento mediante un actuador de dosificación.
+	\item Identificar a la res mediante su referencia de identificación y corroborar si ya se le ha suministrado (o no) su respectiva porción de alimento en una franja horaria determinada.
+	\item Corroborar que la res ha ingerido su porción de alimento
+	\item Monitorear el crecimiento de peso de cada res y compararlo con el crecimiento ideal o deseado.
+	\item Conocer el peso de cada cabeza de ganado diariamente.
+	\item Notificar al personal encargado la insuficiencia de alimento almacenado.
+	\item Registrar la información sensada en una unidad de almacenamiento en la nube.
+	\item Realizar el registro de datos de forma automática.
+	\item Permitir al usuario acceder a los datos almacenados.
+	\item Representar los datos almacenados de manera gráfica.
+	\item Realizar un plan de pruebas.
+\end{itemize}

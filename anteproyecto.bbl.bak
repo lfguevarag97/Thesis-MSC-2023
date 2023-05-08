@@ -1,0 +1,128 @@
+\newcommand{\noopsort}[1]{}
+\begin{thebibliography}{10}
+
+\bibitem{Defopensource}
+Laurent A.
+\newblock {\em Understanding Open Source and Free Software Licesing}.
+\newblock 2008.
+
+\bibitem{arduinodef}
+ARDUINO.
+\newblock Gesti\'on de infraestructura vial y cierre de v\'ias, 2005.
+
+\bibitem{cloud2}
+Griffith Armbust, Fox.
+\newblock A view of cloud computing.
+\newblock {\em ACM Communications}.
+
+\bibitem{defceba}
+Jiménez~Suárez Catalina and Pinzón moreno Guillermo~Andres.
+\newblock Factibilidad de producir y comercializar un suplemento alimenticio
+  para el ganado bovino en ciclo de ceba en el departamento del meta, 2015.
+
+\bibitem{algoritmo}
+Knuth D.
+\newblock {\em The Art of Computer Programming}.
+\newblock Assison-Wesley, 1968.
+
+\bibitem{fao}
+Organización de~las Naciones Unidas para la Alimentación y~la Agricultura.
+\newblock Reforma y descentralización de servicios agrícolas: Un marco de
+  políticas, 2002.
+
+\bibitem{casti}
+Castilo F.
+\newblock {\em Conformado de materiales Plásticos}.
+\newblock Universidad Nacional Autónoma de Mexico, 2012.
+
+\bibitem{invima}
+INVIMA, 2007.
+
+\bibitem{ashby}
+Ashby J.
+\newblock Institutionalising farmer participation in adaptive technology
+  testing with the 'cial'. agricultural research and extension network, network
+  paper 57., 1995.
+
+\bibitem{rfid1}
+K.~{Kapucu} and C.~{Dehollain}.
+\newblock A passive uhf rfid system with a low-power capacitive sensor
+  interface.
+\newblock In {\em 2014 IEEE RFID Technology and Applications Conference
+  (RFID-TA)}, pages 301--305, Sep. 2014.
+
+\bibitem{univalle1}
+Rueda~D León~J.
+\newblock Dispensador automático de comida para mascotas, programabla y
+  controlado remotamente.
+\newblock Trabajo de grado, 2013.
+
+\bibitem{DEM}
+Conveying Knowledge Workmanship Solutions Design~Engineering Manufacturing,
+  2019.
+
+\bibitem{nicaraguat}
+Fonseca~R Montes~E.
+\newblock Dosificadro automático de alimento y agua para el ganado vacuno de la
+  finca molina, en la comunidad de san rafael del sur.
+\newblock Trabajo de grado, 2013.
+
+\bibitem{contextoganadero}
+Fonseca P.
+\newblock Así funcionan los ciclos productivos de las ganaderías, 2016.
+
+%\bibitem{dosificadoras}
+%Sanchez~H Pinto~C.
+%\newblock DiseÑo, modelamiento y simulaciÓn de mÁquina dosificadora de alimento
+%  granulado para animales, 2006.
+
+\bibitem{pinturan}
+Sanchez~H Pinto~C.
+\newblock {\em Diseño, modelamiento y simulación de máquina dosificadore de
+  alimento granulado para animales}.
+\newblock Universidad de La Salle, 2006.
+
+\bibitem{feedstar}
+Sanchez~H Pinto~C.
+\newblock Eder gmbh, 2015.
+
+\bibitem{database}
+Llanos R.
+\newblock {\em Fundamentos de inform\'atica y programaci\'on}.
+\newblock Ediciones Paraninfo, 2007.
+
+\bibitem{defalgoritmo}
+RAE, 2019.
+
+\bibitem{cloud}
+Wells~C Rhea~S.
+\newblock Maintenance-free global data storaage., 2001.
+
+\bibitem{defsilvopas}
+Santana Rodr{\'\i}guez, Martha Oliva, and Jos{\'e}~Dar{\'\i}o Valencia~Real.
+\newblock {\em Producci{\'o}n ganadera sostenible silvopastoreo}.
+\newblock Corporaci{\'o}n Colombiana de Investigaci{\'o}n
+  Agropecuaria-CORPOICA, 1998.
+
+\bibitem{minagricultura}
+MINISTERIO DE AGRICULTURA Y~DESARROLLO RURAL.
+\newblock El campo colombiano compite con innovación, 2018.
+
+\bibitem{torres}
+Marcelo~E Torres~G.
+\newblock Diseño y construcción de un prototipo con sistemas scada aplicado al
+  control del micro clima y dosificación del producto almacenado en silos,
+  2006.
+
+\bibitem{recomendaciones}
+Díaz V.
+\newblock Recomendaciones sobre sistemas intensivos de producción de carne:
+  Estabulación, semiestabulación y sumplementación estrategica en pastoreo,
+  2002.
+
+\bibitem{defestabulacion}
+Díaz V.
+\newblock Manual de recomendaciones sobre sistemas intensivos de producción de
+  carne, 2010.
+
+\end{thebibliography}

@@ -1,0 +1,64 @@
+Tal y como se menciona en el capitulo 2, el objetivo principal de este proyecto radica en el desarrollo de un sistema tal que ayude, permita y facilite el monitoreo alimenticio de un conjunto de novillos estabulados en proceso de engorde; para ello primero es necesario comprender las etapas que influyen en la adquisición de datos y posteriormente considerar oportunidades de intervención (OI) o mejora desde un punto de vista ingenieril.\\
+
+\section{Iteración diaria del proceso de engorde}
+
+El proceso inicia con la verificación de alimento suficiente para el o los grupos de bovinos a alimentar, seguido por la entrada de individuos al área de alimentación; los animales deben ser ingresados por grupos de tal forma que se tenga conocimiento del los individuos que ingresan y salen, y de las porciones correspondientes para que su evolución y monitoreo alimenticio sea apropiado.
+
+\begin{itemize}
+	\item \textbf{OI}: Esto sugiere la necesidad de identificar a los novillos y tener al alcance sus porciones dietarias correspondientes.
+\end{itemize}
+
+
+Al tener identificado al individuo y por ende tener conocimiento de su porción dietaria correspondiente, es necesario entregar dichas porciones lo más precisas posible, descartando cualquier tipo de aproximación errónea o discrepancia por criterio humano. Por otra parte se requiere optimizar el tiempo, costo y personal  requerido en la dosificación del alimento desde el tanque de almacenamiento hasta los comederos.
+
+\begin{itemize}
+	\item \textbf{OI}: Para validar y verificar que las porciones son adecuadas y aproximadamente precisas se opta por pesar las porciones con balanzas digitales antes de ser entregadas al animal. En lo que respecta al suministro constante de alimento se reputa tener puntos fijos de dosificación continua que faciliten la distribución del alimento de manera automática. Para ello se requiere la inclusión de mecanismos de dosificación como los mencionados en la seccion \ref{}.
+\end{itemize}
+
+Una vez iniciada y finalizada la ingesta del alimento, el animal es llevado a una balanza para obtener su peso actual, seguido a esto se registran éste y otros datos concernientes a su proceso de alimentación tales como las veces  que ha sido alimentado o si ha presentado alguna dificultad en consumir su ración diaria; posteriormente se da salida del área de alimentación.
+
+\begin{itemize}
+	\item \textbf{OI}: Al identificar al individuo mediante una referencia única, se pueden asociar datos a esta referencia de identificación, tal y como se realiza en una institución educativa mediante el carné estudiantil. Con esto, el registro de datos se garantiza de forma tal que no se puedan asignar datos erróneos entre los novillos del ganado estabulado.
+Además, si el peso ha presentado algún comportamiento deseable o indeseable, el registro estadístico de los datos puede aportar en la toma de decisiones.
+	
+\end{itemize}
+
+Nuevamente y finalmente, se debe verificar que haya alimento suficiente para un próximo grupo que ingrese al area de alimentación.\\
+
+Como ayuda gráfica para comprender el sistema, se considera el siguiente diagrama de bloques general mostrado en la Figura \ref{dblockspng}:
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.85]{img/dblocks.png}
+	\end{center}
+	\caption{Diagrama de Bloques general. \label{dblockspng}}
+\end{figure}
+
+Del diagrama se puede describir lo siguiente:
+
+\begin{itemize}
+	\item Para la verificación y validación del alimento se pueden utilizar sensores de presencia que indiquen la existencia (o no) de alimento suficiente.
+	\item Para la ``Pre-identificación'', se puede hacer uso de los dispositivos RFID mencionados en la sección (sección donde se hable 
+del RFID).
+	\item Para la ``Dosificación'' del alimento se requiere de hardware, sensores y actuadores electrónicos y/o electromecánicos.
+	\item Para el registro de los datos se puede hacer uso de la etapa de ``Pre-identificación'' y asociar bases de datos a estos dispositivos de reconocimiento para que se actualicen los datos de manera inmediata e inequívoca.
+\end{itemize}
+
+Con base en lo anterior, se puede segmentar el sistema total en 4 sub-sistemas principales: ``ID'', ``Sensado'', ``Hardware'' y ``Manipulación de datos''.
+
+\input{docs/subsisid}
+
+%\input{docs/subsisact}
+\input{docs/subsishw}
+
+%
+%
+%establece el siguiente diagrama funcional del sistema (Ver Figura \ref{dfuncpng}):
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[scale=0.8]{img/dfunc.png}
+%	\end{center}
+%	\caption{Diagrama Funcional del sistema. \label{dfuncpng}}
+%\end{figure}
+%	 

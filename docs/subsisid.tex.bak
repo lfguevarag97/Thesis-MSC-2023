@@ -1,0 +1,130 @@
+\section{Subsistema ID}
+\label{aubsisid}
+%	\item \textbf{ID: } 
+%	El dispositivo RFID es asignado a cada novillo de engorde, y éste lo portará . /*ESTO LO PONGO EN EL QUE YO ESCOGÍ*/
+	En el subsistema ID se realiza la identificación de cada novillo mediante un accesorio, característica, marca, descripción, nombre o finalidad. Sin embargo, por cuestiones de recursos, facilidad de uso, utilidad descriptiva e informativa y capacidad de reutilización se requiere seleccionar una modalidad (de las mencionadas en la sección (vision global)) que cumpla con estos criterios.
+	
+	Para seleccionar la modalidad mas apropiada se procede a realizar la siguiente matriz de pesos  para seleccionar la alternativa mas apropiada:
+	
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.85]{img/matrizid.png}
+	\end{center}
+	\caption{Matriz de selección por peso ponderado para el subsistema ID. \label{matrizidpng}}
+\end{figure}
+	
+De la tabla se puede observar que de las 5 modalidades actuales más utilizadas en la ganaderia, prevalece el uso de la jáquima o collar y el uso de un chip subcutáneo RFID. Desde un punto de vista de la ingeniería electrónica, la modalidad que optimiza la identificación del ganado en cuestión de tiempo y facilidad de descripción informativa es la identificación mediante el transponedor de radiofrecuencia. Por otro lado, desde un punto de vista financiero, el uso del subcutáneo  significa un elevado costo en comparación al uso de Collares que además de ser económicos  pueden ser reutilizables.
+
+No obstante, aunque ambas opciones han resultado ser convenientes, se opta por buscar alternativas que permitan aprovechar las mejores cualidades de ambas modalidades. Como resultado se opta por combinar estos atributos en una modalidad híbrida cuyo diseño se describe a continuación:
+
+\begin{itemize}
+		\item \textbf{Diseño 1, Chaleco ó ``Backband'':} En primera instancia se consideró un chaleco usable, portable Y reutilizable, que sería utilizado por cada individuo perteneciente al ganado estabulado desde su ingreso hasta su salida en la etapa de Ceba, es decir, hasta que alcance un peso adecuado para ser transformado en carne para consumo humano y una vez esto ocurriera, el chaleco sería reasignado a un próximo miembro de la etapa de engorde. Como los equinos, bovinos y otros animales domésticos ya utilizan accesorios en su día a día, se consideró posible que el ganado usase este tipo de complemento. Por otra parte, uno de los objetivos principales de este proyecto es que se pueda identificar cada una de las reses de manera automática y eficiente, por lo que el uso de etiquetas RFID (ver Figura \ref{rfidtagpng}) fue uno de los influyentes mas importantes en este diseño.
+	
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.3]{img/rfidtag.png}
+		\end{center}
+		\caption{Etiqueta ó ``Tag'' RFID. \label{rfidtagpng}}
+		\end{figure}
+
+Ahora bien, en la infraestructura general de un comedero para ganado estabulado, se tienen algunas observaciones que por lo general son añadidas a la misma, como por ejemplo, la separación de cada cabeza mediante barras a los costados que sirven para separar a los animales entre sí evitando disputas en la manada(Ver Figura \ref{barraspng}).
+  Estas barras también rodean la nuca del animal dejando un espacio apropiado para que éste pueda ingresar su cabeza y cuello hasta el comedero.
+% de canoa, canaleta o mixto.
+
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.55]{img/barras.png}
+		\end{center}
+		\caption{Separación de ganado en el comedero. \label{barraspng}}
+		\end{figure}
+		
+Además, para que el lector RFID no dependa de un personal encargado de la lectura de cada etiqueta en los chalecos, es necesario que el lector se encuentre en una posición fija. Con esto en mente, se presupuso que el lector debería estar en un punto estratégico que facilitara la proximidad de la etiqueta RFID sin incomodar al individuo que sería alimentado; por lo tanto el lector RFID se encontraría en la barra superior que bordea la nuca del bovino ocasionando que la etiqueta RFID del chaleco se encontrara en la nuca del novillo.
+
+Se diseñó un primer bosquejo en 3D del compartimento del chaleco que contendría la etiqueta RFID y de la cual se colocarían las correas ajustables que bordearían el cuerpo del novillo (Ver Figura \ref{mod1png}),  
+
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.55]{img/mod12.png}
+		\end{center}
+		\caption{Primer modelo 3D del compartimento RFID. \label{mod1png}}
+		\end{figure}
+
+
+
+Lastimosamente se detectó una primer falencia a este diseño, esto debido a que no todas las razas de bovinos más usados en este tipo de ganadería en Colombia son iguales en altura, contextura y fisionomía \cite{razas}. En la figura \ref{jorobapng} se puede observar razas como la Cyr, Brahman y Nelore; estas poseen una especie de joroba en la nuca o tejido descolgado en la parte inferior del cuerpo, lo que complica el uso de los chalecos y de la posición de la etiqueta RFID en ellos.
+
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.7]{img/joroba.png}
+		\end{center}
+		\caption{Fisionomía de razas comunes en el ciclo productivo de la Carne. \label{jorobapng}}
+		\end{figure}
+
+
+		\item \textbf{Diseño 2, ``Armband'':} Como medida reactiva y correctiva al problema del diseño anterior, se consideró que la etiqueta RFID podría ubicarse a uno de los costados de las extremidades del individuo y por ende el lector, tendría una nueva ubicación acorde a este cambio. No obstante se presentaron otras complicaciones que evidenciaron fallas en este diseño.
+
+La abrazadera ubicada en la extremidad dificulta el movimiento articular de la misma y como en cualquier otro caso de interacción animal que vive en grupo, se presentan ocasiones de confrontación física entre sujetos del sexo masculino; estas confrontaciones pueden suponer un daño irreparable en el compartimento portable del ``Armband'' dificultando la identificación del bovino en ocasiones futuras.
+		
+%	\end{itemize}
+		
+		
+Para satisfacer con las tareas de diseño concernientes a la identificación de ganado planteadas en este proyecto,  conservando factores característicos como la portabilidad, usabilidad, reutilización del identificador RFID y bajo costo; y recalcando lo aprendido sobre las falencias de los diseños anteriores, se decide utilizar una modalidad híbrida entre la Jáquima y los 2 prototipos diseñados con la etiqueta RFID.
+
+\item \textbf{Diseño 2, ``Armband'':}
+ 
+Para el diseño de este nuevo prototipo se observa que un rasgo físico común entre las razas de bovinos usadas para engorde, es  que poseen un gran espacio en la parte frontal del cráneo, por encima de los ojos y que suele usarse con jáquimas comerciales, convencionales, modificables, etc.\\
+
+
+En la figura \ref{argollapng} se observa que las Jáquimas especializadas utilizan una argolla de conexión para unir y tensionar las correas ajustables. Teniendo esto presente se  puede reemplazar esta argolla con un accesorio que se conecte a las correas de la Jáquima garantizando que el accesorio siga siendo usable y reutilizable y que pueda portar una etiqueta RFID.
+
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.9]{img/argolla.png}
+		\end{center}
+		\caption{Argolla de conexión. \label{argollapng}}
+		\end{figure}
+
+Nuevamente, el diseño 3D de este accesorio se realiza en SolidWorks. Para este caso, se requiere de 2 partes, una usada como base donde irá la etiqueta RFID y otra que servirá de tapa protectora. Es importante añadir que este accesorio permite cambiar la etiqueta RFID si lo requiere, lo que evidencia la reutilización del prototipo para ganado en el futuro.\\
+
+La base cuenta con un corte interno que sirve como almohadilla en donde se inserta la etiqueta RFID y también cuenta con 3 hendiduras para el acople de la tapa protectora. Por su parte, la tapa protectora cuenta con 3 salientes que sirven para acoplarse correctamente a la base y permitir que se conforme el accesorio en su totalidad. Una vez impresas las piezas, se obtienen resultados apreciables en la Figura \ref{jrfidpng}:
+
+		\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.65]{img/jrfid.png}
+		\end{center}
+		\caption{Prototipo de accesorio RFID para la Jaquima. \label{jrfidpng}}
+		\end{figure}
+
+En la parte derecha se puede observar que para garantizar resistencia y robustez del producto impreso, es necesario considerar un relleno o ``Infill'' entre 15 y 20\% de tipo Linea, esto se observa gráficamente con la cuadrícula formada por el relleno mencionado.\\
+
+
+A comparación de las modalidades mencionadas, este accesorio cuenta con las mejores características tal y como se puede apreciar en el diagrama radial mostrado en la figura \ref{statsidpng}.
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.6]{img/statsid.png}
+	\end{center}
+	\caption{Diagrama radial de las modalidades de identificación bovina. \label{statsidpng}}
+\end{figure}
+
+
+Finalmente, al unir el accesorio impreso junto con unas abrazaderas ajustables se finiquita el accesorio prototipo denominado como ``Jáquima RFID''. Este contiene un documento de identidad único (UID) y se encuentra grabado en la memoria de la etiqueta RFID añadida al mismo.
+%   para la identificación del ganado estabulado:
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.6]{img/jaquimaid.png}
+	\end{center}
+	\caption{Jáquima ID. \label{jaquimaidpng}}
+\end{figure}
+
+\end{itemize}
+
+
+ Por su parte, para este último diseño se requiere que el lector del dispositivo RFID deba posicionarse en un lugar que esté en contacto con la parte frontal del novillo. Dado que se presentarán distintos ejemplares de diferentes tamaños y fisionomías, el punto estratégico de lectura sería la puerta de ingreso al puesto de comida. Como los animales son guiados a estos puestos con la ayuda de personal calificado, el registro en la entrada es el punto mas apropiado para garantizar que el individuo ingresado esta (o no) identificado para su alimentación y estudio correspondiente.
+
+
+%A este accesorio se le denomina 
+
+Así pues, los novillos que cuenten con este accesorio podrán ser debidamente identificados a la hora de ser ingresados a los puestos de comida donde se les dosifica el alimento.

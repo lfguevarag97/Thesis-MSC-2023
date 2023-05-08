@@ -1,0 +1,40 @@
+\section{Subsistema Hardware} \label{subsishw}
+%	\item \textbf{ID: } 
+%	El dispositivo RFID es asignado a cada novillo de engorde, y éste lo portará . /*ESTO LO PONGO EN EL QUE YO ESCOGÍ*/
+	En el subsistema de Hardware se realiza la activación de los dispositivos encargados de dosificar el alimento desde el tanque de almacenamiento, hasta el plato de comida del novillo. Como se menciona en la sección \ref{}, existen diferentes mecanismos usados para manipular alimentos tanto de consumo humano como animal. Estos poseen atributos, diseños y sistemas de funcionamiento con características especializados para su propósito, estos varían dependiendo de la cantidad de alimento, el tipo de alimento, precisión, velocidad de trabajos entre otros criterio. 
+	
+	Para saber cual de estos mecanismos se acomoda a las necesidades, limitantes, situaciones y propiedades del entorno de trabajo de este proyecto, nuevamente es necesario la selección de el(los) mecanismo(s) más apropiado(s) para las dar soluciones correspondientes a las condiciones del entorno de trabajo. Para ello se recurre a realizar una nueva matriz de selección:
+	
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.85]{img/matrizact.png}
+	\end{center}
+	\caption{Matriz de selección por peso ponderado para el mecanismo dosificador. \label{matrizactpng}}
+\end{figure}
+	
+	En esta Matriz se puede observar que por cuestión de características del propósito, materiales de transporte, precisión de dosificación, viabilidad económica y técnica y control electrónico; el mecanismo encargado de extraer el alimento es el denominado ``Tornillo sin fin''. Aunque este mecanismo es en principio mecánico, debe ser controlado por una señal de activación por pulsos (PWM) ocasionadas por la entrada de datos entregadas por los sensores del sub sistema de sensado explicadas en la siguiente sección. Por otra parte, el tornillo debe moverse rotativa y constantemente gracias a un actuador electrónico como un motor. 
+	
+	Una vez más, es imperativo seleccionar el tipo de motor mas adecuado para culminar esta tarea. Por lo que en esta ocasión los criterios decisivos serán la manipulación electrónica, el torque del motor y el consumo energético.
+	
+	\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.85]{img/matrizmotor.png}
+	\end{center}
+	\caption{Matriz de selección por peso ponderado para el motor . \label{matrizmotorpng}}
+\end{figure}
+	
+Es esencial notar que aunque los motores paso a paso son ideales por su capacidad de torque, estos requieren de sistemas de alimentación de alta potencia y sistemas de manipulación  complejos, motivos por los cuales, los servomotores de giro continuo representan una mejor alternativa.
+
+También es imperativo recalcar que la extracción de alimento es verificado por una balanza digital para corroborar y validar el peso de alimento que se entrega al novillo, ocasionando que la alta precisión de ``micro steps'' del motor paso a paso sea reemplazada por la velocidad de giro del servomotor de giro continuo.
+
+Ahora bien, el uso de tornillos sin fin exponen una dificultad práctica debido a su falta de disponibilidad directa en el mercado, estos se fabrican acorde a las especificaciones del cliente, por lo tanto no es posible encontrar modelos que se adapten a las condiciones de trabajo ya establecidas. Como medida adaptativa a esta situación,  se utiliza nuevamente la impresión 3D como alternativa viable en el desarrollo del prototipo y la validación del diseño. Este proceso de diseño es descrito a continuación:
+
+ 
+
+
+	
+	
+	
+	
+	
+	

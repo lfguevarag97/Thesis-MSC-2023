@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%
+% INTRODUCCION
+%%%%%%%%%%%%%%%%%%%%
+%%Introducción general al problema que se va a resolver. (1 %%página)
+%%%%\begin{align*}
+%%%%\sin(x)=e^{2 \pi \theta \widehat{g}}\\
+%%%%\sin(x)=e^{2 \pi}+\sin(x)
+%%%%\end{align*}
+
+En los últimos años, el sector agropecuario ha ido retomando gran importancia en Latinoamérica y el mundo, debido a múltiples factores entre los cuales se puede resaltar el crecimiento poblacional que lleva consigo el incremento del consumo de alimentos. Esto representa una necesidad que puede y debe ser resuelta con el crecimiento de la producción agropecuaria de hasta un 70\% para satisfacer la demanda alimenticia a nivel mundial. Para ello es de vital importancia que los países en desarrollo como Colombia, entren a formar parte del mercado altamente productivo y competitivo  haciendo uso de las fuentes que le aportan una ventaja comparativa en la región que radican, siendo estas la abundancia de recursos hidrícos y terrestres \cite{fao}.\\
+
+Actualmente, Brasil es el segundo mayor proveedor de alimentos y productos agropecuarios a nivel mundial y cuenta con mejoras continuas en los procesos de producción, que respaldan el rápido crecimiento de las exportaciones. La investigación agropecuaria ha sido uno de los factores clave para el incremento de la productividad en la región durante las últimas décadas con el fin de monitorear los resultados y el desempeño de los sistemas de investigación y desarrollo agropecuario. Estos datos son una herramienta indispensable cuando se trata de evaluar el aporte de la I+D agropecuaria y de manera más general el crecimiento económico del país.\\
+
+En America Latina y más precisamente en Colombia, sobresale la formación de 55 Comités de Investigación Agricola elegidos Localmente (CIAL), estos están consituidos por agricultores experimentados que administran y conducen investigación y desarrollo en beneficio de toda la comunidad \cite{ashby}; así pues se representa la alta participación colombiana en este ámbito de desarrollo.
+
+En Colombia también se han incorporado nuevas entidades que aportan al desarrollo investigativo, productivo y competitivo como la Corporación Colombiana de Investigación Agropecuaria (AGROSIVA), que de mano con la expedición de la Ley 1876 de 2017 donde se crea el Sistema Nacional de Innovación Agropecuaria (SNIA); buscan integrar la ciencia, y el desarrollo tecnológico del sector junto con la formación y prestación del servicio de extensión agropecuaria. En este sentido, la ciencia permite lograr avances en términos productivos, de innovación y de competitividad \cite{minagricultura}.\\
+
+En el Cauca, de acuerdo con el Instituto Geográfico Agustín Codazzi, los suelos del departamento presentan casi todos los pisos térmicos de variadas fertilidades y profundidades y con diversas vocaciones para su uso \cite{igac}. Por otra parte, aunque comúnmente pueda considerarse un sector primitivo o de poca inversión tecnológica, el sector agropecuario cuenta con el mayor potencial tecnológico y es uno de los más tecnificados. Esto debido a la inclusión de nuevas tecnologías, no solo para la ejecución de procesos, sino también para la gestión de la información y las comunicaciones, impulsando el trabajo de campesino y promoviendo su producción a nivel mundial.
+
+
+No obstante, la inclusión de las actuales tecnologías puede significar una gran inversión económica para pequeños y medianos productores y cultivadores. Los altos costos significan un impedimento a la participación competitiva en el mercado ganadero y de cultivos varios, con lo que el mejoramiento de pequeñas partes del sistema total puede manifestarse en mejoras significativas en el día a día de los nuevos emprendedores ganaderos. Estos costos se pueden taxonomizar en costos de producción, mantenimiento, transporte, control, toma, manipulación y representación de datos; que diariamente aportan al consumo de recursos limitados como los económicos, personales y tiempo. Para ello se requiere de nuevas alternativas que permitan mejorar algunas de las condiciones de trabajo de los cultivadores agrícolas promoviendo de igual forma, la integración científica, innovadora y competitiva.\\
+
+
+Con base en todo lo anterior, se considera viable la inclusión de tecnologías re-programables de bajo costo como los microprocesadores y microcontroladores que mediante la programación de algoritmos computacionales, pueden manipular dispositivos electrónicos y electromecánicos que a pesar de ser a menor escala, pueden ayudar a abarcar algunas tareas de la producción ganadera
+
+\section{Planteamiento del Problema}
+
+El sector ganadero abarca diferentes especies de ganado tales como, los bovinos, los ovinos, los porcinos, entre otros. En Colombia se tiene una alta presencia de producción de estos tipos especialmente en el ganado bovino y ovino. De igual forma, estos tipos de ganado tienen diferentes modalidades, entre las cuales se pueden mencionar el ganado para crianza, para producción de leches y sus derivados y ganadería de la carne. En Colombia y el mundo se presentan constantes inversiones en materia tecnológica para mejorar la forma en cómo el ganado es productivo y puede participar de forma competitiva en un mercado de consumo de calidad.\\
+
+Debido a que el ciclo productivo de la carne consta de diferentes etapas con diferentes requerimientos, necesidades y cantidad de áreas verdes, se considera aportar el diseño de un sistema que pueda simplificar  tareas de obtención de datos y gastos por mano de obra en cultivos de reses destinados al engorde, los cuales pueden desempeñarse en espacios cerrados como establos, dando paso al monitoreo por condiciones de estabulación, en donde se garantiza el suministro de forraje verde, minerales, vitaminas y dietas específicas para el ganado y adaptándose a espacios cercanos a la casa matriz de administración de los productores \cite{contextoganadero}.
+En el Cauca, aunque se cuente con bastas hectáreas de diferentes fertilidades y condiciones térmicas apropiadas para el cultivo y desarrollo de la ganadería, se presentan muchas falencias en materia tecnológica y económica, en donde los movimientos migratorios de campesinos desplazados y los efectos colaterales del conflicto armado que se ha presentado en el país, son las principales causas de estas falencias. Sin embargo, el emprendimiento de los pequeños y medianos productores da paso a nuevas oportunidades de intervención por parte de la Ingeniería electrónica y el manejo aplicativo de nuevas tecnologías que permitan tener un contacto más cercano con la población campesina. \\
+
+El manejo de software sofisticado y maquinaria industrial puede presuponer brechas para con los usuarios campesinos por la falta de capacitación técnica o por la complejidad de uso de los programas para el manejo de datos. Sin embargo, el desarrollo de nuevas tecnologías ha dado paso a una era digital con la que se espera lograr avances significativos. Como se menciona en \cite{minagricultura}, \cite{ashby} y \cite{fao} la inclusión de las ciencias y la formación de entidades de apoyo al sector agrario pueden aportar significativamente al desempeño de los  cultivos ganaderos. 
+Como medio para facilitar al usuario la inclusión de software y herramientas tecnológicas más amigables se plantea el manejo de una HMI para que por medio de ésta, el usuario ganadero pueda añadir o eliminar uno o mas reses, establecer los valores dietarios, asignar los RFID a nuevos novillos, visualizar (en caso que se presente) avisos o alarmas y encender o apagar el sistema.\\
+
+Lo anterior se diseña, y se plantea acorde con el manual de Buenas Prácticas de Ganadería  (BPG) y con las legislaciones pertinentes al manejo de alimentos para el consumo humano establecidas por la ley colombiana mencionados en la sección \ref{leyes}.
+
+
+
+
+
+
+% de menor escala que  pero que pde baja potencia y que ayudan de igual forma y  a menor escala, a cumplir con algunas tareas de producción ganadera.
+
+
+
+
+
