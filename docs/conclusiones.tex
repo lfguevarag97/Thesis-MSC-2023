@@ -17,10 +17,21 @@
 
 \section{Posibles mejoras y trabajos a futuro}
 
-Tomando en cuenta los alcances, limitantes, y recursos presupuestados para este proyecto, se pueden identificar características de este sistema prototipo que pueden ser corregidas, mejoradas y optimizadas en implementaciones de mayor escala.
+Tomando en cuenta los alcances, limitantes, y recursos presupuestados para este proyecto, se pueden identificar características de este sistema prototipo que pueden ser corregidas, mejoradas y optimizadas en implementaciones de mayor escala. Entre estas se puede mencionar:
 
-Entre estas se puede mencionar:
+\subsection{Modelo EDO en 3D: MEW - Leche, Estiércol, Peso}
 
-\begin{enumerate}
-   \item 
-\end{enumerate} 
+Por una parte, dado que el modelo usado disminuía la complejidad del análisis al combinar 2 variables en 1, y por otra parte, la evaluación de este modelo ha resultado ser satisfactoria en cuanto a los OE\#3 y \#4; se podría considerar como una mejora el considerar un modelo EDO en 3D analizando de manera independiente el comportamiento de la producción de peso (W), la producción de Leche (M o L) y la producción de Estiércol (E).
+
+\subsection{Modelado por Autómata híbrido}
+Teniendo en cuenta que el modelo EDO 2D planteado puede presentar distintos comportamientos de ajuste (creciente, decreciente, amortiguado y sub amortiguado), y teniendo en cuenta que hay ejemplares que puedan presentar cambios bruscos en su peso; es plausible considerar un cambio de parámetros $k_{i}$ para cuando el peso cambie de manera alternante y las derivadas varíe entre valores positivos y negativos.\\
+
+Esto podría significar un mejor ajuste para las reses que no han sido generalizadas con el modelo EDO-WP propuesto.
+
+\pagebreak
+
+\input{docs/ProgLinEntMix}
+
+% \begin{enumerate}
+%    \item 
+% \end{enumerate} 
