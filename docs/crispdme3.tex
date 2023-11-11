@@ -3,12 +3,12 @@ En esta etapa, se procede a recolectar todos los datos análogos y digitales con
 
 \section{Recolección de datos} \label{datarecol}
 
-Tal y como se mencionó en el capítulo anterior, los datos referentes a Peso, Leche y Alimentación, de cada una de las reses del CA-SENA-POP se encuentran registradas de manera física o digital; ya sea en hojas impresas como el ejemplar de la figura \ref{regleche1png}, así como también en bases de datos digitales como el de la figura \ref{tauruspng}. No obstante, estos datos \textbf{no} pueden ser importados directamente a algún software de procesamiento de datos. Esto puesto que para los datos físicos, se tienen algunas barreras y/o inconvenientes externos tales como los diferentes tipos de letra,  el estado físico de las paginas, y la diferencia entre los números de un ente registrado u otro; mientras que para los datos digitales, estos se encuentran almacenados en el software de pago de manera privada, siendo datos protegidos de acuerdo a la ley de ``Habeas data'', por lo que no pueden ser exportados directamente para manipulación del público.\\ % Feb  2023
+Tal y como se mencionó en el capítulo anterior, los datos referentes a Peso, Leche y Alimentación, de cada una de las reses del CA-SENA-POP se encuentran registradas de manera física o digital; ya sea en hojas impresas como el ejemplar de la Figura \ref{regleche1png}, así como también en bases de datos digitales como el de la Figura \ref{tauruspng}. No obstante, estos datos \textbf{no} pueden ser importados directamente a algún software de procesamiento de datos. Esto puesto que para los datos físicos, se tienen algunas barreras y/o inconvenientes externos tales como los diferentes tipos de letra,  el estado físico de las paginas, y la diferencia entre los números de un ente registrado u otro; mientras que para los datos digitales, estos se encuentran almacenados en el software de pago de manera privada, siendo datos protegidos de acuerdo a la \textbf{Ley de ``Habeas data''}, por lo que no pueden ser exportados directamente para manipulación del público.\\ % Feb  2023
 
 % \subsection{Registros de ``Leche''}
-Teniendo en cuenta que los datos de producción lechera se registran de manera manual, esta tarea es llevada a cabo por distintas personas. Desde aprendices hasta instructores y supervisores; por lo tanto, los datos son escritos por distintas personas, que manejan distintos tipos de letra, distinto orden, distintas practicas adecuadas de escritura, entre otras. Esto implica que los números registrados en las paginas físicas varíen de un tipo de letra a otra y deban ser analizados o copiados rigurosamente de manera digital. Además, es importante mencionar, que estas carpetas físicas de registro de datos, son expuestas a la intemperie, por lo que algunos registros han sido vulnerables ante lluvias, o sustancias que alteran el estado de la hoja de papel, dificultando así su interpretación a primera vista.\\
+Teniendo en cuenta que los datos de producción lechera se registran de manera manual, esta tarea es llevada a cabo por distintas personas. Desde aprendices hasta instructores y supervisores; por lo tanto, los datos son escritos por distintas personas, que manejan distintos tipos de letra, distinto orden, distintas prácticas adecuadas de escritura, entre otras. Esto implica que los números registrados en las paginas físicas varíen de un tipo de letra a otra y deban ser analizados o copiados rigurosamente de manera digital. Además, es importante mencionar, que estas carpetas físicas de registro de datos, son expuestas a la intemperie, por lo que algunos registros han sido vulnerables ante lluvias, o sustancias que alteran el estado de la hoja de papel, dificultando así su interpretación a primera vista.\\
 
-Es importante hacer esta observación, dado que por estas mismas circunstancias, \textbf{no} es posible extraer los datos de las tablas mediante algoritmos de inteligencia artificial de procesamiento de imágenes de manera consistente, pues estos datos pueden ser fácilmente tergiversados o malinterpretados como los ejemplares de la figura \ref{datosamanopng}.
+Es importante hacer esta observación, dado que por estas mismas circunstancias, \textbf{no} es posible extraer los datos de las tablas mediante algoritmos de inteligencia artificial de procesamiento de imágenes de manera consistente, pues estos datos pueden ser fácilmente tergiversados o malinterpretados como los ejemplares de la Figura \ref{datosamanopng}.
 
 \begin{figure}[H]
 	 \begin{center}
@@ -17,7 +17,7 @@ Es importante hacer esta observación, dado que por estas mismas circunstancias,
 	 \caption{Ejemplares de datos físicos con malas prácticas de escritura. \label{datosamanopng}}
 \end{figure}
 
-En cuanto a los registros de peso, dado que la cantidad de datos no es tan abrumadora a comparación de los registros de leche, estos datos son transcritos a archivos de excel y posteriormente a archivos con extensión $^{*}.csv$.
+En cuanto a los registros de peso, dado que la cantidad de datos no es tan extensa a comparación de los registros de leche, estos datos son transcritos a archivos de excel y posteriormente a archivos con extensión $^{*}.csv$.
 
 \section{Digitalización de los datos de producción lechera}
 
@@ -27,7 +27,7 @@ Los datos aquí utilizados comprenden fechas desde el 31 de Diciembre de 2018, h
 
 Esta tarea de transcripción de datos tomó un tiempo aproximado de 1 semana;7 días, en jornadas de 8 horas cada día. Los datos que poseían dificultades de lectura e interpretación fueron corroborados con base en los datos de producción diaria neta y producción neta individual de cada vaca, datos existentes en las tablas escaneadas; por lo que se reduce el riesgo de transcripción de datos erróneos por causas humanas.
 
-Aún sí existiese algún dato atípico o dato erróneo, esto puede corroborarse con la estructuración de los datos que se empleó para su análisis y que se explica en la sección a continuación.
+Aún sí existiese algún dato atípico o dato erróneo, esto puede corroborarse con la estructuración de los datos que se empleó para su análisis y que se explica en la Sección \ref{reestructleche} a continuación.
 
 \section{Reestructuración de los datos de leche}\label{reestructleche}
 % \section{Datos de leche}
@@ -52,12 +52,12 @@ Una vez que se transcribieron los datos de manera individual para cada vaca. se 
     \item En caso que una vaca se encontrase en periodo de Horra,  los datos subsiguientes a esa fecha serán datos de tipo texto representados con la letra \textbf{H}, hasta indicado lo contrario.
     \item En caso que una vaca no se encontrase en periodo determinado, fuera por falta de preñes, horra, u otro motivo desconocido,  los datos subsiguientes a esa fecha aproximada serán datos de tipo texto representados con las letras \textbf{UL}, haciendo referencia a ``Unknown-Location''.
     \item En caso que una vaca se encontrase en periodo de secado, los datos subsiguientes a esa fecha serán datos de tipo texto representados con la letra \textbf{S}, hasta que se reincorpore tras el periodo de secado o hasta que se avise lo contrario (Muerte, Venta, Horra).
-    \item En caso que un registro de producción de leche no haya sido transcrito, ya sea por malas practicas de escritura del documento físico, datos ilegibles o datos inexistentes, la casilla tendrá un valor de texto representado con las letras \textbf{NAN}, \textbf{haciendo referencia a un dato desconocido o dato inexistente por motivo desconocido}.
-    \item En caso de tener valores numéricos 0, este valor es dejado como 0, si se muestra reincidencia en los días subsiguientes (suele suceder en fechas cercanas al periodo de secado), este valor será dejado así pues desde la práctica de toma de datos se ha considerado como una extracción de una cantidad de leche aproximadamente nula. No obstante, ya se ha mencionado que el dominio de los valores númericos de producciones de leche son \textbf{enteros positivos}.
+    \item En caso que un registro de producción de leche no haya sido transcrito, ya sea por malas prácticas de escritura del documento físico, datos ilegibles o datos inexistentes, la casilla tendrá un valor de texto representado con las letras \textbf{NAN}, \textbf{haciendo referencia a un dato desconocido o dato inexistente por motivo desconocido}.
+    \item En caso de tener valores numéricos 0, este valor es dejado como 0, si se muestra reincidencia en los días subsiguientes (suele suceder en fechas cercanas al periodo de secado), este valor será dejado así pues desde la práctica de toma de datos se ha considerado como una extracción de una cantidad de leche aproximadamente nula. No obstante, ya se ha mencionado que el dominio de los valores numéricos de producciones de leche son \textbf{racionales positivos} con hasta 2 cifras decimales.
     \item De las observaciones anteriores es importante agregar que los datos numéricos no pueden ser negativos.
     \item Se tiene un total de 2604 muestras para cada vaca, ya sea numérico o categórico. Se hace así pues las columnas de la matriz deben tener la misma cantidad de datos
     \item Se obtuvieron muestras de un total de 33 vacas distintas.
-    \item Se maneja el dato desconocido con la denominación NAN y no con otro símbolo como el signo de interrogación ``?'', por motivos de formato al momento de transcribir los datos a Microsoft Excel.
+    \item Se maneja el dato desconocido con la denominación NAN y no con otro símbolo como el signo de interrogación \textbf{`` ? ''}, por motivos de formato al momento de transcribir los datos a Microsoft Excel.
 \end{itemize}
 
 \subsection{``Debugging'' y verificación de datos}
@@ -72,7 +72,7 @@ Notese que en la reestructuración inicial se puede observar que los datos puede
 
 \begin{itemize}
     \item En caso de muerte o venta, se considera como dato de valor numérico 0.0, pues se considera como una producción de leche nula dado que no se puede extraer leche de un animal muerto o vendido, mas no obstante, no es considerado como valor de tipo NAN, \textbf{pues se considera NAN un valor que no pudo ser medido y se desconoce el motivo.}
-    \item Como los datos no pueden ser biológica ni físicamente negativos; en caso que una vaca no existiese en fechas anteriores a la fecha de registro (los datos \textbf{ne}), se cambiará el valor categórico \textbf{ne} por un \textbf{-1}.
+    \item Como los datos no pueden ser biológica ni físicamente negativos; en caso que una vaca no existiese en fechas anteriores a la fecha de registro (los datos ``\textbf{ne}''), se cambiará el valor categórico ``\textbf{ne}'' por un \textbf{-1}.
 \end{itemize}
 
 
@@ -88,7 +88,7 @@ Teniendo en cuenta la base de datos estructurada en el punto anterior, es import
 
 Es decir, que se debe considerar un ajuste de curvas a los datos existentes para aproximar la producción neta mediante funciones y modelos matemáticos. Por otra parte es importante tener en cuenta que las producciones de leche de cada animal, varían según el número de partos que hayan experimentado con anterioridad. Las vacas primíparas que recién están produciendo leche, no tendrán un rendimiento equiparable a comparación de las vacas que ya se encuentran en un 3er o 4to parto; en consecuencia es plausible realizar una clasificación de vacas por su cantidad de partos y observar el comportamiento de las producciones lecheras para cada grupo de partos.\\
 
-\subsubsection{Clasificación de Datos}
+\subsubsection{Clasificación de Datos}\label{clasdatos}
 
 Así pues, con base en las observaciones anteriores y partiendo de los datos existentes del CA-SENA-POP, tendremos 6 grupos distintos de partos. $Parto_{i}$, con i=1...6\\
 
@@ -103,9 +103,9 @@ Una vez obtenido el permiso y una copia de la base de datos actual, suministrada
 	 \caption{Clasificación de datos por \#Parto para cada vaca. \label{colorpartospng}}
 \end{figure}
 
-En la figura anterior se puede observar que la clasificación de los partos se realiza con base en la estructuración de datos tanto categóricos como numéricos. Esto con el objetivo de diferenciar de manera visual entre un periodo de producción de leche a un periodo de secado (Casilla blanca con borde de color y casillas coloreadas de color azul respectivamente). No obstante una vez realizada la clasificación, selección y agrupación de datos; las matrices usadas en los análisis posteriores con algoritmos en Matlab, manejan la estructuración numérica descrita en la sub-sección anterior.\\
+En la Figura \ref{colorpartospng} se puede observar que la clasificación de los partos se realiza con base en la estructuración de datos tanto categóricos como numéricos. Esto con el objetivo de diferenciar de manera visual entre un periodo de producción de leche a un periodo de secado (Casilla blanca con borde de color y casillas coloreadas de color azul respectivamente). No obstante una vez realizada la clasificación, selección y agrupación de datos; las matrices usadas en los análisis posteriores con algoritmos en Matlab, manejan la estructuración numérica descrita en la sub-Sección \ref{clasdatos}.\\
 
-Percatese que al tener 6 grupos de partos en el CA-SENA-POP, se utiliza un código de colores para la clasificación de producción por \# de Parto, siendo esta la siguiente:
+Percátese que al tener 6 grupos de partos en el CA-SENA-POP, se utiliza un código de colores para la clasificación de producción por \# de Parto, siendo esta la siguiente:
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -143,15 +143,15 @@ Percatese que al tener 6 grupos de partos en el CA-SENA-POP, se utiliza un códi
 }
 \end{table}
 
-Así pues, se obtienen 6 grupos de un tamaño variable de vacas para cada número de parto. Esta clasificación se puede observar en la tabla \ref{porpartos}. % la tabla gigante de colores que no se deja poner label
+Así pues, se obtienen 6 grupos de un tamaño variable de registros de lactancia de vacas para cada número de parto. Esta agrupación inicial consta de 88 distintas lactancias y se puede observar en la Tabla \ref{porpartos}. % la tabla gigante de colores que no se deja poner label
 
 \subsubsection{Selección de Datos}
 
-Una de las primeras observaciones obtenidas al realizar la agrupación por partos; es que los datos existentes que han sido agrupados no poseen igual cantidad de datos para cada res. Esto se produce dado que los partos varían en cuestión de duración para cada animal. En primera instancia esto no debería suponer un problema significativo, pues en caso que los partos posean una ligera variabilidad de muestras; bastaría con ``rellenar'' los datos faltantes con ceros o con imputación de datos como la media o la moda; ó por otra parte, bastaría con realizar una agrupación con igual cantidad de muestras.\\
+Una de las primeras observaciones obtenidas al realizar la agrupación inicial por partos como la observada en la Tabla \ref{porpartos}; es que los datos existentes que han sido agrupados no poseen igual cantidad de datos para cada res dentro de un mismo grupo de parto. Esto se produce dado que los partos varían en cuestión de duración para cada animal. En primera instancia esto no debería suponer un problema significativo, pues en caso que los partos posean una ligera variabilidad de muestras; bastaría con ``rellenar'' los datos faltantes con ceros o con imputación de datos como la media o la moda; ó por otra parte, bastaría con realizar una agrupación con igual cantidad de muestras.\\
 
-Sin embargo, esta contra medida no puede ser llevada a cabo en razón de que los datos existentes facilitan la agrupación por partos, mas no garantiza que los datos de un parto en específico se encuentren disponibles en su totalidad. En otras palabras, muchos de los datos que se tienen para cada parto son datos de inicio de producción o finalización de producción de leche de las terneras, tanto para las que fallecen, para las que se venden, así como también, para las que a fecha del 31 de Diciembre del 2018 ya se encontraban en periodo productivo.\\
+Sin embargo, estas contramedidas no pueden ser llevadas a cabo en razón de que los datos existentes facilitan la agrupación por partos, mas no garantiza que los datos de un parto en específico se encuentren disponibles en su totalidad. En otras palabras, muchos de los datos que se tienen para cada parto son datos de inicio de producción o finalización de producción de leche de las terneras, tanto para las que fallecen, para las que se venden, así como también, para las que a fecha del 31 de Diciembre del 2018 ya se encontraban en periodo productivo.\\
 
-Si se realiza una representación visual individual de los datos, se puede observar claramente que algunas reses tienen muy pocos datos, lo que ``recargaría'' la distribución hacia los extremos, dificultando su análisis descriptivo. Por otra parte, si se hace un contraste de datos teniendo como punto de referencia el inicio de la producción o su finalización en el periodo de secado, la tabla de registros permite evidenciar el desbalance que manifiestan los datos:
+Si se realiza una representación visual individual de los datos pertenecientes al grupo de parto \#1, se puede observar en la Figura \ref{partosincompletospng} que algunas reses tienen muy pocos datos (celdas vacías), lo que ``recargaría'' la distribución hacia los extremos, dificultando su análisis descriptivo (Esta observación se cumple para los otros grupos de parto). Por otra parte, si se hace un contraste de datos del grupo de parto\#1 teniendo como punto de referencia el inicio de la producción o su finalización en el periodo de secado, la tabla de registros permite evidenciar el desbalance que manifiestan los datos:
 
 \begin{figure}[H]
 	 \begin{center}
@@ -160,9 +160,9 @@ Si se realiza una representación visual individual de los datos, se puede obser
 	 \caption{Desbalance de datos en agrupación inicial por partos. \label{partosincompletospng}}
 \end{figure}
 
-En la figura anterior, se evidencia claramente el desbalance mencionado. Si se observan mas a fondo los datos presentes en el archivo de Excel; 13 de las 19 reses cuentan con menos de la mitad de muestras de producción lechera tras haber parido por primera vez. Solo una de ellas, manifiesta un exceso de registros antes de entrar en periodo de secado; y 5 mamíferos restantes aparentan tener la cantidad de muestras suficientes para representar el grupo de vacas primíparas. Las 5 vacas en cuestión son ``Lucia'', ``Sol'', ``Lunita'', ``Acerada'' y ``Martina''.\\
+En la Figura \ref{partosincompletospng}, se evidencia el desbalance mencionado. Si se observan más a fondo los datos presentes en el archivo de Excel, específicamente en el grupo de parto \#1  de la Tabla \ref{porpartos}, 13 de las 19 reses pertenecientes a este grupo cuentan con menos de la mitad de muestras de producción lechera tras haber parido por primera vez. Por otro parte, solo una de ellas manifiesta un exceso de registros antes de entrar en periodo de secado y 5 mamíferos restantes aparentan tener la cantidad de muestras suficientes para representar el grupo de vacas primíparas. Las 5 vacas en cuestión son ``Lucia'', ``Sol'', ``Lunita'', ``Acerada'' y ``Martina''.\\
 
-Finalmente, aunque todas las reses cuentan con la misma cantidad de datos, se procede a seleccionar únicamente a 3 de ellas que coinciden en el inicio y finalización de la producción de leche (``Sol'', ``Lunita'', ``Acerada''). Mientras que las otras 2; a pesar de tener la misma cantidad de muestras, presentan desfases en el inicio y finalización de la etapa productiva (Lucia y Martina). De esta forma, se puede generar la primera representación visual de los datos mediante un gráfico de dispersión, tal y como se observa en la  figura \ref{scatterparto1png}.
+Finalmente, aunque todas las reses cuentan con la misma cantidad de datos, se procede a seleccionar únicamente a 3 de ellas que coinciden en el inicio y finalización de la producción de leche (``Sol'', ``Lunita'', ``Acerada''). Mientras que las otras 2, a pesar de tener la misma cantidad de muestras, presentan desfases en el inicio y finalización de la etapa productiva (``Lucia'' y ``Martina''). De esta forma, se puede generar la primera representación visual de los datos mediante un gráfico de dispersión, tal y como se observa en la Figura \ref{scatterparto1png}.
 
 \begin{figure}[H]
 	 \begin{center}
@@ -171,7 +171,7 @@ Finalmente, aunque todas las reses cuentan con la misma cantidad de datos, se pr
 	 \caption{Gráfico de dispersión para representar la producción lechera de las vacas primíparas. \label{scatterparto1png}}
 \end{figure}
 
-\subsubsection{Agrupación de Datos}
+\subsubsection{Agrupación de Datos}\label{agrupdat}
 
 El resultado obtenido tras realizar la primer representación visual de datos da un idea de cómo no se deben utilizar los datos para los análisis matemáticos. Pues se observa que al tener muestras matutinas y vespertinas juntas, no se logran diferenciar los datos correspondientes a cada intervalo. Además, el intervalo de tiempo es de 305 días aproximadamente y al manejar ambos tipos de muestras, se tiene un total de 610 datos en el eje horizontal. Por ende, como medida inicial, se opta por realizar un análisis independiente para las muestras obtenidas en diferentes horas del día, procediendo con una representación individual como se observa a continuación:
 
@@ -182,9 +182,9 @@ El resultado obtenido tras realizar la primer representación visual de datos da
 	 \caption{Gráfico de dispersión para Muestras matutinas y vespertinas. \label{desfaseAMPMpng}}
 \end{figure}
 
-En primera instancia parece que la gráfica anterior no presenta ningún inconveniente, a pesar de ello, se puede notar un leve desajuste entre los valores vespertinos; pues los valores de la res denominada como ``Acerada'', muestran una lejanía con los otros datos en el horario de la tarde. Esto genera ciertas inquietudes teniendo en cuenta que las muestras matutinas tienden a ser mayores que las muestras vespertinas para la mayoría de las reses de este estudio. En virtud de que el lapso que existe entre una muestra matutina con una vespertina en un mismo día es de aproximadamente 10 horas; mientras que el lapso entre una muestra vespertina y una muestra matutina es de aproximadamente 14 horas; no sería de extrañar que al tener mayor tiempo de recuperación, se le pueda extraer mayor cantidad de leche a la vaca.
+En primera instancia parece que la Figura \ref{desfaseAMPMpng} no presenta ningún inconveniente, a pesar de ello, se puede notar un leve desajuste entre los valores vespertinos; pues los valores de la res denominada como ``Acerada'', muestran una lejanía con los otros datos en el horario de la tarde. Esto genera ciertas inquietudes teniendo en cuenta que las muestras matutinas tienden a ser mayores que las muestras vespertinas para la mayoría de las reses de este estudio. En virtud de que el lapso que existe entre una muestra matutina con una vespertina en un mismo día es de aproximadamente 10 horas; mientras que el lapso entre una muestra vespertina y una muestra matutina es de aproximadamente 14 horas; no sería de extrañar que al tener mayor tiempo de recuperación, se le pueda extraer mayor cantidad de leche a la vaca.
 
-Lo anterior se presta para realizar nuevamente una corroboración de los datos con los datos manuales existentes y la tabla de datos de la estructuración inicial; con lo que se observa que al realizar la ``alineación'' de datos tras la agrupación por partos; los datos matutinos de la res en cuestión han quedado ``alineados'' con los datos vespertinos de las otras reses. Esto quiere decir que la figura \ref{desfaseAMPMpng} debe cambiarse por la figura \ref{AMPMsindesfasepng}:
+Lo anterior se presta para realizar nuevamente una corroboración de los datos con los datos manuales existentes y la tabla de datos de la estructuración inicial; con lo que se observa que al realizar la ``alineación'' de datos tras la agrupación por partos; los datos matutinos de la res en cuestión han quedado ``alineados'' con los datos vespertinos de las otras reses. Esto quiere decir que la Figura \ref{desfaseAMPMpng} debe cambiarse por la Figura \ref{AMPMsindesfasepng}:
 
 
 \begin{figure}[H]
@@ -195,7 +195,7 @@ Lo anterior se presta para realizar nuevamente una corroboración de los datos c
 \end{figure}
 
 
-De acuerdo con la situación anterior, se concluye que realizar un análisis por franja horaria puede llevar a errores futuros o a reincidentes corroboraciones de datos, siendo esto último una tarea agobiante para el caso de estudio; por lo que se decide considerar únicamente análisis con la producción neta diaria de cada animal. De esta forma se repite el proceso para los otros grupos de partos obteniéndose los gráficos de dispersión de la figura \ref{svnetaspng} y obteniéndose un conjunto total de 28 reses para análisis futuros; que se puede observar en la tabla \ref{porpartosfin}.
+De acuerdo con la situación anterior, se concluye que realizar un análisis por franja horaria puede llevar a errores futuros o a reincidentes corroboraciones de datos, siendo esto último una tarea agobiante para el caso de estudio; por lo que se decide considerar únicamente los análisis con la producción neta diaria de cada animal. De esta forma se repite el proceso para los otros grupos de partos obteniéndose los gráficos de dispersión de la Figura \ref{svnetaspng} y disminuyendo la cantidad de lactancias, desde 88 como se observó inicialmente en la Tabla \ref{porpartos}, hasta obtener un conjunto final de 28 lactancias en total para realizar análisis futuros. Estas lactancias están asociadas a las reses mencionadas en la Tabla \ref{porpartosfin}.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -280,12 +280,10 @@ De acuerdo con la situación anterior, se concluye que realizar un análisis por
 \end{tabular}%
 }
 \end{table}
-%=======================================================
-% Corregir que el parto 4 no salió bien la leyenda >:C
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.675]{img/svnetas.jpg}
+	 \includegraphics[scale=0.675]{img/svnetas.png}
 	 \end{center}
 	 \caption{Gráfico de dispersión para cada grupo de partos. \label{svnetaspng}}
 \end{figure}
@@ -313,7 +311,7 @@ De acuerdo con la situación anterior, se concluye que realizar un análisis por
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
-\caption{Agrupación de vacas por \# de partos}
+\caption{Agrupación general de vacas por \# de partos}
 \label{porpartos}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|ccccc|}
@@ -464,14 +462,52 @@ De acuerdo con la situación anterior, se concluye que realizar un análisis por
 \end{tabular}%
 }
 \end{table}
-
+% %==================================
+%  \begin{table}
+% \centering
+% \caption{Agrupación general de vacas por \# de partos} \label{porpartos}
+% \resizebox{\textwidth}{!}{%
+% \begin{tabular}{|c|ccccc|}
+%     \hline
+%     \cellcolor[HTML]{EBEBEB} & \cellcolor[HTML]{EBEBEB} PARTO $P\#_{i}$ & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{BBFFBB} & \cellcolor[HTML]{BBFFBB}Vacas incluidas & \cellcolor[HTML]{EBEBEB} \\
+%     \hline
+%     \cellcolor[HTML]{343434} & \cellcolor[HTML]{656565} Gina & \cellcolor[HTML]{656565} Viviana & \cellcolor[HTML]{656565} Yolima & \cellcolor[HTML]{656565} Dianita & \cellcolor[HTML]{656565} Lucia\\
+%     \cellcolor[HTML]{343434}\color[HTML]{FFFFFF}  $P\#_{1}$ & \cellcolor[HTML]{656565} Pacha & \cellcolor[HTML]{656565} Araly & \cellcolor[HTML]{656565} Luisa & \cellcolor[HTML]{656565} Isabel & \cellcolor[HTML]{656565} Tamara\\
+%     \cellcolor[HTML]{343434} & \cellcolor[HTML]{656565} Sol & \cellcolor[HTML]{656565} Lunita & \cellcolor[HTML]{656565} Acerada & \cellcolor[HTML]{656565} Martina & \cellcolor[HTML]{656565} Margarita\\
+%     \cellcolor[HTML]{343434} & \cellcolor[HTML]{656565} Jasmin & \cellcolor[HTML]{656565} Velita & \cellcolor[HTML]{656565} Johana & \cellcolor[HTML]{656565} Emperatriz & \cellcolor[HTML]{656565} \\
+%     \hline
+%     \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF} Gina & \cellcolor[HTML]{BDFFFC} Juanita & \cellcolor[HTML]{BDFFFC} Guapa & \cellcolor[HTML]{BDFFFC} Viviana & \cellcolor[HTML]{BDFFFC} & \cellcolor[HTML]{BDFFFC} \\
+%     \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF} Fernanda & \cellcolor[HTML]{BDFFFC} Acerada & \cellcolor[HTML]{BDFFFC} Martina & \cellcolor[HTML]{BDFFFC} Centavito & \cellcolor[HTML]{BDFFFC} & \cellcolor[HTML]{BDFFFC} \\
+%      \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF}$P\#_{2}$ & \cellcolor[HTML]{BDFFFC} Andrea & \cellcolor[HTML]{BDFFFC} Yolima & \cellcolor[HTML]{BDFFFC} Soraya & \cellcolor[HTML]{BDFFFC} Danna & \cellcolor[HTML]{BDFFFC} Lunita \\
+%      \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF} & \cellcolor[HTML]{BDFFFC} Muchira & \cellcolor[HTML]{BDFFFC} Margarita & \cellcolor[HTML]{BDFFFC} Romina & \cellcolor[HTML]{BDFFFC} Pacha & \cellcolor[HTML]{BDFFFC} Johana \\
+%      \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF}  & \cellcolor[HTML]{BDFFFC} Dianita & \cellcolor[HTML]{BDFFFC} Lucia & \cellcolor[HTML]{BDFFFC} Sol & \cellcolor[HTML]{BDFFFC} Morocha & \cellcolor[HTML]{BDFFFC} \\
+%      \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF} & \cellcolor[HTML]{BDFFFC} Araly & \cellcolor[HTML]{BDFFFC} Luisa & \cellcolor[HTML]{BDFFFC} Isabel & \cellcolor[HTML]{BDFFFC} Tamara & \cellcolor[HTML]{BDFFFC} \\
+%      \hline
+%      \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{AAFF85} Gina & \cellcolor[HTML]{AAFF85} Juanita & \cellcolor[HTML]{AAFF85} Guapa & \cellcolor[HTML]{AAFF85} Viviana & \cellcolor[HTML]{AAFF85} Lucia\\   
+%      \cellcolor[HTML]{32CB00} 3 & \cellcolor[HTML]{AAFF85} Morocha & \cellcolor[HTML]{AAFF85} Lunita & \cellcolor[HTML]{AAFF85} Fernanda & \cellcolor[HTML]{AAFF85} Martina & \cellcolor[HTML]{AAFF85} Pacha \\  
+%      \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{AAFF85} Andrea & \cellcolor[HTML]{AAFF85} Yolima & \cellcolor[HTML]{AAFF85} Soraya & \cellcolor[HTML]{AAFF85} Dianita & \cellcolor[HTML]{AAFF85} Sol \\  
+%      \cellcolor[HTML]{32CB00}  & \cellcolor[HTML]{AAFF85} Centavito & \cellcolor[HTML]{AAFF85} Muchira & \cellcolor[HTML]{AAFF85} Romina & \cellcolor[HTML]{AAFF85} Leticia & \cellcolor[HTML]{AAFF85}  \\  
+%      \hline
+%      \cellcolor[HTML]{FFFE65}  & \cellcolor[HTML]{FFFFC7} Guapa & \cellcolor[HTML]{FFFFC7} Viviana & \cellcolor[HTML]{FFFFC7} Andrea & \cellcolor[HTML]{FFFFC7} Yolima & \cellcolor[HTML]{FFFC7}  \\
+%      \cellcolor[HTML]{FFFE65}$P\#_{4}$  & \cellcolor[HTML]{FFFFC7} Sol & \cellcolor[HTML]{FFFFC7} Morocha & \cellcolor[HTML]{FFFFC7} Fernanda & \cellcolor[HTML]{FFFFC7} Centavito & \cellcolor[HTML]{FFFC7}  \\
+%      \cellcolor[HTML]{FFFE65}  & \cellcolor[HTML]{FFFFC7} Soraya & \cellcolor[HTML]{FFFFC7} Dianita & \cellcolor[HTML]{FFFFC7} Muchira & \cellcolor[HTML]{FFFFC7} Leticia & \cellcolor[HTML]{FFFC7}  \\
+%      \hline
+%      \cellcolor[HTML]{D34444}$P\#_{5}$  & \cellcolor[HTML]{FFCCC9} Nancy & \cellcolor[HTML]{FFCCC9} Guapa & \cellcolor[HTML]{FFCCC9} Andrea & \cellcolor[HTML]{FFCCC9} Soraya & \cellcolor[HTML]{FFCCC9}  \\
+%      \cellcolor[HTML]{D34444}  & \cellcolor[HTML]{FFCCC9} Dianita & \cellcolor[HTML]{FFCCC9} Centavito & \cellcolor[HTML]{FFCCC9} Muchira & \cellcolor[HTML]{FFCCC9} Leticia & \cellcolor[HTML]{FFCCC9} \\
+%      \hline
+%      \cellcolor[HTML]{6665CD}  $P\#_{6}$  & \cellcolor[HTML]{CBCEFB} Daniela & \cellcolor[HTML]{CBCEFB} Lina & \cellcolor[HTML]{CBCEFB} Guapa & \cellcolor[HTML]{CBCEFB} Andrea & \cellcolor[HTML]{CBCEFB} \\
+%      \hline
+%  \end{tabular}
+%  }
+% \end{table}
+% %==================================
 \pagebreak
 \section{Reestructuración de los datos de peso}\label{reestructpeso}
 
-Tal y como se mencionó en la sección \ref{datarecol}, los datos referentes al peso de los animales usados en la producción de leche se encuentran registrados en el software ``TaurusWebs'', y con el objetivo posterior de ser exportados y analizados, debemos realizar la transcripción manual de dichos datos.
+Tal y como se mencionó en la Sección \ref{datarecol}, los datos referentes al peso de los animales usados en la producción de leche se encuentran registrados en el software ``TaurusWebs'', y con el objetivo posterior de ser exportados y analizados, debemos realizar la transcripción manual de dichos datos.
 
 \subsection{Reorganización de datos}\label{pocospesos}
-Esta transcripción de datos se realiza de tal forma que se mantienen los datos asociados a las fechas especificadas tal y como se puede observar en la figura \ref{dfpesopng}.
+Esta transcripción de datos se realiza de tal forma que se mantienen los datos asociados a las fechas especificadas tal y como se puede observar en la Figura \ref{dfpesopng}.
 \begin{figure}[H]
 	 \begin{center}
 	 \includegraphics[scale=0.5]{img/dfinicialpeso.jpg}
@@ -479,11 +515,11 @@ Esta transcripción de datos se realiza de tal forma que se mantienen los datos 
 	 \caption{Reorganización inicial de los datos de peso.  \label{dfpesopng}}
 \end{figure}
 
-Sin embargo, tras realizar contrastes de fechas de registros de peso con las fechas de registros de leche, se encuentra con que los registros de peso coinciden parcialmente con los registros de leche en un mismo periodo. Esto quiere decir que de los pocos datos existentes respecto al peso, estos deben ser segmentados de acuerdo con el número de parto con el que coinciden las fechas de registro de producción de leche asociadas a la lactancia de ese parto. En función de lo expresado anteriormente, se debe realizar la segmentación de los datos de peso que pertenecen a cada parto (1..6) para cada vaca perteneciente a la tabla \ref{porpartosfin} de la sección anterior.\\
+Sin embargo, tras realizar contrastes de fechas de registros de peso con las fechas de registros de leche, se encuentra con que \textbf{los registros de peso coinciden parcialmente con los registros de leche en un mismo periodo.} Esto quiere decir que de los pocos datos existentes respecto al peso, estos deben ser segmentados de acuerdo con el número de parto con el que coinciden las fechas de registro de producción de leche asociadas a la lactancia de ese parto. En función de lo expresado anteriormente, se debe realizar la segmentación de los datos de peso que pertenecen a cada parto (1..6) para cada vaca perteneciente a la Tabla \ref{porpartosfin} de la Subsección \ref{agrupdat}.\\
 
 
 \subsection{Agrupación de datos de peso}
-De la tabla \ref{Nporpartos} se tienen 18 vacas diferentes para un total de 28 partos distintos que dependiendo del número de parto se cuenta con una cantidad de muestras distinta (Entre 162 y 309 muestras). Ahora bien, para los análisis algorítmicos en Matlab y/o Python, se requiere que la cantidad de muestras de leche tengan la misma cantidad de muestras para el peso en pro de lograr un análisis por ``Ecuaciones Diferenciales Ordinarias''; por tanto es necesario realizar una interpolación del(los) dato(s) de peso dependiendo de la cantidad de muestras presentes en cada parto.
+De la Tabla \ref{Nporpartos} se tienen 18 vacas diferentes para un total de 28 partos distintos que dependiendo del número de parto se cuenta con una cantidad de muestras distinta (Entre 162 y 309 muestras). Ahora bien, para los análisis algorítmicos en Matlab y/o Python, se requiere que la cantidad de muestras de leche tengan la misma cantidad de muestras para el peso en pro de lograr un análisis por ``Ecuaciones Diferenciales Ordinarias''; por tanto es necesario realizar una interpolación del(los) dato(s) de peso dependiendo de la cantidad de muestras presentes en cada parto.
 %=================================================
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -571,17 +607,17 @@ De la tabla \ref{Nporpartos} se tienen 18 vacas diferentes para un total de 28 p
 \end{table}
 %=================================================
 
-\subsubsection{Generación de columnas de peso que serán anexadas a los ``dataframes'' de cada uno de los modelos asociados al número de parto modelado}
+\subsubsection{Generación de columnas de peso que serán anexadas a los ``dataframes'' de cada uno de los modelos asociados al número de parto modelado}\label{pesosinterpolados}
 
-El método usado para realizar la interpolación entre los datos de peso son las ``Splines Cúbicas'' que varían en tamaño dependiendo de la cantidad de datos presentes en cada parto. Una vez ejecutado el script de Matlab ``InterpPesosPartesEDOs'' (adjunto en este trabajo de grado)' se obtiene el conjunto de arreglos unidimensionales con los tamaños deseados (ver figura \ref{interpesospng}) y se procede a realizar la exportación correspondiente en archivos separados por comas. Posteriormente se procede a agruparlos en ``dataframes'' para su análisis por EDOs en python. Para cada lactancia se tendrá un ``dataframe'' representativo de ese modelo con las columnas de producciones de leche, peso y estiércol producido por cada vaca perteneciente a esa agrupación de lactancia.
+El método usado para realizar la interpolación entre los datos de peso son las ``Splines Cúbicas'' que varían en tamaño dependiendo de la cantidad de datos presentes en cada parto. Una vez ejecutado el script de Matlab ``InterpPesosPartesEDOs'' (adjunto en este trabajo de grado)' se obtiene el conjunto de arreglos unidimensionales con los tamaños deseados (ver Figura \ref{interpesospng}) y se procede a realizar la exportación correspondiente en archivos separados por comas. Posteriormente se procede a agruparlos en ``dataframes'' para su análisis por EDOs en python. Para cada lactancia se tendrá un ``dataframe'' representativo de ese modelo con las columnas de producciones de leche, peso y estiércol producido por cada vaca perteneciente a esa agrupación de lactancia.
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.64]{img/InterPesos.jpg}
+	 \includegraphics[scale=0.604]{img/InterPesos.jpg}
 	 \end{center}
-	 \caption{Formato de nombre de columna para conjunto de datos. Varia en cuanto al nombre de la vaca, cantidad de muestras existentes y cantidad de parto. El código de colores se mantiene según la tabla \ref{colorpartos} \label{interpesospng}}
+	 \caption{Formato de nombre de columna para conjunto de datos. Varia en cuanto al nombre de la vaca, cantidad de muestras existentes y cantidad de parto. El código de colores se mantiene según la Tabla \ref{colorpartos} \label{interpesospng}}
 \end{figure}
 
 
-Llegados a este punto, ya se cuenta con los datos de las 3 variables necesarias (Producción de Leche, Estiércol, Peso) para plantear el (los) modelo(s) por EDOs, descrito en el próximo capitulo.
+Llegados a este punto, se cuentan con los datos de las tres variables necesarias: Producción de Leche, Estiércol y Peso, para plantear el (los) modelo(s) por EDOs, proceso descrito en el próximo capítulo. Adicionalmente, al finalizar este Capítulo, se ha completado la descripción del primer bloque del diagrama en la Figura \ref{tesispptsenapng}, ya que los datos oficiales proporcionados por la institución han sido preprocesados y se dispone de datos descriptivos suficientes para estimar parámetros. 
 %================================================================================================

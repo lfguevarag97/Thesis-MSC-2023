@@ -1,35 +1,50 @@
 %conclusiones
-\section{Descubrimientos}
-\begin{itemize}
-    \item ....
-\end{itemize}
+% \section{Descubrimientos}
+% \begin{itemize}
+%     \item ....
+% \end{itemize}
 \section{Conclusiones}
+
+De acuerdo con la revisión del estado del arte, aún cuando se han planteado modelos dinámicos de producciones ganaderas para la predicción de comportamientos biológicos, físicos o químicos; estos modelos están enfocados en simular el comportamiento de forma que puedan estimar la producción orgánica de los procesos intracorporales. No obstante, este tipo de modelado requiere de un elevado conocimiento de los procesos físico-químicos y biológicos que se presentan en los animales de las producciones ganaderas, además de los conocimientos de ciencias aplicadas para modelamiento dinámico. Esto último aumenta considerablemente la dificultad del análisis sistemático y computacional para tecnificar una producción ganadera, pues es necesario tener conocimiento técnico avanzado del sector agropecuario para lograr tal fin. Por consecuencia, se considera que el enfoque planteado en este trabajo de grado para abarcar la problemática, es la principal contribución del mismo.\\ 
+
+%% Obj Esp \#2
+En particular, se muestra que se pueden utilizar modelos dinámicos por ecuaciones diferenciales ordinarias basados en balances de energía sencillos; estimando un comportamiento aproximado  respecto a los datos reales de Leche (L), Peso (W) y Estiércol (E) obtenidos durante los periodos de lactancia en una producción ganadera cualquiera, en cuyo caso de estudio es el CA-SENA-POP.
+
+%% Obj Esp \#3
+Los resultados obtenidos evidencian que al implementar soluciones numéricas de un modelo dinámico EDO de 2 dimensiones, éstas soluciones pueden ajustarse apropiadamente al comportamiento creciente y decreciente de las variables de producción deseadas (L, W y E); y que, aún cuando algunos datos inexistentes han sido interpolados o generados de manera artificial, esto no es un impedimento para que el modelo dinámico pueda proyectar posibles comportamientos en el futuro.\\
+
+%% Obj Esp \#1
+Adicionalmente, el entendimiento, la preparación, el procesamiento y la estructuración de los datos que se ha realizado en este trabajo de grado, permite que la proyección que otorga el modelo dinámico planteado, varíe dependiendo de insumos externos que son suministrados a las reses del hato como parámetros de entrada; proporcionando así, una abstracción de la cantidad de alimento, forraje, agua y otros elementos dietarios que afectan el rendimiento productivo de los animales (salidas).\\
+
+%% Obj Esp \#4
+También es pertinente hacer hincapié en que aún cuando la metodología usada (CRISP-DM) no incluye una etapa de estimación de parámetros mediante métodos de ajuste no lineal, abarcar el problema desde este enfoque permite contrastar la precisión de los ajustes no lineales y los ajustes dinámicos evidenciados en los resultados de este proyecto, más precisamente en cuanto a la producción lechera del hato (ver Figura \ref{prodparamscomparepng}); en tanto que se puede observar que las producciones netas presentan valores absolutos significativamente aproximados durante el periodo de estudio de aproximadamente 4 años (2018 - 2022).\\
+
+Por último pero no menos importante, se concluye que el alcance del proyecto ha cumplido con las expectativas del cliente, quien ha manifestado una posición satisfactoria en cuanto al desarrollo del proyecto y ha manifestado su interés en proyectos futuros tanto del \authorA, como de otros estudiantes de la Pontificia Universidad Javeriana Cali. Para terminar, se puede concluir este proyecto de investigación manifestando que el objetivo general y los objetivos específicos han sido satisfechos en su totalidad.
+
+
+
+
+
 %%% Tek: sería posible obtener (al menos) una conclusión por cada objetivo específico? 
 %%% las conclusiones salen de la experencia vivida en el proceso de desarrollo del trabajo: qué me pillé que no sospechaba y cómo pude resolverlo o cómo se podría resolver o cómo eso tendría que ser un trabajo futuro (esto útimo está bien)
-\begin{itemize}
-    \item Este trabajo de grado tuvo como finalidad , objetivo que definitivamente se puede lograr con una implementación en conjunto de los elementos investigados, clasificados, descritos y seleccionados.
-    
-    %% Obj Esp \#1
-    \item Debido a las características y elementos usados en este trabajo de grado, 
-\end{itemize}
+
 
 
 
 \section{Posibles mejoras y trabajos a futuro}
 
-Tomando en cuenta los alcances, limitantes, y recursos presupuestados para este proyecto, se pueden identificar características de este sistema prototipo que pueden ser corregidas, mejoradas y optimizadas en implementaciones de mayor escala. Entre estas se puede mencionar:
+Tomando en cuenta los alcances, limitantes, y recursos presupuestados para este proyecto, se pueden identificar características de este sistema prototipo que pueden ser corregidas, mejoradas y optimizadas en implementaciones de mayor escala en trabajos futuros. Entre estas se puede mencionar:
 
 \subsection{Modelo EDO en 3D: MEW - Leche, Estiércol, Peso}
 
 Por una parte, dado que el modelo usado disminuía la complejidad del análisis al combinar 2 variables en 1, y por otra parte, la evaluación de este modelo ha resultado ser satisfactoria en cuanto a los OE\#3 y \#4; se podría considerar como una mejora el considerar un modelo EDO en 3D analizando de manera independiente el comportamiento de la producción de peso (W), la producción de Leche (M o L) y la producción de Estiércol (E).
 
 \subsection{Modelado por Autómata híbrido}
-Teniendo en cuenta que el modelo EDO 2D planteado puede presentar distintos comportamientos de ajuste (creciente, decreciente, amortiguado y sub amortiguado), y teniendo en cuenta que hay ejemplares que puedan presentar cambios bruscos en su peso; es plausible considerar un cambio de parámetros $k_{i}$ para cuando el peso cambie de manera alternante y las derivadas varíe entre valores positivos y negativos.\\
+Teniendo en cuenta que el modelo EDO 2D planteado puede presentar distintos comportamientos de ajuste (creciente, decreciente, amortiguado y subamortiguado), y teniendo en cuenta que hay ejemplares para los que puedan presentar cambios bruscos en su peso; es plausible considerar un cambio de parámetros $k_{i}$ para cuando el peso cambie de manera alternante cuando las derivadas varían entre valores positivos y negativos, en cuyo caso el modelo 2D usado no puede hacer seguimiento exacto (Tomar como ejemplo el comportamiento de la vaca ``Fernanda'' del parto \#3 en la Sección \ref{visualres}, entre otras).\\
 
-Esto podría significar un mejor ajuste para las reses que no han sido generalizadas con el modelo EDO-WP propuesto.
+Así pues, mediante un intercambio de valores de los parámetros $k_{i}$ se podría lograr un mejor ajuste, abarcando así a más ejemplares que tengan este tipo de comportamientos o de los que no se tengan datos tan completos como algunos bovinos de este proyecto. Esto podría significar un mejor ajuste para los datos de las reses que no han sido generalizadas con el modelo EDO-WP propuesto.
 
-\pagebreak
-
+% \pagebreak
 \input{docs/ProgLinEntMix}
 
 % \begin{enumerate}

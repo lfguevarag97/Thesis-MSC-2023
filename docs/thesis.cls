@@ -92,112 +92,135 @@
 
 
 \newcommand{\makecoverletter}{ % Este "{" va hasta la 202
-\thispagestyle{empty}
-\ \newpage
-\thispagestyle{empty}
-\begin{adjustwidth}{8cm}{0.5cm}
-\noindent Nota de Aceptación
-\vskip 0.5cm
-\noindent {Aprobado por el Comité de Trabajo de Grado en cumplimiento de los requisitos exigidos por la Pontificia Universidad Javeriana para optar al título de Magister en Ingeniería en Electrónica.}
-\end{adjustwidth}
-\vskip 3cm
-\begin{center}
-\line(1,0){200}\\
-\deanFIC \\
-Decano Facultad de Ingeniería y Ciencias \\
-\vskip 2cm
-\line(1,0){200}\\
-\directorIE \\
-Director de Posgrados Facultad Ingeniería y Ciencias\\
-\vskip 2cm 
-\ifthenelse{\equal{\codirector}{}}
-{
-\line(1,0){200}\\
-\director \\
-Director Trabajo de Grado
-}
-{
-\begin{tabular}{c{8cm}c{8cm}}
-\line(1,0){200}&\line(1,0){200} \\
-\director & \codirector \\
-Director Trabajo de Grado & Co-Director Trabajo de Grado \\
-\end{tabular}
-}
-\vskip 2cm
-\begin{tabular}{c{8cm}c{8cm}}
-\line(1,0){200}&\line(1,0){200} \\
-\juryA & \juryB \\
-Jurado 1 & Jurado 2
-\end{tabular}
-\end{center}
+% \thispagestyle{empty}
+% \ \newpage
+% \thispagestyle{empty}
+% \begin{adjustwidth}{8cm}{0.5cm}
+% \noindent Nota de Aceptación
+% \vskip 0.5cm
+% \noindent {Aprobado por el Comité de Trabajo de Grado en cumplimiento de los requisitos exigidos por la Pontificia Universidad Javeriana para optar al título de Magister en Ingeniería en Electrónica.}
+% \end{adjustwidth}
+% \vskip 3cm
+% \begin{center}
+% \line(1,0){200}\\
+% \deanFIC \\
+% Decano Facultad de Ingeniería y Ciencias \\
+% \vskip 2cm
+% \line(1,0){200}\\
+% \directorIE \\
+% Director de Posgrados Facultad Ingeniería y Ciencias\\
+% \vskip 2cm 
+% \ifthenelse{\equal{\codirector}{}}
+% {
+% \line(1,0){200}\\
+% \director \\
+% Director Trabajo de Grado
+% }
+% {
+% \begin{tabular}{c{8cm}c{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \director & \codirector \\
+% Director Trabajo de Grado & Co-Director Trabajo de Grado \\
+% \end{tabular}
+% }
+% \vskip 2cm
+% \begin{tabular}{c{8cm}c{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \juryA & \juryB \\
+% Jurado 1 & Jurado 2
+% \end{tabular}
+% \end{center}
 
-\cleardoublepage
+% \cleardoublepage
+
+% \thispagestyle{empty}
+% \noindent Santiago de Cali, \fecha. \\
+% \vspace{2cm}\\
+% \noindent Se\~nores\\
+% \noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
+% \noindent \decanoFIC \\
+% \noindent Decano \\
+% Facultad de Ingenier\'ia y Ciencias \\
+% Ciudad
+% \vspace{2cm}\\
+% \noindent Cordial Saludo.\\\\\\
+%  Por medio de la presente me permito presentarle el Trabajo de Grado titulado ``\titulovar''.\\
+ 
+% \noindent Espero que este trabajo re\'una todos los requisitos acad\'emicos, cumpla el prop\'osito para el cual fue creado y sirva de apoyo para futuros proyectos relacionados con la materia.\\ \\ \\
+
+% \noindent Atentamente,\\\\
+% \\\vspace{2cm}\\
+% \ifthenelse{\equal{\codirectorproyecto}{}}
+% {
+% \line(1,0){200}\\
+% \authorA
+% }
+% {
+% \begin{tabular}{p{8cm}p{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \authorA & \authorB
+% \end{tabular}
+% }
 
 \thispagestyle{empty}
 \noindent Santiago de Cali, \fecha. \\
-\vspace{2cm}\\
-\noindent Se\~nores\\
+\vspace{1.5cm}\\
+\noindent \textbf{Ingeniero:}\\
+\textbf{\directorIE}\\
+\noindent \textbf{Director Posgrados de Ingeniería} \\
+\textbf{Facultad de Ingenier\'ia y Ciencias} \\
 \noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
-\noindent \decanoFIC \\
-\noindent Decano \\
-Facultad de Ingenier\'ia y Ciencias \\
-Ciudad
-\vspace{2cm}\\
-\noindent Cordial Saludo.\\\\\\
- Por medio de la presente me permito presentarle el Trabajo de Grado titulado ``\titulovar''.\\
+
+\vspace{1.5cm}\\
+ \noindent Con el fin de cumplir con los requisitos exigidos por la Universidad para llevar a cabo el Trabajo de Grado y posteriormente optar por el título de Magíster en Ingeniería -- Énfasis en Electrónica, nos permitimos presentar a su consideración el proyecto de Trabajo de Grado denominado ``\titulovar'', el cual será realizado por el estudiante \authorA, con código \authorACOD, perteneciente al énfasis en Electrónica, bajo la dirección del profesor \director.\\
+
+ \noident El suscrito director del Trabajo de Grado autoriza para que se proceda a hacer la evaluación de este Proyecto ante el Tribunal que para el efecto se designe, toda vez que ha revisado cuidadosamente el documento y avala que ya se encuentra listo para ser presentado oficialmente.\\
  
-\noindent Espero que este trabajo re\'una todos los requisitos acad\'emicos, cumpla el prop\'osito para el cual fue creado y sirva de apoyo para futuros proyectos relacionados con la materia.\\ \\ \\
+ \vspace{1.5cm}\\
+ \noindent Atentamente,\\
+ \vspace{2cm}\\
+ \begin{tabular}{p{8cm}p{8cm}}
+ \line(1,0){200}&\line(1,0){200} \\
+ \authorA & \director \\
+ C.C: 1.144.095.556 de Cali & C.C: 9.726.670  de Armenia.
+ \end{tabular}
 
-\noindent Atentamente,\\\\
-\\\vspace{2cm}\\
-\ifthenelse{\equal{\codirectorproyecto}{}}
-{
-\line(1,0){200}\\
-\authorA
-}
-{
-\begin{tabular}{p{8cm}p{8cm}}
-\line(1,0){200}&\line(1,0){200} \\
-\authorA & \authorB
-\end{tabular}
-}
-
-\cleardoublepage
+% \cleardoublepage
 
 %%%%%%%%%% 2nd Letter %%%%%%%%%%%%%
-\thispagestyle{empty}
-\noindent Santiago de Cali, \fecha. \\
-\vspace{2cm}\\
-\noindent Se\~nores\\
-\noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
-\noindent \decanoFIC \\
-\noindent Decano \\
-Facultad de Ingenier\'ia y Ciencias \\
-Ciudad
-\vspace{2cm}\\
-\noindent Cordial Saludo.\\\\\\
-\ifthenelse{\equal{\codirectorproyecto}{}}{Certifico}{Certificamos}
-que el presente Trabajo de Grado titulado ``\titulovar'', realizado por el
-\ifthenelse{\equal{\authorB}{}}{\authorA, estudiante}{\authorA y \authorB, estudiantes}
-de la Maestría en Ingenier\'ia en Electr\'onica, se encuentra terminado y puede ser presentado para sustentaci\'on.\\ \\ \\
+% \thispagestyle{empty}
+% \noindent Santiago de Cali, \fecha. \\
+% \vspace{2cm}\\
+% \noindent Se\~nores\\
+% \noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
+% \noindent \decanoFIC \\
+% \noindent Decano \\
+% Facultad de Ingenier\'ia y Ciencias \\
+% Ciudad
+% \vspace{2cm}\\
+% \noindent Cordial Saludo.\\\\\\
+% \ifthenelse{\equal{\codirectorproyecto}{}}{Certifico}{Certificamos}
+% que el presente Trabajo de Grado titulado ``\titulovar'', realizado por el
+% \ifthenelse{\equal{\authorB}{}}{\authorA, estudiante}{\authorA y \authorB, estudiantes}
+% de la Maestría en Ingenier\'ia en Electr\'onica, se encuentra terminado y puede ser presentado para sustentaci\'on.\\ \\ \\
 
-\noindent Atentamente,\\\\
-\\\vspace{2cm}\\
-\ifthenelse{\equal{\codirectorproyecto}{}}
-{
-\line(1,0){200}\\
-\director \\
-Director del proyecto
-}
-{
-\begin{tabular}{p{8cm}p{8cm}}
-\line(1,0){200}&\line(1,0){200} \\
-\director & \codirector \\
-Director del proyecto & Co-director del proyecto
-\end{tabular}
-}
+% \noindent Atentamente,\\\\
+% \\\vspace{2cm}\\
+% \ifthenelse{\equal{\codirectorproyecto}{}}
+% {
+% \line(1,0){200}\\
+% \director \\
+% Director del proyecto
+% }
+% {
+% \begin{tabular}{p{8cm}p{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \director & \codirector \\
+% Director del proyecto & Co-director del proyecto
+% \end{tabular}
+% }
 
-\cleardoublepage
+% \cleardoublepage
 
 }
 %% End: Edited by colarte, Tek
@@ -613,6 +636,82 @@ Director del proyecto & Co-director del proyecto
                                     {3.25ex \@plus1ex \@minus.2ex}%
                                     {-1em}%
                                     {\normalfont\normalsize\bfseries}}
+
+\newcommand{\makeficha}{
+\ \newpage
+\thispagestyle{empty}
+\begin{center}
+% \includegraphics[width=8cm]{./img/pujlogo.png}
+% \includegraphics[width=9.4cm]{./img/pujlogo2022.png}
+% \includegraphics[width=\textwidth]{./img/IngEl_FIC_PUJC.png}
+\includegraphics[width=15cm]{./img/IngEl_FIC_PUJC.png}
+\end{center}
+%-----  CARTA PARA EL DIRECTOR DE CARRERA
+
+
+% \thispagestyle{empty}
+\begin{center}
+ \bf{FICHA RESUMEN}\\
+% \vspace{0.1cm}
+\bf{TRABAJO DE GRADO DE MAESTRÍA}\\
+\end{center}
+
+%\noindent Agradecimientos. \\
+\vspace{0.5cm}\\
+
+% \noindent Dear\\
+\noindent {\bf TITULO:}   \titulovar\\
+% \vspace{0.05cm}\\
+% \noindent {\bf Cédula:}   1.144'095.556\\
+% \vspace{0.1cm}\\
+\begin{enumerate}
+    \item {\bf ÉNFASIS:} Ingeniería  -  Énfasis en electrónica.
+    
+    \item {\bf TIPO DE PROYECTO:} Tésis II -Proyecto de investigación.
+    
+    \item {\bf ÁREA DE 
+    TRABAJO:} Agropecuaria
+    
+    \item {\bf ESTUDIANTE:} \authorA
+    
+    \item {\bf CORREO ELECTRÓNICO:}  \href{mailto:lfguevarag97@gmail.com}{lfguevarag97@gmail.com}
+    
+    \item {\bf DIRECCIÓN Y TELÉFONO:} Carrera 87 \#10 - 55, Multicentro 10, Apartamento 408. (+57) 305 -  379 80 30
+    
+    \item {\bf DIRECTOR:} \director
+    
+    \item {\bf VINCULACIÓN DEL DIRECTOR:} Profesor Titular, Director de carrera de Ingeniería Electrónica
+    
+    \item {\bf CORREO ELECTRÓNICO DEL DIRECTOR:}  \href{mailto:letobon@javerianacali.edu.co}{letobon@javerianacali.edu.co}
+    
+    \item {\bf CO-DIRECTOR(ES):} N/A
+    
+    \item {\bf GRUPO QUE LO AVALA:}  Servicio Nacional de Aprendizaje SENA, Seccional Popayán
+    
+    \item {\bf OTROS GRUPOS:} N/A
+    
+    \item {\bf PALABRAS CLAVE:} Modelación Dinámica, Ajuste de curvas, Producción ganadera, Regresión no lineal. Splines, Ecuaciones Diferenciales Ordinarias (EDO), Levenberg-Marquardt (LMA), Efectos no lineales mixtos (NLMEA).
+    \item {\bf ODS QUE APLICA EL PROYECTO (AGENDA 2030):} \begin{itemize}
+    \item ODS \#9 - Industria, innovación e infraestructura: Apoyar el desarrollo de tecnologías, la investigación y la innovación nacionales en los países en desarrollo, incluso garantizando un entorno normativo propicio a la diversificación industrial y la adición de valor a los productos básicos, entre otras cosas (9.b).
+    \item ODS \#12 - Producción y consumo responsables: Ayudar a los países en desarrollo a fortalecer su capacidad científica y tecnológica para avanzar hacia modalidades de consumo y producción más sostenibles (12.a).
+    \end{itemize}
+    
+    
+    
+    % \item {\bf CODIGOS UNESCO - CIENCIA Y TECNOLOGÍA:} 1203.26, 1206.07, 1206.12, 3104.90 
+    \item {\bf FECHA DE INICIO:} 1 de Febrero de 2023.% - {\bf DURACIÓN ESTIMADA:} 10 meses  
+    \item {\bf RESUMEN:} Ver siguiente página.
+    %Modelar dinámicamente un sistema es importante para representar de manera simplificada su comportamiento sin recurrir a la experimentación, que para sistemas complejos, puede representar un alto consumo de recursos. También es útil para predecir comportamientos a largo plazo; observar, analizar, e interpretar resultados, frente a diferentes entradas que afectan directa o indirectamente a el o los subsistemas presentes; establecer conclusiones y apoyar la toma de decisiones futuras.\\
+    % 
+    
+    % Este trabajo estudia el comportamiento productivo de ganado bovino y bufalino del Centro Agropecuario del Servicio Nacional de Aprendizaje (SENA), ubicado en la ciudad de Popayán (CA-SENA-POP), teniendo en consideración diferentes variables, entre ellas, la producción de leche, el consumo de agua, consumo de forrajes, consumo de concentrado, generación de desperdicios y finalmente utilidades por venta de producciones de leche y carne. El objetivo es estructurar y evaluar un modelo basado en ecuaciones diferenciales que facilite observar respuestas del sistema productor ganadero ante diferentes entradas, en pro de predecir comportamientos a largo plazo.\\
+    
+    % Este proyecto adapta de manera flexible la metodología CRISP-DM, con la que se busca ajustar conjuntos de datos a curvas lineales y no lineales, de tal forma que se proceda a modelar dinámicamente las respuestas del sistema productor ganadero frente a diferentes entradas. Este proyecto también utiliza conjuntos de datos debidamente registrados y proveídos por el SENA tanto de manera análoga como digital. Los resultados obtenidos pueden suponer un punto de referencia para prever situaciones futuras y evaluar el rendimiento del modelo frente a nuevos datos.\\
+    
+\end{enumerate}
+\cleardoublepage
+} % End of Ficha Tecnica
+
 \newcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
                                        {3.25ex \@plus1ex \@minus .2ex}%
                                        {-1em}%

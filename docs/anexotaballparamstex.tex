@@ -1,0 +1,105 @@
+% [1-49]  --- INCLUYE los "parametros" sacados de los registros
+% \begin{sidewaystable}%[H]
+% % \begin{table}
+% \centering
+% \caption{Resumen de los parámetros de ajuste para cada método usado y su respectivo MSE.} \label{tab:allparams}
+% \resizebox{0.95\textwidth}{!}{\begin{tabular}{|cc|c|ccc|cccc|cccc|ccccc|ccccc|}
+ 
+%     \hline
+%      \cellcolor[HTML]{FFD9AC} &  \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}  & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}REGISTROS & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} LMA & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} ``Super Vaca''  & \cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC}  &\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} NLFEA & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} NLREA & \cellcolor[HTML]{FFD9AC}  & \cellcolor[HTML]{FFD9AC} \\
+%      \cellcolor[HTML]{FFD9AC}PARTO $P\#_{i}$ & \cellcolor[HTML]{FFD9AC}N & \cellcolor[HTML]{FFD9AC}PARS & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-I & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-G & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-I & \cellcolor[HTML]{FFD9AC}MSE-G & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ &\cellcolor[HTML]{FFD9AC} $\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-I & \cellcolor[HTML]{FFD9AC}MSE-G\\
+%      \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}VACA &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}&\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}& \cellcolor[HTML]{FFD9AC}&\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} \\
+%      \hline
+%      \cellcolor[HTML]{343434} & \cellcolor[HTML]{343434} & \cellcolor[HTML]{656565}\color[HTML]{FFFFFF}ACER & 15.500 & 0.045 & 0.007 & 9.602& 0.153& 0.004& 3.930 & & & & &9.612 & 0.147 & 0.003 & 3.848 &  & 10.098 & 0.131 & 0.003 & 3.921 & \\
+%      \cellcolor[HTML]{343434} \color[HTML]{FFFFFF}$P\#_{1}$ & \cellcolor[HTML]{343434} \color[HTML]{FFFFFF}299 & \cellcolor[HTML]{656565}\color[HTML]{FFFFFF}SOL & 7.000 & 0.210 & 0.008 & 7.405 & 0.119 & 0.003 & 4.706 & 8.273& 0.125 & 0.003 & 6.824 & 8.295 & 0.079 & 0.002& 4.682 & 4.486 & 6.833 & 0.131 & 0.003 & 4.750 & 4.485\\
+%      \cellcolor[HTML]{343434}& \cellcolor[HTML]{343434}& \cellcolor[HTML]{656565}\color[HTML]{FFFFFF}LUN & 5.400 & 0.317 & 0.006 & 7.067 & 0.136 & 0.003 & 4.775 & & & & & 6.986 & 0.140 & 0.003 & 4.7829 &  & 7.375 & 0.131 & 0.003 & 5.036 & \\
+%      \hline
+%      \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}DIAN & 21.000 & 0.080 & 0.005 & 15.930 & 0.114 & 0.004 & 12.523 & & & & & 16.220 & 0.107 & 0.004 & 11.949 &  & 16.154 & 0.109 & 0.004 & 11.955 & \\
+%      \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}GINA & 20.400 & 0.168 & 0.009 & 11.950 & 0.251 & 0.007& 3.292 & & & & & 16.059 & 0.149 & 0.006 & 3.230 &  & 15.553 & 0.158 & 0.006 & 3.248 & \\
+%      \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}JUAN & 9.400 & 0.126 & 0.010 & 4.103 & 0.317 & 0.008 & 8.128 & & & & & 4.384 & 0.282 & 0.007 & 8.074 &  & 5.119 & 0.233 & 0.007 & 8.112 & \\
+%      \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF}$P\#_{2}$ & \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF}288 & \cellcolor[HTML]{BDFFFC}LUCI & 19.000 & 0.028 & 0.005 & 13.394 & 0.167 & 0.007 & 4.967 & 12.210 & 0.154 & 0.053 & 17.828 & 13.801 & 0.147 & 0.006 & 4.985 & 8.455 & 13.127 & 0.160 & 0.006 & 4.987 & 8.448\\
+%      \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}PAC & 18.600 & 0.069 & 0.004 & 20.167& -0.036& 0.002 & 9.489 & & & & &19.752 &-0.027 &0.002 & 9.346 &  & 18.765 &-0.010 &0.002 & 9.363 & \\
+%      \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}SOL & 16.800 & 0.078 & 0.008 &10.138 &0.220 &0.007 & 16.013 & & & & & 9.374 & 0.238 & 0.007 & 15.887 &  & 9.673 & 0.227 & 0.007 & 15.890 & \\
+%      \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}VIV & 15.400 & 0.094 & 0.008 &6.794 &0.339 &0.007 & 5.043 & & & & & 7.847 &0.290 &0.007 & 5.017 &  & 8.830 &0.256 &0.006 & 5.034 & \\
+%      \hline
+%     \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}FER & 21.000 & 0.101 & 0.006 & 19.729 & 0.064 & 0.003 & 9.721 & & & & & 20.217 & 0.052 & 0.003 & 9.698 &  & 19.466 & 0.067 & 0.003 & 9.704 & \\
+%      \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}GPA & 22.000 & 0.099 & 0.005 & 15.206 & 0.148 & 0.004 & 11.415 & & & & & 15.638 & 0.132 & 0.004 & 11.420 &  & 15.506 & 0.136 & 0.004 & 11.422 & \\
+%      \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}JUAN & 11.000 & 0.208 & 0.007 & 9.445 & 0.203 & 0.004 & 4.692 & & & & & 9.485 & 0.202 & 0.004 & 4.712 &  & 9.907 & 0.190 & 0.004 & 4.713 & \\
+%      \cellcolor[HTML]{32CB00}$P\#_{3}$ & \cellcolor[HTML]{32CB00}309 & \cellcolor[HTML]{AAFF85}LETI & 16.200 & 0.116 & 0.008 & 15.388 & 0.098 & 0.004 & 22.970 & 13.711 & 0.146 & 0.004 & 21.470 & 16.645 & 0.069 & 0.003 & 22.965 & 12.762 & 16.298 & 0.073 & 0.004 & 22.993 & 12.747\\
+%      \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}MART & 10.800 & 0.283 & 0.007 & 6.613& 0.392& 0.006 & 17.059 & & & & &6.516 &0.396 &0.006 & 17.039 &  & 7.084 &0.371 &0.006 & 17.076 & \\
+%      \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}MOR & 22.000 & 0.157 & 0.009 &19.921 &0.108 &0.004 & 11.914 & & & & &20.858 &0.092 &0.004 & 11.871 &  & 20.353 &0.096 &0.004 & 11.899 & \\
+%      \cellcolor[HTML]{32CB00}&\cellcolor[HTML]{32CB00} & \cellcolor[HTML]{AAFF85}SOL & 16.000 & 0.064 & 0.006 &12.511 &0.058 &0.003 & 10.689 & & & & & 12.452 &0.059 &0.003 & 10.670 &  & 12.282 &0.064 &0.003 & 10.678 & \\
+%      \hline
+%      \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}CENT & 6.600 & 0.211 & 0.008 & 4.030 & 0.375 & 0.005 & 12.678 & & & & & 4.908 & 0.314 & 0.004 & 12.612 &  & 5.959 & 0.259 & 0.004 & 12.622 & \\
+%      \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}DIAN & 11.400 & 0.106 & 0.005 & 10.448 & 0.073 & 0.003 & 11.537 & & & & & 10.658 & 0.067 & 0.002 & 11.424 &  & 9.965 & 0.090 & 0.003 & 11.436 & \\
+%      \cellcolor[HTML]{FFFE65}&\cellcolor[HTML]{FFFE65} & \cellcolor[HTML]{FFFFC7}LETI & 15.000 & 0.089 & 0.007 & 11.952 & 0.073 & 0.003 & 9.446 & & & & & 12.857 & 0.043 & 0.003 & 9.415 &  & 11.721 & 0.073 & 0.030 & 9.429 & \\
+%      \cellcolor[HTML]{FFFE65}$P\#_{4}$ & \cellcolor[HTML]{FFFE65}274 & \cellcolor[HTML]{FFFFC7}MOR & 15.300 & 0.077 & 0.004 & 12.251 & 0.124 & 0.005 & 5.594 & 9.530 & 0.144 & 0.004 & 12.435 & 13.101 & 0.095 & 0.004 & 5.462 & 8.78 & 12.301 & 0.115 & 0.004 & 5.514 & 8.773 \\
+%      \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}MUC & 16.200 & 0.088 & 0.006 & 12.259 & 0.182 & 0.007 & 9.440 & & & & & 13.138 & 0.155 & 0.006 & 9.398 &  & 12.708 & 0.164 & 0.006 & 9.425 & \\
+%      \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}SOR & 4.800 & 0.311 & 0.010 & 5.386 & 0.262 & 0.007 & 9.044 & & & & & 5.404 & 0.263 & 0.007 & 8.943 &  & 6.297 & 0.209 & 0.006 & 8.949 & \\
+%      \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}VIV & 12.200 & 0.138 & 0.005 &7.032 &0.210 &0.004 & 3.401 & & & & & 6.831 &0.208 &0.004 & 3.403 &  & 7.370 &0.186 &0.004 & 3.442 & \\
+%      \hline
+%      \cellcolor[HTML]{D34444}$P\#_{5}$ & \cellcolor[HTML]{D34444}298 & \cellcolor[HTML]{FFCCC9}GPA & 11.000 & 0.169 & 0.009 & 1.619 & 0.688 & 0.009 & 9.345 & 4.246 & 0.425 & 0.007 & 11.388 & 1.531 & 0.705 & 0.009 & 9.270 & 9.440 & 1.670 & 0.679 & 0.009 & 9.278 & 9.440\\
+%      \cellcolor[HTML]{D34444}& \cellcolor[HTML]{D34444}& \cellcolor[HTML]{FFCCC9}ANDRE & 8.600 & 0.258 & 0.008 & 9.473 & 0.213 & 0.005 & 9.553 & & & & & 9.881 & 0.193 & 0.004 & 9.409 &  & 9.371 & 0.210 & 0.005 & 9.418 & \\
+%      \hline
+%      \cellcolor[HTML]{6665CD}$P\#_{6}$ & \cellcolor[HTML]{6665CD}162 & \cellcolor[HTML]{CBCEFB}GPA & 13.000 & 0.173 & 0.005 & 14.928 & 0.149 & 0.004 & 4.801 & 15.118 & 0.136 & 0.004 & 4.869 & 14.977 & 0.146 & 0.004 & 4.802 & 4.652 & 15.118 & 0.136 & 0.004 & 4.995 & 4.648\\
+%      \cellcolor[HTML]{6665CD}&\cellcolor[HTML]{6665CD} & \cellcolor[HTML]{CBCEFB}ANDRE & 19.20 & 0.077 & 0.007 & 15.437 & 0.118 & 0.004 & 4.482 & & & & & 15.247 & 0.125 & 0.004 & 4.436 &  & 15.105 & 0.136 & 0.004 & 4.624 & \\
+%      \hline
+%  \end{tabular}}
+% % \end{table}
+% \end{sidewaystable}
+
+
+
+
+
+% [55 - 105]--- no tiene los "parametros" sacados de los registros
+
+\begin{sidewaystable}%[H]
+% \begin{table}
+\centering
+\caption{Resumen de los parámetros de ajuste para cada método usado y su respectivo MSE.} \label{tab:allparams}
+
+\resizebox{0.95\textwidth}{!}{\begin{tabular}{|cc|c|cccc|cccc|ccccc|ccccc|}
+ 
+    \hline
+     \cellcolor[HTML]{FFD9AC} &  \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}  & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} LMA & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} ``Super Vaca''  & \cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC}  &\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} NLFEA & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} NLREA & \cellcolor[HTML]{FFD9AC}  & \cellcolor[HTML]{FFD9AC} \\
+     \cellcolor[HTML]{FFD9AC}PARTO $P\#_{i}$ & \cellcolor[HTML]{FFD9AC}N & \cellcolor[HTML]{FFD9AC}PARS & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-I & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-G & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ & \cellcolor[HTML]{FFD9AC}$\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-I & \cellcolor[HTML]{FFD9AC}MSE-G & \cellcolor[HTML]{FFD9AC}$\alpha$ & \cellcolor[HTML]{FFD9AC}$\beta$ &\cellcolor[HTML]{FFD9AC} $\gamma$ & \cellcolor[HTML]{FFD9AC}MSE-I & \cellcolor[HTML]{FFD9AC}MSE-G\\
+     \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}VACA &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}&\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC}& \cellcolor[HTML]{FFD9AC}&\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} &\cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} & \cellcolor[HTML]{FFD9AC} \\
+     \hline
+     \cellcolor[HTML]{343434} & \cellcolor[HTML]{343434} & \cellcolor[HTML]{656565}\color[HTML]{FFFFFF}ACER & 9.602& 0.153& 0.004& 3.930 & & & & &9.612 & 0.147 & 0.003 & 3.848 &  & 10.098 & 0.131 & 0.003 & 3.921 & \\
+     \cellcolor[HTML]{343434} \color[HTML]{FFFFFF}$P\#_{1}$ & \cellcolor[HTML]{343434} \color[HTML]{FFFFFF}299 & \cellcolor[HTML]{656565}\color[HTML]{FFFFFF}SOL & 7.405 & 0.119 & 0.003 & 4.706 & 8.273& 0.125 & 0.003 & 6.824 & 8.295 & 0.079 & 0.002& 4.682 & 4.486 & 6.833 & 0.131 & 0.003 & 4.750 & 4.485\\
+     \cellcolor[HTML]{343434}& \cellcolor[HTML]{343434}& \cellcolor[HTML]{656565}\color[HTML]{FFFFFF}LUN & 7.067 & 0.136 & 0.003 & 4.775 & & & & & 6.986 & 0.140 & 0.003 & 4.7829 &  & 7.375 & 0.131 & 0.003 & 5.036 & \\
+     \hline
+     \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}DIAN & 15.930 & 0.114 & 0.004 & 12.523 & & & & & 16.220 & 0.107 & 0.004 & 11.949 &  & 16.154 & 0.109 & 0.004 & 11.955 & \\
+     \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}GINA & 11.950 & 0.251 & 0.007& 3.292 & & & & & 16.059 & 0.149 & 0.006 & 3.230 &  & 15.553 & 0.158 & 0.006 & 3.248 & \\
+     \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}JUAN & 4.103 & 0.317 & 0.008 & 8.128 & & & & & 4.384 & 0.282 & 0.007 & 8.074 &  & 5.119 & 0.233 & 0.007 & 8.112 & \\
+     \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF}$P\#_{2}$ & \cellcolor[HTML]{3241CB}\color[HTML]{FFFFFF}288 & \cellcolor[HTML]{BDFFFC}LUCI & 13.394 & 0.167 & 0.007 & 4.967 & 12.210 & 0.154 & 0.053 & 17.828 & 13.801 & 0.147 & 0.006 & 4.985 & 8.455 & 13.127 & 0.160 & 0.006 & 4.987 & 8.448\\
+     \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}PAC & 20.167& -0.036& 0.002 & 9.489 & & & & &19.752 &-0.027 &0.002 & 9.346 &  & 18.765 &-0.010 &0.002 & 9.363 & \\
+     \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}SOL &10.138 &0.220 &0.007 & 16.013 & & & & & 9.374 & 0.238 & 0.007 & 15.887 &  & 9.673 & 0.227 & 0.007 & 15.890 & \\
+     \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{3241CB}& \cellcolor[HTML]{BDFFFC}VIV &6.794 &0.339 &0.007 & 5.043 & & & & & 7.847 &0.290 &0.007 & 5.017 &  & 8.830 &0.256 &0.006 & 5.034 & \\
+     \hline
+    \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}FER & 19.729 & 0.064 & 0.003 & 9.721 & & & & & 20.217 & 0.052 & 0.003 & 9.698 &  & 19.466 & 0.067 & 0.003 & 9.704 & \\
+     \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}GPA & 15.206 & 0.148 & 0.004 & 11.415 & & & & & 15.638 & 0.132 & 0.004 & 11.420 &  & 15.506 & 0.136 & 0.004 & 11.422 & \\
+     \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}JUAN & 9.445 & 0.203 & 0.004 & 4.692 & & & & & 9.485 & 0.202 & 0.004 & 4.712 &  & 9.907 & 0.190 & 0.004 & 4.713 & \\
+     \cellcolor[HTML]{32CB00}$P\#_{3}$ & \cellcolor[HTML]{32CB00}309 & \cellcolor[HTML]{AAFF85}LETI & 15.388 & 0.098 & 0.004 & 22.970 & 13.711 & 0.146 & 0.004 & 21.470 & 16.645 & 0.069 & 0.003 & 22.965 & 12.762 & 16.298 & 0.073 & 0.004 & 22.993 & 12.747\\
+     \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}MART & 6.613& 0.392& 0.006 & 17.059 & & & & &6.516 &0.396 &0.006 & 17.039 &  & 7.084 &0.371 &0.006 & 17.076 & \\
+     \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{32CB00}& \cellcolor[HTML]{AAFF85}MOR &19.921 &0.108 &0.004 & 11.914 & & & & &20.858 &0.092 &0.004 & 11.871 &  & 20.353 &0.096 &0.004 & 11.899 & \\
+     \cellcolor[HTML]{32CB00}&\cellcolor[HTML]{32CB00} & \cellcolor[HTML]{AAFF85}SOL &12.511 &0.058 &0.003 & 10.689 & & & & & 12.452 &0.059 &0.003 & 10.670 &  & 12.282 &0.064 &0.003 & 10.678 & \\
+     \hline
+     \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}CENT & 4.030 & 0.375 & 0.005 & 12.678 & & & & & 4.908 & 0.314 & 0.004 & 12.612 &  & 5.959 & 0.259 & 0.004 & 12.622 & \\
+     \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}DIAN & 10.448 & 0.073 & 0.003 & 11.537 & & & & & 10.658 & 0.067 & 0.002 & 11.424 &  & 9.965 & 0.090 & 0.003 & 11.436 & \\
+     \cellcolor[HTML]{FFFE65}&\cellcolor[HTML]{FFFE65} & \cellcolor[HTML]{FFFFC7}LETI & 11.952 & 0.073 & 0.003 & 9.446 & & & & & 12.857 & 0.043 & 0.003 & 9.415 &  & 11.721 & 0.073 & 0.030 & 9.429 & \\
+     \cellcolor[HTML]{FFFE65}$P\#_{4}$ & \cellcolor[HTML]{FFFE65}274 & \cellcolor[HTML]{FFFFC7}MOR & 12.251 & 0.124 & 0.005 & 5.594 & 9.530 & 0.144 & 0.004 & 12.435 & 13.101 & 0.095 & 0.004 & 5.462 & 8.78 & 12.301 & 0.115 & 0.004 & 5.514 & 8.773 \\
+     \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}MUC & 12.259 & 0.182 & 0.007 & 9.440 & & & & & 13.138 & 0.155 & 0.006 & 9.398 &  & 12.708 & 0.164 & 0.006 & 9.425 & \\
+     \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}SOR & 5.386 & 0.262 & 0.007 & 9.044 & & & & & 5.404 & 0.263 & 0.007 & 8.943 &  & 6.297 & 0.209 & 0.006 & 8.949 & \\
+     \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFE65}& \cellcolor[HTML]{FFFFC7}VIV &7.032 &0.210 &0.004 & 3.401 & & & & & 6.831 &0.208 &0.004 & 3.403 &  & 7.370 &0.186 &0.004 & 3.442 & \\
+     \hline
+     \cellcolor[HTML]{D34444}$P\#_{5}$ & \cellcolor[HTML]{D34444}298 & \cellcolor[HTML]{FFCCC9}GPA & 1.619 & 0.688 & 0.009 & 9.345 & 4.246 & 0.425 & 0.007 & 11.388 & 1.531 & 0.705 & 0.009 & 9.270 & 9.440 & 1.670 & 0.679 & 0.009 & 9.278 & 9.440\\
+     \cellcolor[HTML]{D34444}& \cellcolor[HTML]{D34444}& \cellcolor[HTML]{FFCCC9}ANDRE & 9.473 & 0.213 & 0.005 & 9.553 & & & & & 9.881 & 0.193 & 0.004 & 9.409 &  & 9.371 & 0.210 & 0.005 & 9.418 & \\
+     \hline
+     \cellcolor[HTML]{6665CD}$P\#_{6}$ & \cellcolor[HTML]{6665CD}162 & \cellcolor[HTML]{CBCEFB}GPA & 14.928 & 0.149 & 0.004 & 4.801 & 15.118 & 0.136 & 0.004 & 4.869 & 14.977 & 0.146 & 0.004 & 4.802 & 4.652 & 15.118 & 0.136 & 0.004 & 4.995 & 4.648\\
+     \cellcolor[HTML]{6665CD}&\cellcolor[HTML]{6665CD} & \cellcolor[HTML]{CBCEFB}ANDRE & 15.437 & 0.118 & 0.004 & 4.482 & & & & & 15.247 & 0.125 & 0.004 & 4.436 &  & 15.105 & 0.136 & 0.004 & 4.624 & \\
+     \hline
+ \end{tabular}}
+% \end{table}
+\end{sidewaystable}

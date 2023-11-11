@@ -66,8 +66,10 @@
 %%%%%%%
 % JURADOS
 %%%%%%%
-\juradoA{Degree.}{pepito perez \#1} % Jurado 1
-\juradoB{Degree.}{Pepito perez \#2} % Jurado 2
+% Jurado 1
+\juradoA{PhD.}{Andrés Felipe Amador Rodriguez} 
+% Jurado 2
+\juradoB{Degree.}{Pepito perez}
 
 \include{docs/format}
 \makeindex
@@ -77,12 +79,14 @@
 %\renewcommand{\dateseparator}{-} 
 %\yyyymmdddate
 %\today
-\maketitle
+\setcitestyle{square}
 \makecoverletter
+\makeficha
+\chapter*{Resumen}  \input{docs/resumen}
+\chapter*{Abstract} \input{docs/abstract}
 
-%%%%%%%%%%%%%%%%%%
-% ABSTRACT
-%%%%%%%%%%%%%%%%%%
+\maketitle
+
 \chapter*{Agradecimientos} \input{docs/agradecimientos}
 
 %\chapter*{Nomenclatura}
@@ -90,8 +94,7 @@
 \input{docs/nomenclatura}
 
 %\chapter*{Glosario} \input{docs/glosario}
-\chapter*{Resumen}  \input{docs/resumen}
-\chapter*{Abstract} \input{docs/abstract}
+
 
 %%%%%%%%%%%%%%%%%
 %%%% TABLE OF CONTENTS
@@ -124,29 +127,31 @@
 \chapter{Metodología}
 \input{docs/metodol.tex}
 
-\chapter{Visión global del contexto \\ ganadero multipropósito} \label{visglob}
+\chapter{Marco teórico} \label{visglob}
 \input{docs/visionglobal.tex}
+%Visión global del contexto \\ ganadero multipropósito
+% CRISP - DM: ETAPA \# \\ 
 
-\chapter{CRISP - DM: ETAPA \#1 \\ Entendimiento del negocio}
+\chapter{Entendimiento del negocio}
 \label{crisp1}
 \input{docs/crispdme1.tex}
 
-\chapter{CRISP - DM: ETAPA \#2 \\ Entendimiento de los datos}
+\chapter{Entendimiento de los datos}
 \label{crisp2}
 \input{docs/crispdme2.tex}
 
-\chapter{CRISP - DM: ETAPA \#3 \\ Preparación de los datos} 
+\chapter{Preparación de los datos} 
 \label{crisp3}
 \input{docs/crispdme3.tex}
 
 % \chapter{CRISP - DM: ETAPA \#3.5 - Preparación de los datos}
 % \input{docs/crispdme3.tex}
 
-\chapter{CRISP - DM: ETAPA \#4 \\ Modelado}\label{crisp4}
+\chapter{Modelado}\label{crisp4}
 \label{crisp4}
 \input{docs/crispdme4.tex}
 
-\chapter{CRISP - DM: ETAPA \#5 \\ Evaluación}
+\chapter{Evaluación}
 \label{crisp5}
 \input{docs/crispdme5.tex}
 
@@ -164,16 +169,19 @@
 \chapter{Conclusiones y trabajos futuros}
 \input{docs/conclusiones.tex}
 
-%\chapter*{Anexos} \label{anexus}
-% \input{docs/anexos}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{IEEEtran}
 \bibliography{docs/biblio}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANEXOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Anexos} \label{anexus}
+\input{docs/anexos}
 
 %%%%%%%%%%%%%%%%
 % GENERAL INDEX

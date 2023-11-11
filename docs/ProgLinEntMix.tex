@@ -1,120 +1,132 @@
 \subsection{Modelado por programación lineal entera} \label{linprogmod}
-El proyecto en cuestión consiste en modelar dinámicamente la producción ganadera del CA-SENA-POP, en pro de predecir o estimar producciones futuras sin la necesidad de poseer los datos reales que corroborarían la precisión del modelo.\\
+El proyecto en cuestión consiste en modelar dinámicamente la producción ganadera del CA-SENA-POP, en pro de predecir o estimar producciones futuras sin la necesidad de poseer los datos reales que corroborarían la precisión del modelo. Hasta ahora, los análisis propuestos requieren de un nivel avanzado de lenguajes de programación, álgebra lineal, ecuaciones diferenciales y estadística básica que pueden presentarse como una barrera al momento de presentar esta solución investigativa hacia los emprendedores ganaderos del centro agropecuario. Por tal motivo, se plantean los conjuntos, las variables, los parámetros y las funciones de objetivo de optimización mediante un ejercicio de optimización lineal que podría prestarse para maximizar ganancias o minimizar emisiones de $[KgCO_{2eq}]$. \\
 
-Hasta ahora, los análisis propuestos requieren de un nivel avanzado de lenguajes de programación, álgebra lineal, ecuaciones diferenciales y estadística básica que pueden presentarse como una barrera al momento de presentar esta solución investigativa hacia los emprendedores ganaderos del centro agropecuario. Por tal motivo, se plantean los conjuntos, las variables, los parámetros y las funciones de objetivo de optimización mediante un ejercicio de optimización lineal que podría prestarse para maximizar ganancias o minimizar emisiones de $[KgCO_{2eq}]$. \\
+En esta ocasión se plantea un problema de optimización lineal entera multipropósito, en donde la estimación de ganancia neta que presenta el CA-SENA-POP presenta un conflicto con la reducción de gases de $[KgCO_{2eq}]$, puesto que a mayor producción de estiércol, leche y carne; mayores son las emisiones de estos Gases de Efecto Invernadero (GEI).\\
 
-En esta ocasión se plantea un problema de optimización lineal entera multi propósito, en donde la estimación de ganancia neta que presenta el CA-SENA-POP presenta un conflicto con la reducción de gases de $[KgCO_{2eq}]$, puesto que a mayor producción de estiércol, leche y carne; mayores son las emisiones de estos Gases de Efecto Invernadero (GEI).
 
-Así pues, se plantea que:
+% \section{Modelado por programación lineal entera} 
+% Así pues, se plantea que:
 
-\subsection{Conjuntos}
-\begin{itemize}
-\begin{multicols}{2}
-    \item $VACAS_{v}$, indexadas por $v$
-    \item $DURACIONES_{d}$, indexadas por $d$
-    \item $PARTOS_{p}$, indexados por $p$
-    \item $DIAS_{t}$, indexados por $t$
-    % \item ESCENARIOS, indexados por $s$
-\end{multicols}
-\end{itemize}
-\subsection{Parámetros}
-
-\subsubsection{Emisiones de $[KgCO_{2eq}]$}
-
-\begin{itemize}
-    \item Según la Nicholas school of environment de la Universidad de Duke (\cite{ecoduke}), la producción de un (1) litro de leche representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $1,39[KgCO_{2eq}/Lt_{leche}]$. Éstas emisiones son denominadas como ``GEIX''.
-    \item Según Statista.com, una compañía de estadística comercial a nivel mundial (\cite{statista}), la producción de un (1) kilogramo de peso de ganado dedicado a la producción de leche, representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $33,3[KgCO_{2eq}/Kg_{carne}]$. Éstas emisiones son denominadas como ``GEIY''.
-    \item Según \cite{manure}, la producción de un (1) kilogramo de estiércol representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $0,0016108[KgCO_{2eq}/Kg_{estiercol}]$. Éstas emisiones son denominadas como ``GEIZ''.
-\end{itemize}
-% \subsubsection{Costos de producción}
+% \subsubsection{Conjuntos}
 % \begin{itemize}
-%     \item Hasta donde sé el sena no me ha dado estos datos, probablemente no los tienen a la mano, entonces mejor no lo considero
+% \begin{multicols}{2}
+%     \item $VACAS_{v}$, indexadas por $v$
+%     \item $DURACIONES_{d}$, indexadas por $d$
+%     \item $PARTOS_{p}$, indexados por $p$
+%     \item $DIAS_{t}$, indexados por $t$
+%     % \item ESCENARIOS, indexados por $s$
+% \end{multicols}
 % \end{itemize}
-\subsubsection{Precios de venta}
-\begin{itemize}
-    \item Según el CA-SENA-POP (\cite{casena}), el precio  de venta promedio de un (1) kilogramo de carne de res hembra (PVY) es de aproximadamente $7100[\$Pesos/Kg_{peso}]$. 
-    \item Según el CA-SENA-POP (\cite{casena}), el precio de venta de un (1) kilogramo de leche cruda sin análsisi de proteína y grasasa (PVX) es de aproximadamente $1350[\frac{\$Pesos}{Kg_{leche-cruda}}]$.
-\end{itemize}
+% \subsubsection{Parámetros}
 
-\subsubsection{Producción}
-\begin{itemize}
-    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (\cite{casena}), las producciones mínimas de leche pueden representarse como un parámetro $PMINX_{vp}$ en [$Kg_{leche}$/$Vaca_{v}Parto_{p}$]
-    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (\cite{casena}), las producciones mínimas de carne pueden representarse como un parámetro $PMINY_{vp}$ en [$Kg_{carne}$/$Vaca_{v}Parto_{p}$]
-    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (\cite{casena}), las producciones mínimas de estiércol pueden representarse como un parámetro $PMINZ_{vp}$ en [$Kg_{estiercol}$/$Vaca_{v}Parto_{p}$]
-    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (\cite{casena}), las producciones máximas de leche pueden representarse como un parámetro $PMAXX_{vp}$ en [$Kg_{leche}$/$Vaca_{v}Parto_{p}$]
-     \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (\cite{casena}), las producciones máximas de carne pueden representarse como un parámetro $PMAXY_{vp}$ en [$Kg_{carne}$/$Vaca_{v}Parto_{p}$]
-      \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (\cite{casena}), las producciones máximas de leche pueden representarse como un parámetro $PMAXZ_{vp}$ en [$Kg_{estiercol}$/$Vaca_{v}Parto_{p}$]
-    % \item Según el CA-SENA-POP (\cite{casena}), el precio de venta de un (1) kilogramo de leche cruda (PVKGLEC) es de aproximadamente $1350[\frac{\$Pesos}{Kg_{leche-cruda}}]$.
-\end{itemize}
+% \textbf{Emisiones de $[KgCO_{2eq}]$}
+
+% \begin{itemize}
+%     \item Según la ``Nicholas school of environment'' de la Universidad de Duke (\cite{ecoduke}), la producción de un (1) litro de leche representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $1,39[KgCO_{2eq}/Lt_{leche}]$. Éstas emisiones son denominadas como ``GEIX''.
+%     \item Según ``Statista.com'', una compañía de estadística comercial a nivel mundial (ver Referencia \cite{statista}), la producción de un (1) kilogramo de peso de ganado dedicado a la producción de leche, representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $33,3[KgCO_{2eq}/Kg_{carne}]$. Éstas emisiones son denominadas como ``GEIY''.
+%     \item Según \cite{manure}, la producción de un (1) kilogramo de estiércol representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $0,0016108[KgCO_{2eq}/Kg_{estiercol}]$. Éstas emisiones son denominadas como ``GEIZ''.
+% \end{itemize}
+% % \subsubsection{Costos de producción}
+% % \begin{itemize}
+% %     \item Hasta donde sé el sena no me ha dado estos datos, probablemente no los tienen a la mano, entonces mejor no lo considero
+% % \end{itemize}
+% % \pagebreak
+
+% \textbf{Precios de venta}
+
+% \begin{itemize}
+%     \item Según el CA-SENA-POP (ver Referencia \cite{casena}), el precio  de venta promedio de un (1) kilogramo de carne de res hembra (PVY) es de aproximadamente $7100[\$Pesos/Kg_{peso}]$. 
+%     \item Según el CA-SENA-POP (ver Referencia \cite{casena}), el precio de venta de un (1) kilogramo de leche cruda sin análisis de proteína y grasas (PVX) es de aproximadamente $1350[\frac{\$Pesos}{Kg_{leche-cruda}}]$.
+% \end{itemize}
+
+% \textbf{Producción}
+
+% \begin{itemize}
+%     \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones mínimas de leche pueden representarse como un parámetro $PMINX_{vp}$ en [$Kg_{leche}$/$Vaca_{v}Parto_{p}$]
+%     \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones mínimas de carne pueden representarse como un parámetro $PMINY_{vp}$ en [$Kg_{carne}$/$Vaca_{v}Parto_{p}$]
+%     \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones mínimas de estiércol pueden representarse como un parámetro $PMINZ_{vp}$ en [$Kg_{estiercol}$/$Vaca_{v}Parto_{p}$]
+%     \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones máximas de leche pueden representarse como un parámetro $PMAXX_{vp}$ en [$Kg_{leche}$/$Vaca_{v}Parto_{p}$]
+%      \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones máximas de carne pueden representarse como un parámetro $PMAXY_{vp}$ en [$Kg_{carne}$/$Vaca_{v}Parto_{p}$]
+%       \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones máximas de leche pueden representarse como un parámetro $PMAXZ_{vp}$ en [$Kg_{estiercol}$/$Vaca_{v}Parto_{p}$]
+%     % \item Según el CA-SENA-POP (\cite{casena}), el precio de venta de un (1) kilogramo de leche cruda (PVKGLEC) es de aproximadamente $1350[\frac{\$Pesos}{Kg_{leche-cruda}}]$.
+% \end{itemize}
+
+% % \subsubsection{Variables}
+
+% % \begin{itemize}
+% %     \item   \begin{equation*}
+% %                 \mathcal{X}_{ijdts}
+% %             \end{equation*}
+% % \end{itemize}
 
 % \subsubsection{Variables}
-
 % \begin{itemize}
-%     \item   \begin{equation*}
-%                 \mathcal{X}_{ijdts}
-%             \end{equation*}
+%     \item \textbf{$\mathcal{X}_{vpdts}$} $\longrightarrow$ Cantidad de leche producida por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Leche}$]. $\left(\mathcal{X}_{vpdts}\geq 0 \right)$.
+%     % \item \textbf{$\mathcal{X}_{vpdts}$}, Cantidad de leche producida por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Leche}$].
+%     % \begin{equation*}
+%     %     \mathcal{X}_{ijdts}
+%     % \end{equation*}
+%     \item \textbf{$\mathcal{Y}_{vpdts}$}$\longrightarrow$ Cantidad de carne producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Carne}$].  $\left(\mathcal{Y}_{vpdts}\geq 0 \right)$.
+%     % \item \textbf{$\mathcal{Y}_{vpdts}$}, Cantidad de carne producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Carne}$].
+%     % \begin{equation*}
+%     %     \mathcal{Y}_{ijdts}
+%     % \end{equation*}
+
+%     \item \textbf{$\mathcal{Z}_{vpdts}$}$\longrightarrow$ Cantidad de estiércol producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Estiercol}$].  $\left(\mathcal{Z}_{vpdts}\geq 0 \right)$.
+%     % \item \textbf{$\mathcal{Z}_{vpdts}$}, Cantidad de estiércol producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Estiercol}$].
 % \end{itemize}
 
-\subsection{Variables}
-\begin{itemize}
-    \item \textbf{$\mathcal{X}_{vpdts}$} $\longrightarrow$ Cantidad de leche producida por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Leche}$]. $\left(\mathcal{X}_{vpdts}\geq 0 \right)$.
-    % \item \textbf{$\mathcal{X}_{vpdts}$}, Cantidad de leche producida por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Leche}$].
-    % \begin{equation*}
-    %     \mathcal{X}_{ijdts}
-    % \end{equation*}
-    \item \textbf{$\mathcal{Y}_{vpdts}$}$\longrightarrow$ Cantidad de carne producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Carne}$].  $\left(\mathcal{Y}_{vpdts}\geq 0 \right)$.
-    % \item \textbf{$\mathcal{Y}_{vpdts}$}, Cantidad de carne producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Carne}$].
-    % \begin{equation*}
-    %     \mathcal{Y}_{ijdts}
-    % \end{equation*}
+% \subsubsection{Funciones objetivo}
 
-    \item \textbf{$\mathcal{Z}_{vpdts}$}$\longrightarrow$ Cantidad de estiércol producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Estiercol}$].  $\left(\mathcal{Z}_{vpdts}\geq 0 \right)$.
-    % \item \textbf{$\mathcal{Z}_{vpdts}$}, Cantidad de estiércol producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Estiercol}$].
-\end{itemize}
+% \textbf{Maximizar ganancias}
 
-\subsection{Funciones objetivo}
-\subsubsection{Maximizar ganancias}
-Si nos centramos únicamente en plantear el modelo en pro de maximizar las ganancias sin importar el impacto ecológico que estas producciones puedan representar, se tiene un modelo lineal cuya función objetivo estará representada por la ecuación \ref{ecutil}. Es importante tener en cuenta que para este análsis no se tiene conocimiento de los costos operacionales del CA-SENA-POP, por lo que son considerados nulos para este caso.
-En una situación donde se tenga conocimiento de estos valores económicos, basta con substraer el costo operacional asociado a cada lactancia monitoreada que puede ser considerado como un parámetro $COPER_{vpdt}$ (si el costo es diario durante toda la lactancia) ó $COPER_{vp}$ (si el costo es total, resultado de todo el periodo de lactancia).
+% Si nos centramos únicamente en plantear el modelo en pro de maximizar las ganancias sin importar el impacto ecológico que estas producciones puedan representar, se tiene un modelo lineal cuya función objetivo estará representada por la ecuación \ref{ecutil}. Es importante tener en cuenta que para este análisis no se tiene conocimiento de los costos operacionales del CA-SENA-POP, por lo que son considerados nulos para este caso.
+% En una situación donde se tenga conocimiento de estos valores económicos, basta con substraer el costo operacional asociado a cada lactancia monitoreada que puede ser considerado como un parámetro $COPER_{vpdt}$ (si el costo es diario durante toda la lactancia) ó $COPER_{vp}$ (si el costo es total, resultado de todo el periodo de lactancia).
 
-\begin{equation}\label{ecutil}
-\begin{split}
-    Max(UTILIDADES) =\left(PVX\sum_{v,p,d,t}\mathcal{X}_{vpdt}\right) + \left(PVY\sum_{v,p,d,t}\mathcal{Y}_{vpdt} \right) - \sum_{v,p,d,t}COPER_{vpdt}
-\end{split}
-\end{equation}
+% \begin{equation}\label{ecutil}
+% \begin{split}
+%     Max(UTILIDADES) =\left(PVX\sum_{v,p,d,t}\mathcal{X}_{vpdt}\right) + \left(PVY\sum_{v,p,d,t}\mathcal{Y}_{vpdt} \right) - \sum_{v,p,d,t}COPER_{vpdt}
+% \end{split}
+% \end{equation}
 
-\subsubsection{Minimizar emisiones de gases de efecto invernadero GEI}
-Si nos centramos únicamente en plantear el modelo en pro de minimizar las emisiones de GEI sin tener en consideración las posibles repercusiones financieras que estas producciones puedan representar, se tiene un modelo lineal cuya función objetivo estará representada por la siguiente ecuación:
+% \textbf{Minimizar emisiones de gases de efecto invernadero GEI.}
 
-\begin{equation}\label{ecemis}
-\begin{split}
-    Min(EMISIONES) =\left( GEIX\sum_{v,p,d,t}\mathcal{X}_{vpdt}\right) + \left(GEIY\sum_{v,p,d,t}\mathcal{Y}_{vpdt}\right) + \left(GEIZ\sum_{v,p,d,t}\mathcal{Z}_{vpdt} \right)
-\end{split}
-\end{equation}
-% \subsubsection{Multi-objetivo: Ganancia máxima y emisiones mínimas}
+% Si nos centramos únicamente en plantear el modelo en pro de minimizar las emisiones de GEI sin tener en consideración las posibles repercusiones financieras que estas producciones puedan representar, se tiene un modelo lineal cuya función objetivo estará representada por la siguiente ecuación:
 
-\subsection{Restricciones}
+% \begin{equation}\label{ecemis}
+% \begin{split}
+%     Min(EMISIONES) =\left( GEIX\sum_{v,p,d,t}\mathcal{X}_{vpdt}\right) + \left(GEIY\sum_{v,p,d,t}\mathcal{Y}_{vpdt}\right) + \left(GEIZ\sum_{v,p,d,t}\mathcal{Z}_{vpdt} \right)
+% \end{split}
+% \end{equation}
+% % \subsubsection{Multi-objetivo: Ganancia máxima y emisiones mínimas}
 
-\subsubsection{Producción mínima}
-\begin{itemize}
-\begin{multicols}{2}
-    \item \textbf{$\mathcal{X}_{vpdts}\geq PMINX_{vp}$} $\longrightarrow \forall v,p $
-    \item \textbf{$\mathcal{Z}_{vpdts}\geq PMINZ_{vp}$} $\longrightarrow \forall v,p $
-    \item \textbf{$\mathcal{Y}_{vpdts}\geq PMINY_{vp}$} $\longrightarrow \forall v,p $
-    \item $PMINX_{vp}$, $PMINY_{vp}$, $PMINZ_{vp}$, $\geq 0$
+% \subsubsection{Restricciones}
+
+% \textbf{Producción mínima}
+
+% \begin{itemize}
+% \begin{multicols}{2}
+%     \item \textbf{$\mathcal{X}_{vpdts}\geq PMINX_{vp}$} $\longrightarrow \forall v,p $
+%     \item \textbf{$\mathcal{Z}_{vpdts}\geq PMINZ_{vp}$} $\longrightarrow \forall v,p $
+%     \item \textbf{$\mathcal{Y}_{vpdts}\geq PMINY_{vp}$} $\longrightarrow \forall v,p $
+%     \item $PMINX_{vp}$, $PMINY_{vp}$, $PMINZ_{vp}$, $\geq 0$
     
-\end{multicols}
-\end{itemize}
-\subsubsection{Producción máxima}
-\begin{itemize}
-\begin{multicols}{2}
-    \item \textbf{$\mathcal{X}_{vpdts}\leq PMAXX_{vp}$} $\longrightarrow \forall v,p $
-    \item \textbf{$\mathcal{Z}_{vpdts}\leq PMAXZ_{vp}$} $\longrightarrow \forall v,p$
-    \item \textbf{$\mathcal{Y}_{vpdts}\leq PMAXY_{vp}$} $\longrightarrow \forall v,p$
-    \item $PMAXX_{vp}$, $PMAXY_{vp}$, $PMAXZ_{vp}$, $\geq 0$
+% \end{multicols}
+% \end{itemize}
+
+% \textbf{Producción máxima}
+
+% \begin{itemize}
+% \begin{multicols}{2}
+%     \item \textbf{$\mathcal{X}_{vpdts}\leq PMAXX_{vp}$} $\longrightarrow \forall v,p $
+%     \item \textbf{$\mathcal{Z}_{vpdts}\leq PMAXZ_{vp}$} $\longrightarrow \forall v,p$
+%     \item \textbf{$\mathcal{Y}_{vpdts}\leq PMAXY_{vp}$} $\longrightarrow \forall v,p$
+%     \item $PMAXX_{vp}$, $PMAXY_{vp}$, $PMAXZ_{vp}$, $\geq 0$
     
-\end{multicols}
-\end{itemize}
-% \subsubsection{}
+% \end{multicols}
+% \end{itemize}
+% % \subsubsection{}
+
+
 
 

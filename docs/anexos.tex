@@ -1,25 +1,199 @@
-%A continuación se presentan los anexos del proyecto:
-%\begin{itemize}
-%	\item Consideraciones para presupuesto del proyecto:
-		\begin{figure}
-			\begin{center}
-				\includegraphics{img/consideraciones2.png}
-			\end{center}
-			\caption{Consideraciones para el presupuesto \label{tabconsideraciones}}
-		\end{figure}
-%	\item Presupuesto del proyecto:
-		\begin{figure}
-			\begin{center}
-				\includegraphics{img/presuTot.png}
-			\end{center}
-			\caption{Presupuesto \label{tabpresupuesto}}
-		\end{figure}
-%	\item Cronograma del proyecto:
-		\begin{figure}
-			\begin{center}
-				\includegraphics{img/cronopng4_5.png}
-%				\includegraphics{img/cronopng2.png} %este es el que tiene colores mas oscuro po si no se ve bien el otro
-			\end{center}
-			\caption{Cronograma del proyecto. \label{cronograma}}
-		\end{figure}
-%\end{itemize} 
+% A continuación se presentan los anexos del proyecto.\\
+
+% \section{Demostración de la relación entre los parámetros $k_{i}$ para el modelo EDO-WP}
+
+\section{Modelo de optimización por programación lineal entera} 
+
+Con base en lo mencionado en la Sección \ref{linprogmod}, se plantean los conjuntos, las variables, los parámetros y las funciones de objetivo de optimización mediante un ejercicio de optimización lineal que podría prestarse para maximizar ganancias o minimizar emisiones de $[KgCO_{2eq}]$. En esta ocasión se plantea un problema de optimización lineal entera multipropósito, en donde la estimación de ganancia neta que presenta el CA-SENA-POP presenta un conflicto con la reducción de gases de $[KgCO_{2eq}]$, puesto que a mayor producción de estiércol, leche y carne; mayores son las emisiones de estos Gases de Efecto Invernadero (GEI). Así pues, se plantea que:
+
+\subsection{Conjuntos}
+\begin{itemize}
+\begin{multicols}{2}
+    \item $VACAS_{v}$, indexadas por $v$
+    \item $DURACIONES_{d}$, indexadas por $d$
+    \item $PARTOS_{p}$, indexados por $p$
+    \item $DIAS_{t}$, indexados por $t$
+    % \item ESCENARIOS, indexados por $s$
+\end{multicols}
+\end{itemize}
+\subsection{Parámetros}
+
+\subsubsection{Emisiones de $[KgCO_{2eq}]$}
+
+\begin{itemize}
+    \item Según la ``Nicholas school of environment'' de la Universidad de Duke (\cite{ecoduke}), la producción de un (1) litro de leche representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $1,39[KgCO_{2eq}/Lt_{leche}]$. Éstas emisiones son denominadas como ``GEIX''.
+    \item Según ``Statista.com'', una compañía de estadística comercial a nivel mundial (ver Referencia \cite{statista}), la producción de un (1) kilogramo de peso de ganado dedicado a la producción de leche, representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $33,3[KgCO_{2eq}/Kg_{carne}]$. Éstas emisiones son denominadas como ``GEIY''.
+    \item Según \cite{manure}, la producción de un (1) kilogramo de estiércol representa una generación de  emisiones equivalentes de $Co_{2}$ de aproximadamente $0,0016108[KgCO_{2eq}/Kg_{estiercol}]$. Éstas emisiones son denominadas como ``GEIZ''.
+\end{itemize}
+% \subsubsection{Costos de producción}
+% \begin{itemize}
+%     \item Hasta donde sé el sena no me ha dado estos datos, probablemente no los tienen a la mano, entonces mejor no lo considero
+% \end{itemize}
+% \pagebreak
+
+\subsubsection{Precios de venta}
+
+\begin{itemize}
+    \item Según el CA-SENA-POP (ver Referencia \cite{casena}), el precio  de venta promedio de un (1) kilogramo de carne de res hembra (PVY) es de aproximadamente $7100[\$Pesos/Kg_{peso}]$. 
+    \item Según el CA-SENA-POP (ver Referencia \cite{casena}), el precio de venta de un (1) kilogramo de leche cruda sin análisis de proteína y grasas (PVX) es de aproximadamente $1350[\frac{\$Pesos}{Kg_{leche-cruda}}]$.
+\end{itemize}
+
+\subsubsection{Producción}
+
+\begin{itemize}
+    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones mínimas de leche pueden representarse como un parámetro $PMINX_{vp}$ en [$Kg_{leche}$/$Vaca_{v}Parto_{p}$]
+    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones mínimas de carne pueden representarse como un parámetro $PMINY_{vp}$ en [$Kg_{carne}$/$Vaca_{v}Parto_{p}$]
+    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones mínimas de estiércol pueden representarse como un parámetro $PMINZ_{vp}$ en [$Kg_{estiercol}$/$Vaca_{v}Parto_{p}$]
+    \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones máximas de leche pueden representarse como un parámetro $PMAXX_{vp}$ en [$Kg_{leche}$/$Vaca_{v}Parto_{p}$]
+     \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones máximas de carne pueden representarse como un parámetro $PMAXY_{vp}$ en [$Kg_{carne}$/$Vaca_{v}Parto_{p}$]
+      \item Según los registros proporcionados de manera física y digital del CA-SENA-POP (ver Referencia \cite{casena}), las producciones máximas de leche pueden representarse como un parámetro $PMAXZ_{vp}$ en [$Kg_{estiercol}$/$Vaca_{v}Parto_{p}$]
+    % \item Según el CA-SENA-POP (\cite{casena}), el precio de venta de un (1) kilogramo de leche cruda (PVKGLEC) es de aproximadamente $1350[\frac{\$Pesos}{Kg_{leche-cruda}}]$.
+\end{itemize}
+
+\subsection{Variables}
+\begin{itemize}
+    \item \textbf{$\mathcal{X}_{vpdts}$} $\longrightarrow$ Cantidad de leche producida por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Leche}$]. $\left(\mathcal{X}_{vpdts}\geq 0 \right)$.
+    % \item \textbf{$\mathcal{X}_{vpdts}$}, Cantidad de leche producida por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Leche}$].
+    % \begin{equation*}
+    %     \mathcal{X}_{ijdts}
+    % \end{equation*}
+    \item \textbf{$\mathcal{Y}_{vpdts}$}$\longrightarrow$ Cantidad de carne producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Carne}$].  $\left(\mathcal{Y}_{vpdts}\geq 0 \right)$.
+    % \item \textbf{$\mathcal{Y}_{vpdts}$}, Cantidad de carne producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Carne}$].
+    % \begin{equation*}
+    %     \mathcal{Y}_{ijdts}
+    % \end{equation*}
+
+    \item \textbf{$\mathcal{Z}_{vpdts}$}$\longrightarrow$ Cantidad de estiércol producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$; en [$Kg_{Estiercol}$].  $\left(\mathcal{Z}_{vpdts}\geq 0 \right)$.
+    % \item \textbf{$\mathcal{Z}_{vpdts}$}, Cantidad de estiércol producido por una vaca $v$ en un grupo de parto $p$ que tiene una duración de lactancia aproximada $d$ en un día $t$ en un escenario $s$; en [$Kg_{Estiercol}$].
+\end{itemize}
+
+\subsection{Funciones objetivo}
+
+\subsubsection{Maximizar ganancias}
+
+Si el planteamiento del modelo se enfoca en maximizar las ganancias sin importar el posible impacto ecológico, la función objetivo del modelo lineal estará representada por la ecuación \ref{ecutil}. Se debe mencionar que para este análisis no se tiene conocimiento de los costos operacionales del CA-SENA-POP, por lo que son considerados como nulos para este caso. En una situación donde se tenga conocimiento de estos valores económicos, basta con substraer el costo operacional asociado a cada lactancia monitoreada que puede ser considerado como un parámetro $COPER_{vpdt}$ (si el costo es diario durante toda la lactancia) ó $COPER_{vp}$ (si el costo es total, resultado de todo el periodo de lactancia).
+\begin{equation}\label{ecutil}
+\begin{split}
+    Max(UTILIDADES) =\left(PVX\sum_{v,p,d,t}\mathcal{X}_{vpdt}\right) + \left(PVY\sum_{v,p,d,t}\mathcal{Y}_{vpdt} \right) - \sum_{v,p,d,t}COPER_{vpdt}
+\end{split}
+\end{equation}
+
+\subsubsection{Minimizar emisiones de gases de efecto invernadero GEI.}
+
+Si nos centramos únicamente en plantear el modelo para minimizar las emisiones de GEI sin tener en consideración las posibles repercusiones financieras que estas producciones puedan representar, se tiene un modelo lineal cuya función objetivo estará representada por la siguiente ecuación:
+\begin{equation}\label{ecemis}
+\begin{split}
+    Min(EMISIONES) =\left( GEIX\sum_{v,p,d,t}\mathcal{X}_{vpdt}\right) + \left(GEIY\sum_{v,p,d,t}\mathcal{Y}_{vpdt}\right) + \left(GEIZ\sum_{v,p,d,t}\mathcal{Z}_{vpdt} \right)
+\end{split}
+\end{equation}
+
+% \subsubsection{Multi-objetivo: Ganancia máxima y emisiones mínimas}
+
+\subsection{Restricciones}
+
+\subsubsection{Producción mínima}
+
+\begin{itemize}
+\begin{multicols}{2}
+    \item \textbf{$\mathcal{X}_{vpdts}\geq PMINX_{vp}$} $\longrightarrow \forall v,p $
+    \item \textbf{$\mathcal{Z}_{vpdts}\geq PMINZ_{vp}$} $\longrightarrow \forall v,p $
+    \item \textbf{$\mathcal{Y}_{vpdts}\geq PMINY_{vp}$} $\longrightarrow \forall v,p $
+    \item $PMINX_{vp}$, $PMINY_{vp}$, $PMINZ_{vp}$, $\geq 0$
+    
+\end{multicols}
+\end{itemize}
+
+\subsubsection{Producción máxima}
+
+\begin{itemize}
+\begin{multicols}{2}
+    \item \textbf{$\mathcal{X}_{vpdts}\leq PMAXX_{vp}$} $\longrightarrow \forall v,p $
+    \item \textbf{$\mathcal{Z}_{vpdts}\leq PMAXZ_{vp}$} $\longrightarrow \forall v,p$
+    \item \textbf{$\mathcal{Y}_{vpdts}\leq PMAXY_{vp}$} $\longrightarrow \forall v,p$
+    \item $PMAXX_{vp}$, $PMAXY_{vp}$, $PMAXZ_{vp}$, $\geq 0$
+    
+\end{multicols}
+\end{itemize}
+% \pagebreak
+
+\section{Tabla \ref{tab:allparams} - Parámetros de ajuste para cada método usado.}
+\input{docs/anexotaballparamstex}
+\pagebreak
+
+\section{Figura \ref{covmatricespng} - Matrices de covarianza} \label{anexocovmatricespng}
+
+\begin{figure}[H]
+	 \begin{center}
+	 \includegraphics[scale=0.604]{img/covmatricesspa.jpg}
+	 \end{center}
+	 \caption{Matrices de covarianza del método ``nlmefit''. \label{covmatricespng}}
+\end{figure}
+
+\section{Relación matemática entre los parámetros $k_{1}$, $k_{2}$, $k_{3}$ y $k_{4}$}\label{demostralabel}
+
+Partiendo de las Ecuaciones Diferenciales Ordinarias de primer orden \ref{modwp1} y \ref{modwp2} y considerando que estas ecuaciones estan relacionadas entre sí, se puede establecer una EDO de segundo orden que permita expresar una varible en función de otra de la siguiente manera:
+
+% Por una parte sabemos que:
+\begin{equation*}
+    \frac{dW}{dt} = k_{1}\alpha_{s}W - k_{2}P, \hspace{0.6cm} \frac{dP}{dt} = k_{3}\alpha_{s}W - k_{4}P \hspace{0.2cm}, \hspace{0.3cm} \hspace{0.2cm} \frac{dW}{dt} = \dot{W}, \hspace{0.3cm} \frac{dP}{dt} = \dot{P}
+\end{equation*}
+
+% Reescribiendo P en terminos de W obteniendo W** 
+% \begin{equation*}
+%     \frac{dP}{dt} = k_{3}\alpha_{s}W - k_{4}P, \hspace{1cm} \frac{dP}{dt} = \dot{P}
+% \end{equation*}
+
+\begin{equation*}
+    \ddot{W} = \frac{d}{dt}\left(\frac{dW}{dt}\right) \longrightarrow \ddot{W} = k_{1}\alpha_{s}\frac{dW}{dt} - k_{2}\frac{dP}{dt} \hspace{0.3cm} \longrightarrow \hspace{0.3cm} \ddot{W} = k_{1}\alpha_{s}\dot{W} - k_{2}\dot{P}\hspace{0.15cm}
+\end{equation*}
+
+Sabemos que el valor de $\dot{P}$, por lo que reemplazando en $\ddot{W}$ se obtiene:
+\begin{equation*}
+    \dot{P} = k_{3}\alpha_{s}W - k_{4}P, \hspace{0.2cm}\longrightarrow\hspace{0.2cm} \ddot{W} = k_{1}\alpha_{s}\dot{W} - k_{2}(k_{3}\alpha_{s}W - k_{4}P)
+\end{equation*}
+
+% Abrimos parentésis y reescribimos = 0
+Separando las variables hacia los lados:
+\begin{equation}
+    \ddot{W}- k_{1}\alpha_{s}\dot{W} + k_{2}k_{3}\alpha_{s}W = k_{2}k_{4}P
+\end{equation}
+
+% suponiendo que k_{2}k_{4}P=0 y cambio de variable
+Supóngase  $k_{2}k_{4}P\approx 0$, despejamos $\ddot{W}$, hacemos cambio de variable y resolvemos para $m = \ddot{W}$
+
+% suponiendo que k_{2}k_{4}P=0 y cambio de variable
+\begin{equation}
+    % (a)m^{2} + (b)m + (c) = 0, \longrightarrow m=\frac{-b \pm \sqrt{b^{2}-4(a)(c)}}{2(a)} 
+    % \longrightarrow
+    m=\left(\frac{-b}{2a}\right) \pm \sqrt{\left(\frac{b}{2a}\right)^{2}-(c)} \hspace{0.2cm}
+\end{equation}
+Donde $\left[\left(\frac{b}{2a}\right)^{2} - (c)\right]$ decidirá el comportamiento amortiguado del sistema. Reemplazamos valores:
+% Reescribimos la cuadrática y vemos la raíz
+\begin{equation}
+    m=\left[\left(\frac{k_{1}\alpha_{s}}{2}\right)\pm\sqrt{\left(\frac{k_{1}\alpha_{s}^{2}}{2}\right)-(k_{2}k_{3}\alpha_{s})} \hspace{0.2cm}\right] donde \hspace{0.2cm} \left(\frac{k_{1}\alpha_{s}}{2}\right)^{2}\geq k_{2}k_{3}\alpha_{s} 
+\end{equation}
+
+Despejando la desigualdad, y sabiendo de antemano que 
+ $\alpha_{s}\neq 0$, se obtiene que:
+\begin{equation} \label{relacionkis}
+    \left(\frac{k_{1}\alpha_{s}}{2}\right)^{2}\geq k_{2}k_{3}\alpha_{s} \longrightarrow \left(\frac{k_{1}^{2}\alpha_{s}^{2}}{2^{2}}\right)\geq k_{2}k_{3}\alpha_{s} \longrightarrow k_{1}^{2}\geq 4\left(\frac{k_{2}k_{3}}{\alpha_{s}}\right)
+\end{equation}
+\subsection{Observaciones}
+Basado en la representación por EDOs, tanto en las ecuaciones \ref{modwp1} y \ref{modwp2}, así como también por la representación gráfica del modelo, es importante mencionar que, $k_{2}$ debería ser igual a $k_{3}\alpha$, pues parte del peso que no se gana se debe a la producción de producto P que es expulsado del cuerpo del animal, ya sea por la producción de leche L en el proceso de ordeño o por producción de estiércol en el proceso de excreción de las necesidades biológicas del animal. \\
+
+Por otra parte, el factor $k_{2}k_{4}P$ que se supone aproximadamente igual a 0, puede afectar el comportamiento final del sistema puesto que este valor únicamente sería 0 si el bovino no tuviera perdidas en la producción de desechos.
+
+\section{Representación gráfica del modelo EDO-WP}\label{grafolabel}
+
+\begin{figure}[H]
+	 \begin{center}
+	 \includegraphics[scale=0.48504]{img/grafoedo.png}
+	 \end{center}
+	 \caption{Representación gráfica de las ecuaciones \ref{modwp1} y \ref{modwp2}. \label{anexografoedo}}
+\end{figure}
+
+
+
+
+
+

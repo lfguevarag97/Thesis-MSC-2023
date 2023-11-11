@@ -1,4 +1,5 @@
 %%% Generation: =CONCATENATE("@misc{";A1;",author={";A1;"},title={";B1;"}}")
+
 %%%%%
 @PREAMBLE{ "\newcommand{\noopsort}[1]{}" }
 @STRING{aalborg	= "Department of Mathematics and Computer Science, Aalborg 
@@ -55,12 +56,20 @@
 @STRING{siamjc	= "SIAM Journal of Computing" } 
 @STRING{tcs	= "Theoretical Computer Science" } 
 @STRING{toplas	= "ACM Transactions on Programming Languages and Systems" } 
- 
+\bibliographystyle{plainnat}
 %referencia bibliograficas 
 
+@online{msclfggprogrepo,
+  author = {Guevara Gómez, L. and Tobón Llano, L.},
+  title = {Repositorio del trabajo de grado de maestría titulada ``\titulovar''. ``{D}atos y Algoritmos''},
+  year = 2023,
+  url = {https://github.com/lfguevarag97/Thesis-MSC-2023-Scripts_and-data},
+  urldate = {2023-05-15}
+}
+%{L.F. {Guevara Gómez} and L.E. {Tobón Llano}}
 @online{msclfggrepo,
-  author = {L.F. {Guevara Gómez} and L.E. {Tobón Llano}},
-  title = {Repositorio de trabajo de grado de maestría titulada \titulovar},
+  author = {Guevara Gómez, L. and Tobón Llano, L.},
+  title = {Repositorio del trabajo de grado de maestría titulada ``\titulovar''. ``{D}ocumentación''},
   year = 2023,
   url = {https://github.com/lfguevarag97/Thesis-MSC-2023},
   urldate = {2023-05-01}
@@ -104,35 +113,34 @@
  year = {2003}
 }
 
+% year = 2005,
 @online{leylacteos,
   author = {SIVIGILA},
   title = {Derivados lácteos},
-%   year = 2005,
   url = {http://www.saludcapital.gov.co/sitios/VigilanciaSaludPublica/Protocolos\%20de\%20Vigilancia\%20en\%20Salud\%20Publica/Derivados\%20Lacteos.pdf},
   urldate = {2022-10-01}
 }
 
-@online{lechepaisa1,
-  author = {Cañas J, Muñoz M, Corrales J},
+@online{lechepaisa1,  
+  author = {Cañas, J. and others},
   title = {Modeling the lactation curves for milk, fat and protein yield of Holstein cattle in Antioquia, Colombia},
   year = 2011,
   url = {http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0122-02682011000200009},
   urldate = {2020-09-25}
 }
-
+%author = {Guimarães, V; Rodrigues, M; Sarmento, J; Rocha, D},
 @online{caprinos,
-  author = {Guimarães V; Rodrigues M; Sarmento J; Rocha D},
+  author = {Guimarães, V. and others},
   title = {Use of mathematical functions in the study of lactation curves in goats},
   year = 2006,
   url = {https://www.scielo.br/scielo.php?pid=S1516-35982006000200028&script=sci_arttext},
   urldate = {2020-09-25}
 }
-
-
+%Patricia AND Casellas, Joaquim AND Quijano, Jorge Humberto AND Casals, Ramon AND Such, Xavier
 @article{colombiaherd,
    title = {{Fitting lactation curves in a Colombian Holstein herd using nonlinear models}},
-   journal = {{Revista Facultad Nacional de Agronom\~A\-a Medell\~A\-n}},
-   author={Duque, Norma Patricia AND Casellas, Joaquim AND Quijano, Jorge Humberto AND Casals, Ramon AND Such, Xavier},
+   journal = {{Revista Facultad Nacional de Agronomía, Medellín}},
+   author={Duque, N. and others },
    ISSN = {0304-2847},
    language = {en},
    URL = {http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0304-28472018000208459&nrm=iso},
@@ -143,9 +151,9 @@
    publisher = {scieloco},
    crossref = {10.15446/rfna.v71n2.67424},
    }
-
+%; Pereira J; Campos O; Braga J; Silva F; Martuscello J
 @online{janaina1,
-  author = {Cunha D ; Pereira J; Campos O; Braga J; Silva F; Martuscello J},
+  author = {Cunha, D. and others},
   title = {Evaluation of a dynamic simulation model for milk production systems},
   year = 2010,
   url = {https://www.scielo.br/scielo.php?pid=S1516-35982010000400027&script=sci_arttext&tlng=en},
@@ -153,13 +161,13 @@
 }
 
 @online{janaina2,
-  author = {Cunha D ; Pereira J; Campos O; Braga J; Silva F; Martuscello J},
+  author = {Cunha, D. and others},
   title = {Selection of models of lactation curves to use in milk production simulation systems},
   year = 2010,
   url = {https://www.scielo.br/pdf/rbz/v39n4/v39n4a26.pdf},
   urldate = {2020-09-25}
 }
-
+%A-M, Martins. and V-A, Santos. and M-M, Ginja. and J-A, Colaço
 @article{silvestre,
 title = {Lactation curves for milk, fat and protein in dairy cows: A full approach},
 journal = {Livestock Science},
@@ -170,12 +178,12 @@ year = {2009},
 issn = {1871-1413},
 doi = {https://doi.org/10.1016/j.livsci.2008.09.017},
 url = {https://www.sciencedirect.com/science/article/pii/S1871141308003090},
-author = {A.M. Silvestre and A.M. Martins and V.A. Santos and M.M. Ginja and J.A. Colaço},
+author = {Silvestre, A. and others},
 keywords = {Milk composition, Lactation curve},
 }
-
+% P.J. Berger and A.E. Freeman and F.N. Dickinson
 @article{shanks,
-title = {Genetic Aspects of Lactation Curves1},
+title = {Genetic Aspects of Lactation Curves},
 journal = {Journal of Dairy Science},
 volume = {64},
 number = {9},
@@ -184,7 +192,7 @@ year = {1981},
 issn = {0022-0302},
 doi = {https://doi.org/10.3168/jds.S0022-0302(81)82775-0},
 url = {https://www.sciencedirect.com/science/article/pii/S0022030281827750},
-author = {R.D. Shanks and P.J. Berger and A.E. Freeman and F.N. Dickinson},
+author = {Shanks, R. and others},
 }
 
 @article{iran,
@@ -197,6 +205,28 @@ volume = {40},
 journal = {Acta Scientiarum Animal Sciences},
 doi = {10.4025/actascianimsci.v40i1.37895}
 }
+
+@article{msereg,
+        title={ The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation. },
+        authors={ Davide Chicco and Matthijs J. Warrens and Giuseppe Jurman },
+        journal={ PeerJ },
+        year={ 2021 },
+        doi={ 10.7717/PEERJ-CS.623 },  
+      }
+@article{aicbicdata,
+        title={ Aic and bic for modeling with complex survey data },
+        authors={ Thomas Lumley and Alastair Scott },
+        journal={ Journal of Survey Statistics and Methodology },
+        year={ 2015 },
+        doi={ 10.1093/JSSAM/SMU021 },  
+      }
+@article{loglike,
+        title={ Comparison of Akaike information criterion (AIC) and Bayesian information criterion (BIC) in selection of stock–recruitment relationships },
+        authors={ Yanjun Wang and Qun Liu },
+        journal={ Fisheries Research },
+        year={ 2006 },
+        doi={ 10.1016/J.FISHRES.2005.08.011 },  
+      }
 
 @article{mees,
 author = {Fateme Medhat Bojnourd and Mohammad Ali Fanaei and Hadi Zohreie},
@@ -211,23 +241,29 @@ doi = {10.1080/13873954.2014.980276},
 URL = {https://doi.org/10.1080/13873954.2014.980276},
 eprint = {https://doi.org/10.1080/13873954.2014.980276}
 }
-
-@article{hdmwallace, title={Development and evaluation of the herd dynamic milk model with focus on the individual cow component}, volume={10}, DOI={10.1017/S1751731116001026}, number={12}, journal={animal}, publisher={Cambridge University Press}, author={Ruelle, E. and Delaby, L. and Wallace, M. and Shalloo, L.}, year={2016}, pages={1986–1997}
+%{Ruelle, E. and Delaby, L. and Wallace, M. and Shalloo, L.}
+@article{hdmwallace,
+title={Development and evaluation of the herd dynamic milk model with focus on the individual cow component},
+volume={10},
+DOI={10.1017/S1751731116001026},
+number={12},
+journal={{A}nimal},
+publisher={Cambridge University Press}, author={Ruelle, E. and others}, year={2016}, pages={1986–1997}
 }
 
-@article{mixedShelley, title={Introduction to Nonlinear Mixed-Effects Models for Longitudinal Data }, publisher={University of California}, author={Shelley, A.}, year={2019}, pages={1-6}
+@article{mixedShelley, title={Introduction to Nonlinear Mixed-Effects Models for Longitudinal Data }, publisher={University of California}, author={Shelley, A}, year={2019}, pages={1-6}
 }
 
 @online{ibmcrisp,
   author = {IBM},
-  title = {Introducción al CRISP-DM},
+  title = {Introducción al {CRISP-DM}},
   year = 2021,
   url = {https://www.ibm.com/docs/es/spss-modeler/saas?topic=guide-introduction-crisp-dm},
   urldate = {2022-06-20}
 }
 
 @online{matlabmixed,
-  author = {TheMathWorks, Inc.},
+  author = {{The MathWorks, Inc.}},
   title = {Mixed-Effects Models},
   year = 2022,
   url = {https://www.mathworks.com/help/stats/mixed-effects-models.html},
@@ -235,24 +271,23 @@ eprint = {https://doi.org/10.1080/13873954.2014.980276}
 }
 
 @online{levenberduke,
-  author = {Gavin H. },
+  author = {Gavin, H},
   title = {The Levenberg-Marquardt algorithm for nonlinear least squares curve fitting problems},
   year = 2023,
   url = {https://people.duke.edu/~hpgavin/lm.pdf},
   urldate = {2023-02-19}
 }
-
+%  {https://blogs.nicholas.duke.edu/citizenscientist/how-green-is-your-milk/\#:~:text=As\%20a\%20global\%20average\%2C\%20dairy,atmosphere\%20for\%20every\%20liter\%20produced.},
 @online{ecoduke,
-  author = {Schlesinger W. },
+  author = {Schlesinger, W},
   title = {How green is your milk},
   year = 2019,
-  url = {shorturl.at/zAGK6},
-  %{https://blogs.nicholas.duke.edu/citizenscientist/how-green-is-your-milk/\#:~:text=As\%20a\%20global\%20average\%2C\%20dairy,atmosphere\%20for\%20every\%20liter\%20produced.},
+  url = {https://blogs.nicholas.duke.edu/citizenscientist/how-green-is-your-milk/\#:~:text=As\%20a\%20global\%20average\%2C\%20dairy,atmosphere\%20for\%20every\%20liter\%20produced.},
   urldate = {2023-03-19}
 }
-
+% Rebbeca. A. Larson
 @online{manure,
-  author = {Horacio. A. V, Rebbeca. A. Larson},
+  author = {Aguirre, H. and others},
   title = {Evaluating greenhouse gas emissions from dairy manure management practices using survey data and lifecycle tools},
   year = 2017,
   url = {https://www.sciencedirect.com/science/article/pii/S0959652616321953},
@@ -260,10 +295,10 @@ eprint = {https://doi.org/10.1080/13873954.2014.980276}
 }
 
 @online{statista,
-  author = {Statista },
+  author = {Tiseo, Ian},
   title = {Average greenhouse gas emissions per kilogram of major food products worldwide},
   year = 2023,
-  url = {shorturl.at/BHVY6},
+  url = {https://www.statista.com/statistics/1201677/greenhouse-gas-emissions-of-major-food-products/},
   urldate = {2023-03-19}
 }
 % shorturl.at/BHVY6
@@ -271,51 +306,51 @@ eprint = {https://doi.org/10.1080/13873954.2014.980276}
 
 @online{sena,
   author = {SENA},
-  title = {Quiénes somos},
+  title = {¿{Q}uiénes somos?},
   year = 2022,
   url = {https://www.sena.edu.co/es-co/sena/Paginas/quienesSomos.aspx},
   urldate = {2022-10-20}
 }
 
 @online{casena,
-  author = {SENA},
-  title = {Introducción al CRISP-DM},
+  author = {CA-SENA},
+  title = {Misión},
   year = 2022,
   url = {https://centroagropecuarioregionalcau.blogspot.com/p/nuestro-centro.html},
   urldate = {2022-10-20}
 }
 
 
-
+% Lirio, Viviani and Luiz, Maurinho and Santos, Dos and Da, Wilson and Vieira, Cruz
 @article{avila1,
-author = {Ávila, William and Lirio, Viviani and Luiz, Maurinho and Santos, Dos and Da, Wilson and Vieira, Cruz},
+author = {Ávila, W. and others},
 year = {2015},
 month = {06},
 pages = {},
-title = {Uso da dinâmica de sistemas como suporte à decisão em propriedades produtoras de leite: um estudo de caso},
+title = {Uso da dinâmica de sistemas como suporte à decisú em propriedades produtoras de leite: um estudo de caso},
 volume = {2},
 journal = {Revista de Economia e Agronegócio},
 doi = {10.25070/rea.v2i4.46}
 }
 
 @online{gavira,
-  author = {Gavira M},
-  title = {Simulação computacional como uma ferramenta de aquisição de conhecimento.},
+  author = {Gavira, M},
+  title = {Simulaçú computacional como uma ferramenta de aquisiçú de conhecimento.},
   year = 2003,
   url = {https://www.researchgate.net/publication/236342878_Simulacao_computacional_como_uma_ferramenta_de_aquisicao_de_conhecimento},
   urldate = {2020-09-28}
 }
-
+%, Muñoz M, Corrales J
 @online{lechepaisa2,
-  author = {Cañas J, Muñoz M, Corrales J},
+  author = {Cañas, J. and others},
   title = {Modeling and genetic parameters of lactation curves in Holstein bovine breed in Colombia},
   year = 2012,
   url = {http://www.scielo.org.co/pdf/mvz/v17n2/v17n2a07.pdf},
   urldate = {2020-09-26}
 }
-
+%Villota M, Portilla C, Rosero E
 @online{lechepastusa,
-  author = {Jojoa K,Villota M, Portilla C, Rosero E},
+  author = {Jojoa, K. and others},
   title = {Modeling of dairy production curve in holstein cattle in the high tropic of Nariño},
   year = 2012,
   url = {https://revistas.udenar.edu.co/index.php/revip/article/view/396/407},
@@ -323,9 +358,9 @@ doi = {10.25070/rea.v2i4.46}
 }
 
 @online{minsaludleche,
-  author = {Ministerio de Salud, Republica de Colombia},
+  author = {{Ministerio de Salud, Republica de Colombia}},
   title = {Resolución número 02310 de 1986},
-%   year = 1986,
+  year = 1986,
   url = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/OT/Resolucion-2310-de-1986.pdf},
   urldate = {2022-10-01}
 }
@@ -339,7 +374,7 @@ doi = {10.25070/rea.v2i4.46}
 }
 
 @online{fao,
-  author = {Organización de las Naciones Unidas para la Alimentación y la Agricultura},
+  author = {{Organización de las Naciones Unidas para la Alimentación y la Agricultura}},
   title = {Reforma y Descentralización de Servicios Agrícolas: Un Marco de Políticas},
   year = 2002,
   url = {http://www.fao.org/3/y2006s/y2006s00.htm#Contents},
@@ -418,7 +453,7 @@ doi = {10.25070/rea.v2i4.46}
 
 
 @online{minagricultura,
-  author = {Ministerio de Agricultura y Desarrollo Rural},
+  author = {{Ministerio de Agricultura y Desarrollo Rural}},
   title = {El campo colombiano compite con innovación},
   year = 2018,
   url = {https://www.minagricultura.gov.co/noticias/Paginas/El-campo-colombiano-compite-con-innovaci\%C3\%B3n-.aspx},
@@ -426,7 +461,7 @@ doi = {10.25070/rea.v2i4.46}
 }
 
 @online{igac,
-  author = {Instituto Geográfico Agustín Codazzi},
+  author = {{Instituto Geográfico Agustín Codazzi}},
   title = {Laboratorio Nacional de Suelos},
   year = 2019,
   url = {https://www.igac.gov.co/es/contenido/areas-estrategicas/agrologia/laboratorio-nacional-de-suelos},
@@ -450,7 +485,7 @@ doi = {10.25070/rea.v2i4.46}
 }
 
 @online{librito1,
-  author = {CARE Perú},
+  author = {{CARE Perú}},
   title = {Crianza y manejo de ganado vacuno},
   year = 2000,
   url = {http://infolactea.com/wp-content/uploads/2016/02/BVCI0002410_2-1.pdf},
@@ -493,7 +528,7 @@ doi = {10.13140/2.1.5115.6487}
 
 
 @online{contextoganadero,
-  author = {Fonseca P},
+  author = {Fonseca, P},
   title = {Así funcionan los ciclos productivos de las ganaderías},
   year = 2016,
   url = {https://www.contextoganadero.com/ganaderia-sostenible/informe-asi-funcionan-los-ciclos-productivos-de-las-ganaderias},
@@ -501,7 +536,7 @@ doi = {10.13140/2.1.5115.6487}
 }
 
 @online{ashby,
-  author = {Ashby J.},
+  author = {Ashby, J.},
   title = {Institutionalising farmer participation in adaptive technology testing with the 'CIAL'. Agricultural research and extension network, Network Paper 57.},
   year = 1995,
   url = {http://agris.fao.org/agris-search/search.do?recordID=GB9610671},
@@ -525,7 +560,7 @@ doi = {10.13140/2.1.5115.6487}
 }
 
 @online{defestabulacion,
-  author = {Díaz V.},
+  author = {Díaz, V},
   title = {Manual de recomendaciones sobre Sistemas Intensivos de Producción de Carne},
   year = 2010,
   url = {http://www.platicar.go.cr/images/buscador/documents/pdf/05/00375-manual-produccion-de-carne.pdf},
@@ -533,12 +568,55 @@ doi = {10.13140/2.1.5115.6487}
 }
 
 @online{recomendaciones,
-  author = {Díaz V.},
+  author = {Díaz, V},
   title = {Recomendaciones sobre sistemas intensivos de producción de carne: Estabulación, Semiestabulación y Sumplementación estrategica en pastoreo},
   year = 2002,
   url = {http://www.mag.go.cr/biblioteca_virtual_animal/estabulacion.pdf},
   urldate = {2019-03-29}
 }
+
+@article{CruveFitKenjiro,
+        title={ Curve Fitting Using Generalized Fractional Bézier Curve },
+        authors={ S. A. S. M. Zain and M. Y. Misro and Kenjiro T. Miura },
+        journal={ Computer-aided Design and Applications },
+        year={ 2022 },
+        doi={ 10.14733/cadaps.2023.350-363 },  
+      }
+
+@article{CurveFitFreq,
+        title={ Frequency Estimation using Curve Fitting },
+        authors={ Matthew Strickland and Dani Strickland and Simon J Royston and Artis Riepnieks },        
+        year={ 2020 },
+        doi={ 10.1109/ICRERA49962.2020.9242667 },  
+      }
+
+@book{curvefitdalgaard,
+        title={ Nonlinear curve fitting },
+        authors={ Peter Dalgaard },        
+        year={ 2007 },
+        doi={ 10.1007/978-0-387-79054-1_16 },  
+      }
+
+@book{mathmod1D,
+        title={ Mathematical Modelling in One Dimension: An Introduction via Difference and Differential Equations },
+        authors={ Jacek Banasiak },
+        year={ 2013 },   
+      }
+
+@article{mees,
+author = {Fateme Medhat Bojnourd and Mohammad Ali Fanaei and Hadi Zohreie},
+title = {Mathematical modelling and dynamic simulation of multi-effect falling-film evaporator for milk powder production},
+journal = {Mathematical and Computer Modelling of Dynamical Systems},
+volume = {21},
+number = {4},
+pages = {336-358},
+year  = {2015},
+publisher = {Taylor & Francis},
+doi = {10.1080/13873954.2014.980276},
+URL = {https://doi.org/10.1080/13873954.2014.980276},
+eprint = {https://doi.org/10.1080/13873954.2014.980276}
+}
+
 @online{dosificadoras,
   author = {Pinto C, Sanchez H},
   title = {DISEÑO, MODELAMIENTO Y SIMULACIÓN DE MÁQUINA DOSIFICADORA DE ALIMENTO GRANULADO PARA ANIMALES },
@@ -546,16 +624,16 @@ doi = {10.13140/2.1.5115.6487}
   url = {http://repository.lasalle.edu.co/bitstream/handle/10185/16483/00781358.pdf},
   urldate = {2019-03-29}
 }
-
+%  Gallego L, Peláez F
 @online{mahecha,
-  author = {Mahecha L, Gallego L, Peláez F},
+  author = {Mahecha, L. and others},
   title = {Situación actual de la ganadería de carne en Colombia y alternativas para impulsar su competitividad y sostenibilidad},
   year = 2002,
   url = {https://dialnet.unirioja.es/servlet/articulo?codigo=3242901},
   urldate = {2019-04-09}
 }
 @online{ingemecanica,
-  author = {Ingemecanica, Rodríguez H},
+  author = {Rodríguez, H. and {Ingemecanica}},
   title = {Cálculo de transportadores de tornillo sin fin},
   year = 2019,
   url = {https://ingemecanica.com/tutorialsemanal/tutorialn143.html},
@@ -578,6 +656,20 @@ doi = {10.13140/2.1.5115.6487}
   urldate = {2019-08-09}
 }
 
+@article{nlreg,
+author = {Motulsky, Harvey J. and Ransnas, Lennart A.},
+title = {Fitting curves to data using nonlinear regression: a practical and nonmathematical review},
+journal = {The FASEB Journal},
+volume = {1},
+number = {5},
+pages = {365-374},
+keywords = {nonlinear regression, computer programs, curve fitting, data analysis},
+doi = {https://doi.org/10.1096/fasebj.1.5.3315805},
+url = {https://faseb.onlinelibrary.wiley.com/doi/abs/10.1096/fasebj.1.5.3315805},
+eprint = {https://faseb.onlinelibrary.wiley.com/doi/pdf/10.1096/fasebj.1.5.3315805},
+year = {1987}
+}
+
 @inproceedings{hmi,
 author = {A. D'H Gough, Christiaan and Green, Richard and Billinghurst, Mark},
 year = {2006},
@@ -588,25 +680,25 @@ volume = {158},
 journal = {ACM International Conference Proceeding Series},
 doi = {10.1145/1152760.1152778}
 }
-
+%% abstract = {Colombia es un país caracterizado por la producción agrícola y pecuaria, a lo largo de los años se ha concentrado en potencializar este sector económico para obtener calidad, por ello la ganadería colombiana ha explorado genÃ©ticamente para mejorar dia a dia la calidad de la carne y la leche. Gracias a su ubicación geográfica nuestro país cuenta con gran variedad de pisos tÃ©rmicos que van desde el nivel del mar hasta regiones de páramo, ello permite la explotación de diferentes razas bovinas productoras de carne, leche y doble propósito. Según el Censo Nacional de 2015 realizado el ICA (Instituto Colombia Agropecuario) la Población Bovina en el país está distribuida en 495.609 predios y constituida aproximadamente por 22.527.783 animales, ubicados principalmente en los departamentos de Antioquia (11,25%), Córdoba (8,45%), Casanare (8,43%), Meta (7,38%), Cesar (6,30%), Santander (6,29%), Caquetá (5,79%), Magdalena (5,50%) y Cundinamarca (4,74%) que agrupan el 64,13% de la población total nacional; contamos con un total de 1 662. 000 millones de cabezas de ganado de las cuales 788.540 entre hembras y machos están en edad(desde 1 a 3 años) para inicio del ciclo de ceba (2 años de duración) De acuerdo a su vocación productiva las razas manifiestan su potencial genÃ©tico de acuerdo a cada una de las zonas donde se encuentran, además, se hacen más susceptibles a una u otra enfermedad, por lo que el análisis de su ubicación, manejo y desplazamiento resulta fundamental para el diseño de estrategias que permitan obtener un máximo rendimiento de la explotación. Actualmente la oferta de alimentos concentrados en los Llanos Orientales para ganado bovino en ciclo de ceba, carece de un producto con contenido nutricional energÃ©tico que incremente la ganancia de peso de manera eficiente y rentable durante el tiempo que dura el ciclo de engorde. La necesidad de tener un concentrado fabricado con materias primas cultivadas en la región, que de manera industrializada garantice calidad e inocuidad, con un precio de venta que sea viable para el ganadero, nos lleva a plantear estudiar la factibilidad de la fabricar un suplemento alimenticio de manera que satisfaga la necesidad de los ganaderos del Departamento del Meta. De allí surge la pregunta de investigación Â¿cuál es la factibilidad de producir y comercializar suplemento alimenticio para ceba de ganado bovino en el departamento del Meta, Colombia?, para así crear una empresa llanera que satisfaga la demanda de un producto elaborado en la región con un precio al público asequible teniendo en cuenta las crisis por las que el sector pasa hoy día.},
 @misc{defceba,
         author = {Jiménez C, Pinzón M},
         title = {Factibilidad de producir y comercializar un suplemento alimenticio para el ganado bovino en ciclo de ceba en el Departamento del Meta },
         year = {2015},
-        % abstract = {Colombia es un paÃ­s caracterizado por la producciÃ³n agrÃ­cola y pecuaria, a lo largo de los aÃ±os se ha concentrado en potencializar este sector econÃ³mico para obtener calidad, por ello la ganaderÃ­a colombiana ha explorado genÃ©ticamente para mejorar dia a dia la calidad de la carne y la leche. Gracias a su ubicaciÃ³n geogrÃ¡fica nuestro paÃ­s cuenta con gran variedad de pisos tÃ©rmicos que van desde el nivel del mar hasta regiones de pÃ¡ramo, ello permite la explotaciÃ³n de diferentes razas bovinas productoras de carne, leche y doble propÃ³sito. SegÃºn el Censo Nacional de 2015 realizado el ICA (Instituto Colombia Agropecuario) la PoblaciÃ³n Bovina en el paÃ­s estÃ¡ distribuida en 495.609 predios y constituida aproximadamente por 22.527.783 animales, ubicados principalmente en los departamentos de Antioquia (11,25%), CÃ³rdoba (8,45%), Casanare (8,43%), Meta (7,38%), Cesar (6,30%), Santander (6,29%), CaquetÃ¡ (5,79%), Magdalena (5,50%) y Cundinamarca (4,74%) que agrupan el 64,13% de la poblaciÃ³n total nacional; contamos con un total de 1 662. 000 millones de cabezas de ganado de las cuales 788.540 entre hembras y machos estÃ¡n en edad(desde 1 a 3 aÃ±os) para inicio del ciclo de ceba (2 aÃ±os de duraciÃ³n) De acuerdo a su vocaciÃ³n productiva las razas manifiestan su potencial genÃ©tico de acuerdo a cada una de las zonas donde se encuentran, ademÃ¡s, se hacen mÃ¡s susceptibles a una u otra enfermedad, por lo que el anÃ¡lisis de su ubicaciÃ³n, manejo y desplazamiento resulta fundamental para el diseÃ±o de estrategias que permitan obtener un mÃ¡ximo rendimiento de la explotaciÃ³n. Actualmente la oferta de alimentos concentrados en los Llanos Orientales para ganado bovino en ciclo de ceba, carece de un producto con contenido nutricional energÃ©tico que incremente la ganancia de peso de manera eficiente y rentable durante el tiempo que dura el ciclo de engorde. La necesidad de tener un concentrado fabricado con materias primas cultivadas en la regiÃ³n, que de manera industrializada garantice calidad e inocuidad, con un precio de venta que sea viable para el ganadero, nos lleva a plantear estudiar la factibilidad de la fabricar un suplemento alimenticio de manera que satisfaga la necesidad de los ganaderos del Departamento del Meta. De allÃ­ surge la pregunta de investigaciÃ³n Â¿cuÃ¡l es la factibilidad de producir y comercializar suplemento alimenticio para ceba de ganado bovino en el departamento del Meta, Colombia?, para asÃ­ crear una empresa llanera que satisfaga la demanda de un producto elaborado en la regiÃ³n con un precio al pÃºblico asequible teniendo en cuenta las crisis por las que el sector pasa hoy dÃ­a.},
+        
         url = {http://hdl.handle.net/11634/14271}
         }
-
+%  and Oliva, Martha and Valencia Real, José Darío
 @book{defsilvopas,
-  title={Producción ganadera sostenible silvopastoreo},
-  author={Rodr{\'\i}guez, Santana and Oliva, Martha and Valencia Real, Jos{\'e} Dar{\'\i}o},
+  title={Producción ganadera sostenible. {S}ilvopastoreo},
+  author={Rodríguez, S. and others},
   year={1998},
-  publisher={Corporaci{\'o}n Colombiana de Investigaci{\'o}n Agropecuaria-CORPOICA}
+  publisher={Corporación Colombiana de Investigación Agropecuaria-CORPOICA}
 }
 
 @book{perry,
   title={Manual del ingeniero químico},
-  author={Perry R},
+  author={Perry, R},
   year={1992},
   publisher={McGraw-Hill}
 }
